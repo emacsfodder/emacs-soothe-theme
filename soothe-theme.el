@@ -1,5 +1,4 @@
-;;; monokai-theme.el --- REQUIRES EMACS 24: Monokai Color Theme for Emacs.
-
+;;; soothe-theme.el --- REQUIRES EMACS 24: A Color Theme for Emacs.
 ;; Copyright (C) 2012-13 Jason Milkins.
 ;;
 ;; Author: Jason Milkins <jasonm23@gmail.com>
