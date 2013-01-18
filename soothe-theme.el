@@ -1,4 +1,4 @@
-;;; soothe-theme.el --- REQUIRES EMACS 24: A Color Theme for Emacs.
+;; soothe-theme.el --- REQUIRES EMACS 24: A Color Theme for Emacs.
 ;; Copyright (C) 2012-13 Jason Milkins.
 ;;
 ;; Author: Jason Milkins <jasonm23@gmail.com>
@@ -43,8 +43,8 @@
  ;; #009090 - blue-3
  ;; #364e7a - blue-4
  ;; #7868b5 - purple-1
- ;; #110F13 - black velvet
- ;; #111013 - black alt
+ ;; #110F13 - background black tint
+ ;; #111013 - background black alt
 
 (let  (
        ;; mode-line-font - tighten up the modeline by making it
@@ -52,79 +52,89 @@
        (mode-line-font "Droid Sans")
 
        ;; named colors
-       (gray-1         "#828282")
-       (gray-1bg       "#0a0a0a")
-       (gray-2         "#333333")
-       (gray-2bg       "#111111")
-       (gray-3         "#aaaaaa")
-       (gray-3bg       "#141414")
-       (gray-4         "#252525")
-       (gray-4bg       "#171717")
-       (gray-5         "#2a2a2a")
-       (gray-5bg       "#1a1a1a")
-       (gray-6         "#202020")
-       (gray-6bg       "#1e1e1e")
+       (gray-1           "#828282")
+       (gray-1bg         "#0a0a0a")
+       (gray-2           "#333333")
+       (gray-2bg         "#111111")
+       (gray-3           "#aaaaaa")
+       (gray-3bg         "#141414")
+       (gray-4           "#252525")
+       (gray-4bg         "#171717")
+       (gray-5           "#2a2a2a")
+       (gray-5bg         "#1a1a1a")
+       (gray-6           "#202020")
+       (gray-6bg         "#1e1e1e")
+                         
+       (red-1            "#b13120")
+       (red-1bg          "#1D1515")
+       (red-2            "#a23f1e")
+       (red-2bg          "#251c1e")
+                         
+       (brown-1          "#8f621d")
+       (brown-1bg        "#2a1f1f")
+                         
+       (orange-1         "#c97a35")
+       (orange-1bg       "#1F1710")
+                         
+       (yellow-1         "#ceae3e")
+       (yellow-1bg       "#18140C")
+                         
+       (green-1          "#719f34")
+       (green-1bg        "#1a2321")
+       (green-2          "#3e8f75")
+       (green-2bg        "#1a2321")
+                         
+       (turquoise-1      "#01535F")
+       (turquoise-2      "#073E46")
+                         
+       (turquoise-1bg    "#04181C")
+       (turquoise-2bg    "#031316")
+                         
+       (blue-1           "#7c9fc9")
+       (blue-1bg         "#1e252f")
+       (blue-2           "#317598")
+       (blue-2bg         "#1b333e")
+       (blue-3           "#009090")
+       (blue-3bg         "#132228")
+       (blue-4           "#364e7a")
+       (blue-4bg         "#172028")
+                         
+       (purple-1         "#7868b5")
+       (purple-1bg       "#1D1B25")
+                         
+                         
+       (foreground       "#dcdddd")
+       (hl-line          "#11151a")
+       (selection        "#11151a")
 
-       (red-1          "#b13120")
-       (red-1bg        "#1D1515")
-       (red-2          "#a23f1e")
-       (red-2bg        "#251c1e")
-
-       (brown-1        "#8f621d")
-       (brown-1bg      "#2a1f1f")
-
-       (orange-1       "#c97a35")
-       (orange-1bg     "#1F1710")
-
-       (yellow-1       "#ceae3e")
-       (yellow-1bg     "#18140C")
-
-       (green-1        "#719f34")
-       (green-1bg      "#1a2321")
-       (green-2        "#3e8f75")
-       (green-2bg      "#1a2321")
-
-       (turquoise-1    "#01535F")
-       (turquoise-2    "#073E46")
-
-       (turquoise-1bg  "#04181C")
-       (turquoise-2bg  "#031316")
-
-       (blue-1         "#7c9fc9")
-       (blue-1bg       "#1e252f")
-       (blue-2         "#317598")
-       (blue-2bg       "#1b333e")
-       (blue-3         "#009090")
-       (blue-3bg       "#132228")
-       (blue-4         "#364e7a")
-       (blue-4bg       "#172028")
-
-       (purple-1       "#7868b5")
-       (purple-1bg     "#1D1B25")
-
-       ;; special colors
-       (background       (if (window-system) "#110F13"  "#000000"))
-       (alt-background   (if (window-system) "#111013"  "#000000"))
-
-       (builtin-bg       (if (window-system) "#1D1525"  "#000000")) 
-       (constant-bg      (if (window-system) "#1D1B25"  "#000000")) 
-       (comment-bg       (if (window-system) "#111013"  "#000000")) 
-       (comment-delim-bg (if (window-system) "#111013"  "#000000")) 
-       (doc-bg           (if (window-system) "#0a0a0a"  "#000000")) 
-       (doc-string-bg    (if (window-system) "#0a0a0a"  "#000000")) 
-       (function-bg      (if (window-system) "#1D1525"  "#000000")) 
-       (keyword-bg       (if (window-system) "#1F1710"  "#000000")) 
-       (negation-bg      (if (window-system) "#18140C"  "#000000")) 
-       (prepro-bg        (if (window-system) "#1F1710"  "#000000")) 
-       (string-bg        (if (window-system) "#031316"  "#000000")) 
-       (type-face-bg     (if (window-system) "#251c1e"  "#000000")) 
-       (var-bg           (if (window-system) "#1e252f"  "#000000")) 
-       (warn-bg          (if (window-system) "#251c1e"  "#000000")) 
-
-       (foreground     "#dcdddd")
-       (hl-line        "#11151a")
-       (selection      "#11151a")
+       (background       "#110F13")
+       (alt-background   "#111013")
       )
+
+  ;; Terminal colors - set background to black.
+  (unless (window-system)
+    (setq background      "#000000")
+    (setq alt-background  "#000000")
+    (setq gray-1bg        "#000000")
+    (setq gray-2bg        "#000000")
+    (setq gray-3bg        "#000000")
+    (setq gray-4bg        "#000000")
+    (setq gray-5bg        "#000000")
+    (setq gray-6bg        "#000000")
+    (setq red-1bg         "#000000")
+    (setq red-2bg         "#000000")
+    (setq brown-1bg       "#000000")
+    (setq orange-1bg      "#000000")
+    (setq yellow-1bg      "#000000")
+    (setq green-1bg       "#000000")
+    (setq green-2bg       "#000000")
+    (setq turquoise-1bg   "#000000")
+    (setq turquoise-2bg   "#000000")
+    (setq blue-1bg        "#000000")
+    (setq blue-2bg        "#000000")
+    (setq blue-3bg        "#000000")
+    (setq blue-4bg        "#000000")
+    (setq purple-bg1      "#000000"))
 
   (custom-theme-set-faces
    'soothe
@@ -139,20 +149,20 @@
    `(escape-glyph                              ((t (:foreground ,red-1       :background ,purple-1bg                    ))))
 
    ;; Font-lock stuff
-   `(font-lock-builtin-face                    ((t (:foreground ,red-2       :background ,builtin-bg                    ))))
-   `(font-lock-constant-face                   ((t (:foreground ,purple-1    :background ,constant-bg                   ))))
-   `(font-lock-comment-face                    ((t (:foreground ,turquoise-2 :background ,comment-bg                     :italic t ))))
-   `(font-lock-comment-delimiter-face          ((t (:foreground ,turquoise-1 :background ,comment-delim-bg               :italic t ))))
-   `(font-lock-doc-face                        ((t (:foreground ,blue-3      :background ,doc-bg                        ))))
-   `(font-lock-doc-string-face                 ((t (:foreground ,blue-3      :background ,doc-string-bg                 ))))
-   `(font-lock-function-name-face              ((t (:foreground ,red-1       :background ,function-bg                   ))))
-   `(font-lock-keyword-face                    ((t (:foreground ,orange-1    :background ,keyword-bg                    ))))
-   `(font-lock-negation-char-face              ((t (:foreground ,yellow-1    :background ,negation-bg                   ))))
-   `(font-lock-preprocessor-face               ((t (:foreground ,orange-1    :background ,prepro-bg                     ))))
-   `(font-lock-string-face                     ((t (:foreground ,blue-3      :background ,string-bg                     ))))
-   `(font-lock-type-face                       ((t (:foreground ,red-2       :background ,type-face-bg                   :bold nil ))))
-   `(font-lock-variable-name-face              ((t (:foreground ,blue-1      :background ,var-bg                        ))))
-   `(font-lock-warning-face                    ((t (:foreground ,red-2       :background ,warn-bg                       ))))
+   `(font-lock-builtin-face                    ((t (:foreground ,red-2       :background ,red-1bg                       ))))
+   `(font-lock-constant-face                   ((t (:foreground ,purple-1    :background ,purple-bg1                    ))))
+   `(font-lock-comment-face                    ((t (:foreground ,turquoise-2 :background ,alt-background                 :italic t ))))
+   `(font-lock-comment-delimiter-face          ((t (:foreground ,turquoise-1 :background ,alt-background                 :italic t ))))
+   `(font-lock-doc-face                        ((t (:foreground ,blue-3      :background ,gray-1bg                      ))))
+   `(font-lock-doc-string-face                 ((t (:foreground ,blue-3      :background ,gray-1bg                      ))))
+   `(font-lock-function-name-face              ((t (:foreground ,red-1       :background ,red-1bg                       ))))
+   `(font-lock-keyword-face                    ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
+   `(font-lock-negation-char-face              ((t (:foreground ,yellow-1    :background ,yellow-1bg                    ))))
+   `(font-lock-preprocessor-face               ((t (:foreground ,orange-1    :background ,orange-1bg                     ))))
+   `(font-lock-string-face                     ((t (:foreground ,blue-3      :background ,turquoise-2bg                     ))))
+   `(font-lock-type-face                       ((t (:foreground ,red-2       :background ,red-1bg                   :bold nil ))))
+   `(font-lock-variable-name-face              ((t (:foreground ,blue-1      :background ,blue-1bg                        ))))
+   `(font-lock-warning-face                    ((t (:foreground ,red-2       :background ,red-2bg                       ))))
 
    ;; UI related
    `(link                                      ((t (:foreground ,blue-1      :background ,blue-1bg                      ))))
@@ -243,6 +253,7 @@
   (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#131439" )
   (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#eF3000" )
   )
+
 (eval-after-load "rainbow-delimiters" '(soothe-rainbow-delim-set-face))
 
 ;;;###autoload
