@@ -3,7 +3,7 @@
 ;;
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/jasonm23/emacs-soothe-theme
-;; Version: 0.0.5
+;; Version: 0.0.7
 ;;
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
