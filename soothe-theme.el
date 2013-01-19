@@ -3,7 +3,7 @@
 ;;
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/jasonm23/emacs-soothe-theme
-;; Version: 0.0.7
+;; Version: 0.1.1
 ;;
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -16,23 +16,30 @@
 ;;
 ;; You should have received a copy of the GNU General Public License
 ;; along with GNU Emacs.
+;;
+;; This file is not a part of Emacs
+;;
+;; 
 
 (unless (>= 24 emacs-major-version)
   (error "soothe-theme requires Emacs 24 or later."))
 
 (deftheme soothe
-  "soothe-theme
-   Modified : 2:17pm(+1100) 2013-01-16 - Jason Milkins.
-   licence : MIT
-   An amalgam of muted color tones and highlighted backgrounds.
-   Also has support for rainbow-delimiters")
+  "soothe-theme An amalgam of muted color tones and
+   highlighted backgrounds.  Has builtin support for
+   rainbow-delimiters, org-mode, whitespace-mode, ECB, flyspell,
+   ido, linum, highlight-indentation, show-paren-mode, more mode
+   support to come.")
 
 (let  (
        ;; mode-line-font - tighten up the modeline by making it
        ;; variable pitch. This theme also uses powerline.el
        (mode-line-font "Droid Sans")
 
-       ;; named colors
+       ;; Palette
+       (foam             "#E0E4CC")
+       (snow-code        "#ECE5CE")
+       (crem             "#F4EAD5")
        (gray-1           "#828282")
        (gray-2           "#333333")
        (gray-3           "#aaaaaa")
@@ -45,21 +52,19 @@
        (gray-4bg         "#171717")
        (gray-5bg         "#1a1a1a")
        (gray-6bg         "#1e1e1e")
-                         
        (red-1            "#b13120")
        (red-2            "#a23f1e")
+       (red-3            "#AA1100")
+       (red-4            "#660000")
        (red-1bg          "#1D1515")
        (red-2bg          "#251c1e")
-                         
        (brown-1          "#8f621d")
        (brown-1bg        "#2a1f1f")
-                         
-       (orange-1         "#c97a35")
+       (orange-1         "#d94a05")
+       (orange-2         "#FF5211")
        (orange-1bg       "#1F1710")
-                         
        (yellow-1         "#ceae3e")
        (yellow-1bg       "#18140C")
-                         
        (green-1          "#719f34")
        (green-2          "#3e8f75")
        (green-1bg        "#1a2321")
@@ -78,17 +83,17 @@
        (blue-4bg         "#172028")
        (purple-1         "#7868b5")
        (purple-1bg       "#1D1B25")
-
-       (foreground       "#dcdddd")
+       (foreground       "#F4EAD5")
        (hl-line          "#11152a")
        (selection        "#11152a")
        (background       "#110F13")
-       (alt-background   "#111013")
-      )
+       (background-dark  "#0F0D11")
+       (alt-background   "#111013"))
 
   ;; Terminal colors - set background to black.
   (unless (window-system)
     (setq background      "#000000")
+    (setq background-dark "#000000")
     (setq alt-background  "#000000")
     (setq gray-1bg        "#000000")
     (setq gray-2bg        "#000000")
@@ -114,6 +119,7 @@
   (custom-theme-set-faces
    'soothe
 
+   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Basics
    `(default                                   ((t (:foreground ,foreground  :background ,background                    ))))
    `(cursor                                    ((t (                         :background ,red-2                         ))))
@@ -122,12 +128,12 @@
    `(hl-line                                   ((t (                         :background ,hl-line                       ))))
    `(minibuffer-prompt                         ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
    `(escape-glyph                              ((t (:foreground ,red-1       :background ,purple-1bg                    ))))
-
+   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Font-lock stuff
    `(font-lock-builtin-face                    ((t (:foreground ,red-2       :background ,red-1bg                       ))))
    `(font-lock-constant-face                   ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
-   `(font-lock-comment-face                    ((t (:foreground ,turquoise-2 :background ,alt-background                 :italic t ))))
-   `(font-lock-comment-delimiter-face          ((t (:foreground ,turquoise-1 :background ,alt-background                 :italic t ))))
+   `(font-lock-comment-face                    ((t (:foreground ,turquoise-2 :background ,alt-background :italic t      ))))
+   `(font-lock-comment-delimiter-face          ((t (:foreground ,turquoise-1 :background ,alt-background :italic t      ))))
    `(font-lock-doc-face                        ((t (:foreground ,blue-3      :background ,gray-1bg                      ))))
    `(font-lock-doc-string-face                 ((t (:foreground ,blue-3      :background ,gray-1bg                      ))))
    `(font-lock-function-name-face              ((t (:foreground ,red-1       :background ,red-1bg                       ))))
@@ -135,28 +141,28 @@
    `(font-lock-negation-char-face              ((t (:foreground ,yellow-1    :background ,yellow-1bg                    ))))
    `(font-lock-preprocessor-face               ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
    `(font-lock-string-face                     ((t (:foreground ,blue-3      :background ,turquoise-2bg                 ))))
-   `(font-lock-type-face                       ((t (:foreground ,red-2       :background ,red-1bg                   :bold nil ))))
+   `(font-lock-type-face                       ((t (:foreground ,red-2       :background ,red-1bg        :bold nil      ))))
    `(font-lock-variable-name-face              ((t (:foreground ,blue-1      :background ,blue-1bg                      ))))
    `(font-lock-warning-face                    ((t (:foreground ,red-2       :background ,red-2bg                       ))))
-
+   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; UI related
    `(link                                      ((t (:foreground ,blue-1      :background ,blue-1bg                      ))))
    `(fringe                                    ((t (                         :background ,gray-3bg                      ))))
    `(mode-line                                 ((t (:foreground ,gray-1      :background ,gray-3bg  :box nil :height 85 :family ,mode-line-font ))))
    `(mode-line-inactive                        ((t (:foreground ,gray-6      :background ,gray-3bg  :box nil :height 85 ))))
    `(vertical-border                           ((t (:foreground ,gray-5      :background ,background                    ))))
-
+   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Linum
    `(linum                                     ((t (:foreground ,gray-5bg    :background ,alt-background :height 90     ))))
-
+   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; show-paren-mode
-   `(show-paren-match                          ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
-   `(show-paren-mismatch                       ((t (:foreground ,red-2bg     :background ,red-2                         ))))
-
+   `(show-paren-match                          ((t (:foreground ,foam        :background ,red-1                         ))))
+   `(show-paren-mismatch                       ((t (:foreground ,orange-1    :background ,red-2bg                       ))))
+   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; ido
    `(ido-only-match                            ((t (:foreground ,green-1     :background ,green-1bg                     ))))
    `(ido-subdir                                ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
-
+   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; whitespace-mode
    `(whitespace-empty                          ((t (:foreground ,yellow-1bg  :background ,yellow-1                      ))))
    `(whitespace-hspace                         ((t (:foreground ,gray-2                                                 ))))
@@ -167,32 +173,33 @@
    `(whitespace-space-after-tab                ((t (:foreground ,gray-2                                                 ))))
    `(whitespace-tab                            ((t (:foreground ,gray-2                                                 ))))
    `(whitespace-trailing                       ((t (:foreground ,red-1bg     :background ,red-1                         ))))
-
+   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; flyspell-mode
    `(flyspell-incorrect                        ((t (:underline ,red-2                                                   ))))
-   `(flyspell-duplicate                        ((t (:underline ,red-2                                                   ))))
-
+   `(flyspell-duplicate                        ((t (:underline ,green-2                                                 ))))
+   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; magit
    `(magit-diff-add                            ((t (:foreground ,green-1                                                ))))
    `(magit-diff-del                            ((t (:foreground ,red-2                                                  ))))
    `(magit-item-highlight                      ((t (                         :background ,gray-1bg                      ))))
-
+   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; highlight-indentation-mode
-   `(highlight-indentation-face                ((t (                         :background ,gray-1bg                      ))))
+   `(highlight-indentation-face                ((t (                         :background ,background-dark               ))))
    `(highlight-indentation-current-column-face ((t (                         :background ,gray-4                        ))))
-
+   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; ECB
    `(ecb-default-general-face                  ((t (:foreground ,gray-3      :background ,gray-1bg                      ))))
    `(ecb-default-highlight-face                ((t (:foreground ,red-1       :background ,red-1bg                       ))))
    `(ecb-method-face                           ((t (:foreground ,red-1       :background ,red-1bg                       ))))
    `(ecb-tag-header-face                       ((t (                         :background ,blue-2bg                      ))))
-
+   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; org-mode
    `(org-date                                  ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
    `(org-done                                  ((t (:foreground ,green-1     :background ,green-1bg                     ))))
    `(org-hide                                  ((t (:foreground ,gray-2      :background ,gray-1bg                      ))))
    `(org-link                                  ((t (:foreground ,blue-1      :background ,blue-1bg                      ))))
    `(org-todo                                  ((t (:foreground ,red-1       :background ,red-1bg                       ))))
+   ;;-----------------------------------------------------------------------------------------------------------------------
    )
 
 
@@ -220,14 +227,13 @@
 ;; Rainbow delimiters
 (defun soothe-rainbow-delim-set-face ()
   (set-face-attribute 'rainbow-delimiters-depth-1-face   nil :foreground "#1f6570" )
-  (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#13527F" )
+  (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#124872" )
   (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#125882" )
-  (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#223B74" )
-  (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#2D2E55" )
-  (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#282147" )
-  (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#131439" )
-  (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#eF3000" )
-  )
+  (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#323B74" )
+  (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#3D2E55" )
+  (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#482147" )
+  (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#531439" )
+  (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#FF5000" ))
 
 (eval-after-load "rainbow-delimiters" '(soothe-rainbow-delim-set-face))
 
