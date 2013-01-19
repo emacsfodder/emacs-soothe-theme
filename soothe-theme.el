@@ -156,7 +156,7 @@
    `(linum                                     ((t (:foreground ,gray-5bg    :background ,alt-background :height 90     ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; show-paren-mode
-   `(show-paren-match                          ((t (:foreground ,foam        :background ,red-1                         ))))
+   `(show-paren-match                          ((t (:foreground ,foam        :background ,red-1bg                       ))))
    `(show-paren-mismatch                       ((t (:foreground ,orange-1    :background ,red-2bg                       ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; ido
