@@ -40,11 +40,11 @@
        (foam             "#E0E4CC")
        (snow-code        "#ECE5CE")
        (crem             "#F4EAD5")
-       (gray-1           "#828282")
-       (gray-2           "#333333")
-       (gray-3           "#aaaaaa")
-       (gray-4           "#252525")
-       (gray-5           "#2a2a2a")
+       (gray-1           "#aaaaaa")
+       (gray-2           "#828282")
+       (gray-3           "#333333")
+       (gray-4           "#2a2a2a")
+       (gray-5           "#252525")
        (gray-6           "#202020")
        (gray-1bg         "#0a0a0a")
        (gray-2bg         "#111111")
@@ -148,9 +148,9 @@
    ;; UI related
    `(link                                      ((t (:foreground ,blue-1      :background ,blue-1bg                      ))))
    `(fringe                                    ((t (                         :background ,gray-3bg                      ))))
-   `(mode-line                                 ((t (:foreground ,gray-1      :background ,gray-3bg  :box nil :height 85 :family ,mode-line-font ))))
+   `(mode-line                                 ((t (:foreground ,gray-2      :background ,gray-3bg  :box nil :height 85 :family ,mode-line-font ))))
    `(mode-line-inactive                        ((t (:foreground ,gray-6      :background ,gray-3bg  :box nil :height 85 ))))
-   `(vertical-border                           ((t (:foreground ,gray-5      :background ,background                    ))))
+   `(vertical-border                           ((t (:foreground ,gray-4      :background ,background                    ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Linum
    `(linum                                     ((t (:foreground ,gray-5bg    :background ,alt-background :height 90     ))))
@@ -165,13 +165,13 @@
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; whitespace-mode
    `(whitespace-empty                          ((t (:foreground ,yellow-1bg  :background ,yellow-1                      ))))
-   `(whitespace-hspace                         ((t (:foreground ,gray-2                                                 ))))
-   `(whitespace-indentation                    ((t (:foreground ,gray-2                                                 ))))
-   `(whitespace-line                           ((t (                         :background ,gray-2                        ))))
-   `(whitespace-newline                        ((t (:foreground ,gray-2                                                 ))))
-   `(whitespace-space                          ((t (:foreground ,gray-2                                                 ))))
-   `(whitespace-space-after-tab                ((t (:foreground ,gray-2                                                 ))))
-   `(whitespace-tab                            ((t (:foreground ,gray-2                                                 ))))
+   `(whitespace-hspace                         ((t (:foreground ,gray-3                                                 ))))
+   `(whitespace-indentation                    ((t (:foreground ,gray-3                                                 ))))
+   `(whitespace-line                           ((t (                         :background ,gray-3                        ))))
+   `(whitespace-newline                        ((t (:foreground ,gray-3                                                 ))))
+   `(whitespace-space                          ((t (:foreground ,gray-3                                                 ))))
+   `(whitespace-space-after-tab                ((t (:foreground ,gray-3                                                 ))))
+   `(whitespace-tab                            ((t (:foreground ,gray-3                                                 ))))
    `(whitespace-trailing                       ((t (:foreground ,red-1bg     :background ,red-1                         ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; flyspell-mode
@@ -185,10 +185,10 @@
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; highlight-indentation-mode
    `(highlight-indentation-face                ((t (                         :background ,background-dark               ))))
-   `(highlight-indentation-current-column-face ((t (                         :background ,gray-4                        ))))
+   `(highlight-indentation-current-column-face ((t (                         :background ,gray-5                        ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; ECB
-   `(ecb-default-general-face                  ((t (:foreground ,gray-3      :background ,gray-1bg                      ))))
+   `(ecb-default-general-face                  ((t (:foreground ,gray-1      :background ,gray-1bg                      ))))
    `(ecb-default-highlight-face                ((t (:foreground ,red-1       :background ,red-1bg                       ))))
    `(ecb-method-face                           ((t (:foreground ,red-1       :background ,red-1bg                       ))))
    `(ecb-tag-header-face                       ((t (                         :background ,blue-2bg                      ))))
@@ -196,7 +196,7 @@
    ;; org-mode
    `(org-date                                  ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
    `(org-done                                  ((t (:foreground ,green-1     :background ,green-1bg                     ))))
-   `(org-hide                                  ((t (:foreground ,gray-2      :background ,gray-1bg                      ))))
+   `(org-hide                                  ((t (:foreground ,gray-3      :background ,gray-1bg                      ))))
    `(org-link                                  ((t (:foreground ,blue-1      :background ,blue-1bg                      ))))
    `(org-todo                                  ((t (:foreground ,red-1       :background ,red-1bg                       ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
@@ -217,10 +217,10 @@
 
    `(ansi-color-names-vector
      ;; black, red, green, yellow, blue, magenta, cyan, white
-     [,background ,red-1 ,green-1 ,yellow-1 ,blue-1 ,purple-1 ,blue-1 ,foreground])
+     [,background ,red-1 ,green-1 ,yellow-1 ,blue-1 ,purple-1 ,blue-3 ,foreground])
    `(ansi-term-color-vector
      ;; black, red, green, yellow, blue, magenta, cyan, white
-     [unspecified ,background ,red-1 ,green-1 ,yellow-1 ,blue-1 ,purple-1 ,blue-1 ,foreground])
+     [unspecified ,background ,red-1 ,green-1 ,yellow-1 ,blue-1 ,purple-1 ,blue-3 ,foreground])
    )
   )
 
