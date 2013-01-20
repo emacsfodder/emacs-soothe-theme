@@ -3,7 +3,7 @@
 ;;
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/jasonm23/emacs-soothe-theme
-;; Version: 0.1.2
+;; Version: 0.1.3
 ;;
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -164,15 +164,15 @@
    `(ido-subdir                                ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; whitespace-mode
-   `(whitespace-empty                          ((t (:foreground ,yellow-1bg  :background ,yellow-1                      ))))
-   `(whitespace-hspace                         ((t (:foreground ,gray-3                                                 ))))
-   `(whitespace-indentation                    ((t (:foreground ,gray-3                                                 ))))
-   `(whitespace-line                           ((t (                         :background ,gray-3                        ))))
-   `(whitespace-newline                        ((t (:foreground ,gray-3                                                 ))))
-   `(whitespace-space                          ((t (:foreground ,gray-3                                                 ))))
-   `(whitespace-space-after-tab                ((t (:foreground ,gray-3                                                 ))))
-   `(whitespace-tab                            ((t (:foreground ,gray-3                                                 ))))
-   `(whitespace-trailing                       ((t (:foreground ,red-1bg     :background ,red-1                         ))))
+   `(whitespace-empty                          ((t (:foreground ,yellow-1    :background ,turquoise-2bg                 ))))
+   `(whitespace-hspace                         ((t (:foreground ,turquoise-2 :background ,turquoise-2bg                 ))))
+   `(whitespace-indentation                    ((t (:foreground ,turquoise-2 :background ,turquoise-2bg                 ))))
+   `(whitespace-line                           ((t (:foreground ,orange-1    :background ,turquoise-2bg                 ))))
+   `(whitespace-newline                        ((t (:foreground ,turquoise-2 :background ,turquoise-2bg                 ))))
+   `(whitespace-space                          ((t (:foreground ,turquoise-2 :background ,turquoise-2bg                 ))))
+   `(whitespace-space-after-tab                ((t (:foreground ,turquoise-2 :background ,turquoise-2bg                 ))))
+   `(whitespace-tab                            ((t (:foreground ,turquoise-2 :background ,turquoise-2bg                 ))))
+   `(whitespace-trailing                       ((t (:foreground ,red-1       :background ,turquoise-2bg                 ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; flyspell-mode
    `(flyspell-incorrect                        ((t (:underline ,red-2                                                   ))))
@@ -210,6 +210,8 @@
    `(powerline-color2 ,gray-3bg)
    `(Linum-format "%7i ")
    `(fringe-mode 4)
+
+   `(whitespace-)
 
    ;; Fill Column Indicator mode
    `(fci-rule-color ,gray-6)
