@@ -91,6 +91,7 @@
        (alt-background   "#111013"))
 
   ;; Terminal colors - set background to black.
+ 
   (unless (window-system)
     (setq background      "#000000")
     (setq background-dark "#000000")
@@ -228,14 +229,17 @@
 
 ;; Rainbow delimiters
 (defun soothe-rainbow-delim-set-face ()
-  (set-face-attribute 'rainbow-delimiters-depth-1-face   nil :foreground "#1f6570" )
-  (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#124872" )
-  (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#125882" )
-  (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#323B74" )
-  (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#3D2E55" )
-  (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#482147" )
-  (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#531439" )
-  (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#FF5000" ))
+  (set-face-attribute 'rainbow-delimiters-depth-1-face   nil :foreground "#189" )
+  (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#178" )
+  (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#167" )
+  (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#156" )
+  (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#145" )
+  (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#134" )
+  (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#123" )
+  (set-face-attribute 'rainbow-delimiters-depth-8-face   nil :foreground "#023" )
+  (set-face-attribute 'rainbow-delimiters-depth-9-face   nil :foreground "#013" )
+  (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#600" ))
+
 
 (eval-after-load "rainbow-delimiters" '(soothe-rainbow-delim-set-face))
 
