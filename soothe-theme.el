@@ -84,7 +84,7 @@
        (purple-1         "#7868b5")
        (purple-1bg       "#1D1B25")
        (foreground       "#F4EAD5")
-       (hl-line          "#11152a")
+       (hl-line          "#171717")
        (selection        "#11152a")
        (background       "#110F13")
        (background-dark  "#0F0D11")
@@ -123,10 +123,10 @@
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Basics
    `(default                                   ((t (:foreground ,foreground  :background ,background                    ))))
-   `(cursor                                    ((t (                         :background ,red-2                         ))))
+   `(cursor                                    ((t (                         :background ,purple-1                      ))))
    `(region                                    ((t (:foreground nil          :background ,selection                     ))))
    `(highlight                                 ((t (:foreground ,blue-3      :background ,blue-3bg                      ))))
-   `(hl-line                                   ((t (                         :background ,hl-line                       ))))
+   `(hl-line                                   ((t (:foreground ,foreground  :background ,hl-line                       ))))
    `(minibuffer-prompt                         ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
    `(escape-glyph                              ((t (:foreground ,red-1       :background ,purple-1bg                    ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
@@ -201,6 +201,13 @@
    `(org-link                                  ((t (:foreground ,blue-1      :background ,blue-1bg                      ))))
    `(org-todo                                  ((t (:foreground ,red-1       :background ,red-1bg                       ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
+   ;; helm
+   '(helm-candidate-number                     ((t (:foreground "black"      :background "#779"                         ))))
+   '(helm-selection                            ((t (                         :background "#122359" :underline nil       ))))
+   '(helm-separator                            ((t (:foreground "#117799"                                               ))))
+   '(helm-source-header                        ((t (:foreground "white"      :background "nil"     :weight bold :height 1.4 :family "Sans Serif"))))
+   '(helm-visible-mark                         ((t (:foreground "black"      :background "#444"                         ))))
+
    )
 
 
@@ -229,16 +236,16 @@
 
 ;; Rainbow delimiters
 (defun soothe-rainbow-delim-set-face ()
-  (set-face-attribute 'rainbow-delimiters-depth-1-face   nil :foreground "#6ef" )
-  (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#1ad" )
-  (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#168" )
-  (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#148" )
-  (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#018" )
-  (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#013" )
-  (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#135" )
-  (set-face-attribute 'rainbow-delimiters-depth-8-face   nil :foreground "#156" )
-  (set-face-attribute 'rainbow-delimiters-depth-9-face   nil :foreground "#189" )
-  (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#600" ))
+  (set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "#4A7D90")
+  (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "#2C4B56")
+  (set-face-attribute 'rainbow-delimiters-depth-3-face nil :foreground "#1A2D33")
+  (set-face-attribute 'rainbow-delimiters-depth-4-face nil :foreground "#237A9A")
+  (set-face-attribute 'rainbow-delimiters-depth-5-face nil :foreground "#2C5C62")
+  (set-face-attribute 'rainbow-delimiters-depth-6-face nil :foreground "#1A374D")
+  (set-face-attribute 'rainbow-delimiters-depth-7-face nil :foreground "#135A8A")
+  (set-face-attribute 'rainbow-delimiters-depth-8-face nil :foreground "#225C65")
+  (set-face-attribute 'rainbow-delimiters-depth-9-face nil :foreground "#14373C")
+  (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#660000"))
 
 
 (eval-after-load "rainbow-delimiters" '(soothe-rainbow-delim-set-face))
