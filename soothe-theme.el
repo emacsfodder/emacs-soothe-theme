@@ -1,25 +1,22 @@
-;; soothe-theme.el --- REQUIRES EMACS 24: A Color Theme for Emacs.
-;; Copyright (C) 2012-13 Jason Milkins.
-;;
-;; Author: Jason Milkins <jasonm23@gmail.com>
-;; URL: https://github.com/jasonm23/emacs-soothe-theme
-;; Version: 0.1.3
-;;
-;; This program is free software: you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation, version 3 of the License.
-;;
-;; This file is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
-;;
-;; You should have received a copy of the GNU General Public License
-;; along with GNU Emacs.
-;;
-;; This file is not a part of Emacs
-;;
-;; 
+;;; soothe-theme.el --- a light on dark color theme for Emacs24.
+;;; Author: Jason Milkins <jasonm23@gmail.com>
+;;; Url: https://github.com/jasonm23/emacs-soothe-theme
+;;; Version: 0.1.3
+;;;
+;;; This program is free software: you can redistribute it and/or modify
+;;; it under the terms of the GNU General Public License as published by
+;;; the Free Software Foundation, version 3 of the License.
+;;;
+;;; This file is distributed in the hope that it will be useful,
+;;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;; GNU General Public License for more details.
+;;;
+;;; You should have received a copy of the GNU General Public License
+;;; along with GNU Emacs.
+;;;
+;;; This file is not a part of Emacs
+;;;
 
 (unless (>= 24 emacs-major-version)
   (error "soothe-theme requires Emacs 24 or later."))
@@ -232,10 +229,10 @@
   (set-face-attribute 'rainbow-delimiters-depth-1-face   nil :foreground "#6ef" )
   (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#1ad" )
   (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#168" )
-  (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#148" )
-  (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#018" )
-  (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#013" )
-  (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#135" )
+  (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#146" )
+  (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#036" )
+  (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#033" )
+  (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#134" )
   (set-face-attribute 'rainbow-delimiters-depth-8-face   nil :foreground "#156" )
   (set-face-attribute 'rainbow-delimiters-depth-9-face   nil :foreground "#189" )
   (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#600" ))
@@ -249,3 +246,5 @@
                (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'soothe)
+
+;;; soothe-theme.el ends here
