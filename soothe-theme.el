@@ -1,7 +1,7 @@
-;;; soothe-theme.el --- a light on dark color theme for Emacs24.
+;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 0.2.0
+;;; Version: 0.3
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -88,6 +88,7 @@
        (alt-background   "#111013"))
 
   ;; Terminal colors - set background to black.
+  ;; FIXME: Use defface method (class color) (min-colors ...)
  
   (unless (window-system)
     (setq background      "#000000")
@@ -200,16 +201,15 @@
    ;;-----------------------------------------------------------------------------------------------------------------------
    )
 
-
   (custom-theme-set-variables
    'soothe
 
    `(powerline-color1 ,gray-6)
    `(powerline-color2 ,gray-3bg)
+   `(mainline-color1 ,gray-g)
+   `(mainline-color2 ,gray-3bg)
    `(Linum-format "%7i ")
    `(fringe-mode 4)
-
-   `(whitespace-)
 
    ;; Fill Column Indicator mode
    `(fci-rule-color ,gray-6)
@@ -248,3 +248,4 @@
 (provide-theme 'soothe)
 
 ;;; soothe-theme.el ends here
+
