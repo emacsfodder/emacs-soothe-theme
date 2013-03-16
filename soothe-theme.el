@@ -1,12 +1,13 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 0.3.4
+;;; Version: 0.3.5
 ;;;
 ;;; Changelog:
-;;; 0.3.4 added support for main-line and flymake
-;;; 0.3.0 cleaned up for elpa
-;;; 0.1.0 initial version
+;;; 0.3.5 : bugfix
+;;; 0.3.4 : added support for main-line and flymake
+;;; 0.3.0 : cleaned up for elpa
+;;; 0.1.0 : initial version
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
