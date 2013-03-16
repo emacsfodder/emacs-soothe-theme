@@ -1,7 +1,12 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 0.3
+;;; Version: 0.3.4
+;;;
+;;; Changelog:
+;;; 0.3.4 added support for main-line and flymake
+;;; 0.3.0 cleaned up for elpa
+;;; 0.1.0 initial version
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -17,22 +22,22 @@
 ;;;
 ;;; This file is not a part of Emacs
 ;;;
+;;; Commentary: An amalgam of muted color tones and highlighted
+;;;   backgrounds.  Builtin support for rainbow-delimiters, org-mode,
+;;;   whitespace-mode, ECB, flyspell, ido, linum, highlight
+;;;   indentation, show-paren-mode, further mode support to come.
 
 (unless (>= 24 emacs-major-version)
   (error "soothe-theme requires Emacs 24 or later."))
 
 (deftheme soothe
-  "soothe-theme An amalgam of muted color tones and
-   highlighted backgrounds.  Has builtin support for
-   rainbow-delimiters, org-mode, whitespace-mode, ECB, flyspell,
-   ido, linum, highlight-indentation, show-paren-mode, more mode
-   support to come.")
+  "soothe-theme An amalgam of muted color tones and highlighted
+   backgrounds.  Has builtin support for rainbow-delimiters,
+   org-mode, whitespace-mode, ECB, flyspell, ido, linum,
+   highlight indentation, show-paren-mode, further mode support
+   to come.")
 
-(let  (
-       ;; mode-line-font - tighten up the modeline by making it
-       ;; variable pitch. This theme also uses powerline.el
-       (mode-line-font "Droid Sans")
-
+(let  (      
        ;; Palette
        (foam             "#E0E4CC")
        (snow-code        "#ECE5CE")
@@ -177,6 +182,10 @@
    `(flyspell-incorrect                        ((t (:underline ,red-2                                                   ))))
    `(flyspell-duplicate                        ((t (:underline ,green-2                                                 ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
+   ;; flymake-mode
+   `(flymake-errline                           ((t (:underline ,red-2                                                   ))))
+   `(flymake-warnline                          ((t (:underline ,green-2                                                 ))))
+   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; magit
    `(magit-diff-add                            ((t (:foreground ,green-1                                                ))))
    `(magit-diff-del                            ((t (:foreground ,red-2                                                  ))))
@@ -206,8 +215,8 @@
 
    `(powerline-color1 ,gray-6)
    `(powerline-color2 ,gray-3bg)
-   `(mainline-color1 ,gray-g)
-   `(mainline-color2 ,gray-3bg)
+   `(main-line-color1 ,gray-6)
+   `(main-line-color2 ,gray-3bg)
    `(Linum-format "%7i ")
    `(fringe-mode 4)
 
