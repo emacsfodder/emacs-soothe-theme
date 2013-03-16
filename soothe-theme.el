@@ -152,7 +152,7 @@
    ;; UI related
    `(link                                      ((t (:foreground ,blue-1      :background ,blue-1bg                      ))))
    `(fringe                                    ((t (                         :background ,gray-3bg                      ))))
-   `(mode-line                                 ((t (:foreground ,gray-2      :background ,gray-3bg  :box nil :height 85 :family ,mode-line-font ))))
+   `(mode-line                                 ((t (:foreground ,gray-2      :background ,gray-3bg  :box nil :height 85 ))))
    `(mode-line-inactive                        ((t (:foreground ,gray-6      :background ,gray-3bg  :box nil :height 85 ))))
    `(vertical-border                           ((t (:foreground ,gray-4      :background ,background                    ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
