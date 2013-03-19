@@ -1,7 +1,7 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 0.3.7
+;;; Version: 0.3.8
 ;;;
 ;;; Changelog:
 ;;; 0.3.8 : Added support for isearch
