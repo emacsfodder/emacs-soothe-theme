@@ -78,8 +78,9 @@
        (orange-1bg       "#1F1710")
        (yellow-1         "#ceae3e")
        (yellow-1bg       "#18140C")
-       (green-1          "#719f34")
+       (green-1          "#719f34")       
        (green-2          "#3e8f75")
+       (green-3          "#839F5E")
        (green-1bg        "#1a2321")
        (green-2bg        "#1a2321")
        (turquoise-1      "#01535F")
@@ -143,6 +144,7 @@
    `(hl-line                                   ((t (                         :background ,hl-line                       ))))
    `(minibuffer-prompt                         ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
    `(escape-glyph                              ((t (:foreground ,red-1       :background ,purple-1bg                    ))))
+   `(error                                     ((t (:foreground ,red-1       :background ,red-1bg                       ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Font-lock stuff
    `(font-lock-builtin-face                    ((t (:foreground ,red-2       :background ,red-1bg                       ))))
@@ -278,11 +280,11 @@
    ;; ido
    `(ido-only-match                            ((t (:foreground ,green-1     :background ,green-1bg                     ))))
    `(ido-subdir                                ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
-
-  ;; ido-first-match
-  ;; ido-incomplete-regexp
-  ;; ido-indicator
-  ;; ido-virtual
+   `(ido-first-match                           ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
+   
+   ;; ido-incomplete-regexp
+   ;; ido-indicator
+   ;; ido-virtual
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; whitespace-mode
    `(whitespace-empty                          ((t (:foreground ,yellow-1    :background ,turquoise-2bg                 ))))
@@ -300,8 +302,8 @@
    `(flyspell-duplicate                        ((t (:underline ,green-2                                                 ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; flymake-mode
-   `(flymake-errline                           ((t (:underline ,red-2                                                   ))))
-   `(flymake-warnline                          ((t (:underline ,green-2                                                 ))))
+   `(flymake-errline                           ((t (:underline ,red-2        :inherit nil                               ))))
+   `(flymake-warnline                          ((t (:underline ,green-2      :inherit nil                               ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; dropdown-list
    `(dropdown-list-selection-face              ((t (:foreground ,foam        :background ,purple-1bg                    ))))
@@ -316,36 +318,36 @@
    ;; 
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; magit
-   `(magit-diff-add                            ((t (:foreground ,green-1                                                ))))
-   `(magit-diff-del                            ((t (:foreground ,red-2                                                  ))))
+   `(magit-diff-add                            ((t (:foreground ,green-3     :background ,green-2bg                     ))))
+   `(magit-diff-del                            ((t (:foreground ,red-1       :background ,red-1bg                       ))))
    `(magit-item-highlight                      ((t (                         :background ,gray-1bg                      ))))
 
    ;; Preparation for extended magit mode theming
-   ;; `(magit-branch 	 ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-whitespace-warning-face      ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-section-title                ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-header                       ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-item-mark                    ((t (:foreground ,foam        :background ,background       ))))
-   ;;                                            
-   ;; `(magit-diff-hunk-header 	 ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-diff-merge-proposed 	 ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-diff-none 	 ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-diff-file-header             ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-diff-merge-current           ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-diff-merge-separator         ((t (:foreground ,foam        :background ,background       ))))
-   ;;                                            
-   ;; `(magit-log-author 	 ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-log-graph 	 ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-log-head-label-bisect-good 	 ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-log-head-label-local 	 ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-log-head-label-remote 	 ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-log-message 	 ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-log-date                     ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-log-head-label-bisect-bad    ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-log-head-label-default       ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-log-head-label-patches       ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-log-head-label-tags          ((t (:foreground ,foam        :background ,background       ))))
-   ;; `(magit-log-sha1                     ((t (:foreground ,foam        :background ,background       ))))
+   `(magit-branch                              ((t (:foreground ,green-2     :background ,green-2bg                     ))))
+   `(magit-whitespace-warning-face             ((t (:foreground ,red-3       :background ,red-1bg                       ))))
+   `(magit-section-title                       ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
+   `(magit-header                              ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
+   `(magit-item-mark                           ((t (:foreground ,green-1                                                ))))
+                                                     
+   `(magit-diff-hunk-header                    ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
+   `(magit-diff-merge-proposed                 ((t (:foreground ,foam                                                   ))))
+   `(magit-diff-none                           ((t (:foreground ,foam                                                   ))))
+   `(magit-diff-file-header                    ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
+   `(magit-diff-merge-current                  ((t (:foreground ,blue-1                                                 ))))
+   `(magit-diff-merge-separator                ((t (:foreground ,blue-2                                                 ))))
+                                                     
+   `(magit-log-author                          ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
+   `(magit-log-graph                           ((t (:foreground ,blue-2      :background ,blue-2bg                      ))))
+   `(magit-log-head-label-bisect-good          ((t (:foreground ,turquoise-1 :background ,turquoise-1bg                 ))))
+   `(magit-log-head-label-local                ((t (:foreground ,foam        :background ,turquoise-1bg                 ))))
+   `(magit-log-head-label-remote               ((t (:foreground ,brown-1     :background ,brown-1bg                     ))))
+   `(magit-log-message                         ((t (:foreground ,foam        :background ,background                    ))))
+   `(magit-log-date                            ((t (:foreground ,green-2     :background ,green-2bg                     ))))
+   `(magit-log-head-label-bisect-bad           ((t (:foreground ,red-1       :background ,red-1bg                       ))))
+   `(magit-log-head-label-default              ((t (:foreground ,foam        :background ,turquoise-1bg                 ))))
+   `(magit-log-head-label-patches              ((t (:foreground ,blue-2      :background ,blue-1bg                      ))))
+   `(magit-log-head-label-tags                 ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
+   `(magit-log-sha1                            ((t (:foreground ,blue-1      :background ,blue-1bg                      ))))
 
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; iedit-occurrence
@@ -392,18 +394,35 @@
    )
   )
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ;; Rainbow delimiters
 (defun soothe-rainbow-delim-set-face ()
-  (set-face-attribute 'rainbow-delimiters-depth-1-face   nil :foreground "#6ef" )
-  (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#1ad" )
-  (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#168" )
-  (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#146" )
-  (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#036" )
-  (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#033" )
-  (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#134" )
-  (set-face-attribute 'rainbow-delimiters-depth-8-face   nil :foreground "#156" )
-  (set-face-attribute 'rainbow-delimiters-depth-9-face   nil :foreground "#189" )
-  (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#600" ))
+  (set-face-attribute 'rainbow-delimiters-depth-1-face   nil :foreground "#2B583D")
+  (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#2B5858")
+  (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#2B3C58")
+  (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#342B58")
+  (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#4F2B58") 
+  (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#582B45")
+  (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#58462B")
+  (set-face-attribute 'rainbow-delimiters-depth-8-face   nil :foreground "#4E582B")   
+  (set-face-attribute 'rainbow-delimiters-depth-9-face   nil :foreground "#33582B")
+  (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#660000"))
 
 
 (eval-after-load "rainbow-delimiters" '(soothe-rainbow-delim-set-face))
