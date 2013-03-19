@@ -1,9 +1,14 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 0.3.6
+;;; Version: 0.3.7
 ;;;
 ;;; Changelog:
+;;; 0.3.7 : extended magit support
+;;;       : added iedit support
+;;;       : added CUA support
+;;;       : added AutoComplete support
+;;;       : changed rainbow delimiters for better visibility
 ;;; 0.3.6 : beginning work on additional mode support
 ;;;       : added git-gutter
 ;;;       : added dropdown-list
@@ -53,6 +58,8 @@
        (foam             "#E0E4CC")
        (snow-code        "#ECE5CE")
        (crem             "#F4EAD5")
+       (dirty-crem       "#DBD2BF")
+       (dirty-crem-bg    "#2B2A26")
        (gray-1           "#aaaaaa")
        (gray-2           "#828282")
        (gray-3           "#333333")
@@ -96,7 +103,12 @@
        (blue-3bg         "#132228")
        (blue-4bg         "#172028")
        (purple-1         "#7868b5")
+       (purple-2         "#8A7FB5")
+       (purple-3         "#483E6C")
+       (purple-4         "#342B58")
        (purple-1bg       "#1D1B25")
+       (purple-2bg       "#302948")
+       (purple-3bg       "#241F36")
        (foreground       "#F4EAD5")
        (hl-line          "#11152a")
        (selection        "#11152a")
@@ -111,6 +123,7 @@
     (setq background      "#000000")
     (setq background-dark "#000000")
     (setq alt-background  "#000000")
+    (setq dirty-crem-bg   "#000000")
     (setq gray-1bg        "#000000")
     (setq gray-2bg        "#000000")
     (setq gray-3bg        "#000000")
@@ -130,7 +143,10 @@
     (setq blue-2bg        "#000000")
     (setq blue-3bg        "#000000")
     (setq blue-4bg        "#000000")
-    (setq purple-1bg      "#000000"))
+    (setq purple-1bg      "#000000")
+    (setq purple-2bg      "#000000")
+    (setq purple-3bg      "#000000")
+    )
 
   (custom-theme-set-faces
    'soothe
@@ -138,7 +154,7 @@
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Basics
    `(default                                   ((t (:foreground ,foreground  :background ,background                    ))))
-   `(cursor                                    ((t (                         :background ,red-2                         ))))
+   `(cursor                                    ((t (                         :background ,orange-1                      ))))
    `(region                                    ((t (:foreground nil          :background ,selection                     ))))
    `(highlight                                 ((t (:foreground ,blue-3      :background ,blue-3bg                      ))))
    `(hl-line                                   ((t (                         :background ,hl-line                       ))))
@@ -184,27 +200,38 @@
    ;; `(completions-first-difference           ((t (:foreground ,foam        :background ,background                    )))) 
 
    ;;-----------------------------------------------------------------------------------------------------------------------
-   ;; Auto Complete - preparation for theming
-   ;; `(ac-candidate-face           ((t (:foreground ,background :background ,foam )))) 
-   ;; `(ac-candidate-mouse-face     ((t (:foreground ,background :background ,foam )))) 
-   ;; `(ac-completion-face          ((t (:foreground ,background :background ,foam )))) 
-   ;; `(ac-gtags-candidate-face     ((t (:foreground ,background :background ,foam )))) 
-   ;; `(ac-gtags-selection-face     ((t (:foreground ,background :background ,foam )))) 
-   ;; `(ac-selection-face           ((t (:foreground ,background :background ,foam )))) 
-   ;; `(ac-yasnippet-candidate-face ((t (:foreground ,background :background ,foam )))) 
-   ;; `(ac-yasnippet-selection-face ((t (:foreground ,background :background ,foam )))) 
-
+   ;; Auto Complete
+   ;;
+   `(ac-selection-face           ((t (:foreground ,dirty-crem :background ,dirty-crem-bg )))) 
+   `(ac-candidate-face           ((t (:foreground ,background :background ,dirty-crem )))) 
+   `(ac-yasnippet-candidate-face ((t (:foreground ,background :background ,green-2 ))))
+   `(ac-yasnippet-selection-face ((t (:foreground ,foam       :background ,dirty-crem-bg )))) 
+   `(ac-gtags-candidate-face     ((t (:foreground ,background :background ,purple-3 )))) 
+   `(ac-gtags-selection-face     ((t (:foreground ,dirty-crem :background ,dirty-crem-bg )))) 
+   `(ac-candidate-mouse-face     ((t (:foreground ,foam       :background ,turquoise-1 )))) 
+   `(ac-completion-face          ((t (:foreground ,snow-code  :background ,purple-3bg :underline t )))) 
+   ;; used by AC
+   `(popup-tip-face                            ((t (:foreground ,dirty-crem  :background ,dirty-crem-bg                 ))))
+   ;;; popup-face
+   ;;; popup-isearch-match
+   ;;; popup-menu-face
+   ;;; popup-menu-mouse-face
+   ;;; popup-menu-selection-face
+   ;;; popup-menu-summary-face
+   ;;; popup-scroll-bar-background-face
+   ;;; popup-scroll-bar-foreground-face
+   ;;; popup-summary-face  
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Dired
-   ;; dired-directory
-   ;; dired-flagged
-   ;; dired-header
-   ;; dired-ignored
-   ;; dired-mark
-   ;; dired-marked
-   ;; dired-perm-write
-   ;; dired-symlink
-   ;; dired-warning
+   `(dired-directory                           ((t (:foreground ,dirty-crem  :background ,background                    )))) 
+   `(dired-flagged                             ((t (:foreground ,red-1       :background ,orange-1bg                    )))) 
+   `(dired-header                              ((t (:foreground ,orange-1    :background ,background                    )))) 
+   `(dired-ignored                             ((t (:foreground ,turquoise-1 :background ,background                    )))) 
+   `(dired-mark                                ((t (:foreground ,orange-2    :background ,background                    )))) 
+   `(dired-marked                              ((t (:foreground ,green-3     :background ,orange-1bg                    )))) 
+   `(dired-perm-write                          ((t (:foreground ,foam        :background ,background                    )))) 
+   `(dired-symlink                             ((t (:foreground ,purple-3    :background ,purple-1bg                    )))) 
+   `(dired-warning                             ((t (:foreground ,red-1       :background ,red-2bg                       )))) 
 
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Gnus
@@ -281,10 +308,9 @@
    `(ido-only-match                            ((t (:foreground ,green-1     :background ,green-1bg                     ))))
    `(ido-subdir                                ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
    `(ido-first-match                           ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
-   
-   ;; ido-incomplete-regexp
-   ;; ido-indicator
-   ;; ido-virtual
+   `(ido-incomplete-regexp                     ((t (:foreground ,red-1       :background ,orange-1bg                    ))))
+   `(ido-indicator                             ((t (:foreground ,turquoise-1 :background ,turquoise-1bg                 ))))
+   `(ido-virtual                               ((t (:foreground ,green-3     :background ,turquoise-1bg                 ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; whitespace-mode
    `(whitespace-empty                          ((t (:foreground ,yellow-1    :background ,turquoise-2bg                 ))))
@@ -315,44 +341,37 @@
    `(git-gutter:modified                       ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
    `(git-gutter:unchanged                      ((t (                         :background ,yellow-1bg                    ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
-   ;; 
-   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; magit
    `(magit-diff-add                            ((t (:foreground ,green-3     :background ,green-2bg                     ))))
    `(magit-diff-del                            ((t (:foreground ,red-1       :background ,red-1bg                       ))))
-   `(magit-item-highlight                      ((t (                         :background ,gray-1bg                      ))))
-
-   ;; Preparation for extended magit mode theming
+   `(magit-item-highlight                      ((t (                         :background ,purple-3bg                    ))))
    `(magit-branch                              ((t (:foreground ,green-2     :background ,green-2bg                     ))))
    `(magit-whitespace-warning-face             ((t (:foreground ,red-3       :background ,red-1bg                       ))))
    `(magit-section-title                       ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
    `(magit-header                              ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
    `(magit-item-mark                           ((t (:foreground ,green-1                                                ))))
-                                                     
    `(magit-diff-hunk-header                    ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
    `(magit-diff-merge-proposed                 ((t (:foreground ,foam                                                   ))))
    `(magit-diff-none                           ((t (:foreground ,foam                                                   ))))
    `(magit-diff-file-header                    ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
    `(magit-diff-merge-current                  ((t (:foreground ,blue-1                                                 ))))
    `(magit-diff-merge-separator                ((t (:foreground ,blue-2                                                 ))))
-                                                     
    `(magit-log-author                          ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
    `(magit-log-graph                           ((t (:foreground ,blue-2      :background ,blue-2bg                      ))))
    `(magit-log-head-label-bisect-good          ((t (:foreground ,turquoise-1 :background ,turquoise-1bg                 ))))
    `(magit-log-head-label-local                ((t (:foreground ,foam        :background ,turquoise-1bg                 ))))
-   `(magit-log-head-label-remote               ((t (:foreground ,brown-1     :background ,brown-1bg                     ))))
-   `(magit-log-message                         ((t (:foreground ,foam        :background ,background                    ))))
-   `(magit-log-date                            ((t (:foreground ,green-2     :background ,green-2bg                     ))))
+   `(magit-log-head-label-remote               ((t (:foreground ,foam        :background ,purple-2bg                    ))))
+   `(magit-log-message                         ((t (:foreground ,dirty-crem  :background ,background                    ))))
+   `(magit-log-date                            ((t (:foreground ,blue-4      :background ,background                    ))))
    `(magit-log-head-label-bisect-bad           ((t (:foreground ,red-1       :background ,red-1bg                       ))))
    `(magit-log-head-label-default              ((t (:foreground ,foam        :background ,turquoise-1bg                 ))))
    `(magit-log-head-label-patches              ((t (:foreground ,blue-2      :background ,blue-1bg                      ))))
    `(magit-log-head-label-tags                 ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
-   `(magit-log-sha1                            ((t (:foreground ,blue-1      :background ,blue-1bg                      ))))
-
+   `(magit-log-sha1                            ((t (:foreground ,turquoise-1 :background ,turquoise-1bg                 ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
-   ;; iedit-occurrence
-   ;; iedit-read-only-occurrence
- 
+   ;; IEdit
+   `(iedit-occurrence                          ((t (:foreground ,green-3   :background ,orange-1bg                     )))) 
+   `(iedit-read-only-occurrence                ((t (:foreground ,red-1     :background ,orange-1bg                     )))) 
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; highlight-indentation-mode
    `(highlight-indentation-face                ((t (                         :background ,background-dark               ))))
@@ -371,6 +390,10 @@
    `(org-link                                  ((t (:foreground ,blue-1      :background ,blue-1bg                      ))))
    `(org-todo                                  ((t (:foreground ,red-1       :background ,red-1bg                       ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
+   ;; cua-mode
+   `(cua-global-mark        ((t(:foreground ,foam :background ,turquoise-1                                              )))) 
+   `(cua-rectangle          ((t(:foreground ,foam :background ,purple-4                                                 )))) 
+   `(cua-rectangle-noselect ((t(:foreground ,foam :background ,orange-1                                                 )))) 
    )
 
   (custom-theme-set-variables
@@ -393,23 +416,6 @@
      [unspecified ,background ,red-1 ,green-1 ,yellow-1 ,blue-1 ,purple-1 ,blue-3 ,foreground])
    )
   )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ;; Rainbow delimiters
 (defun soothe-rainbow-delim-set-face ()
@@ -463,10 +469,6 @@
 ;;; completions-annotations
 ;;; completions-common-part
 ;;; completions-first-difference
-
-;;; cua-global-mark
-;;; cua-rectangle
-;;; cua-rectangle-noselect
 
 ;;; custom-button
 ;;; custom-button-mouse
@@ -599,16 +601,6 @@
 ;;; org-link
 ;;; org-todo
 
-;;; popup-face
-;;; popup-isearch-match
-;;; popup-menu-face
-;;; popup-menu-mouse-face
-;;; popup-menu-selection-face
-;;; popup-menu-summary-face
-;;; popup-scroll-bar-background-face
-;;; popup-scroll-bar-foreground-face
-;;; popup-summary-face
-;;; popup-tip-face
 
 ;;; powerline-active1
 ;;; powerline-active2
