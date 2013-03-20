@@ -18,7 +18,7 @@
 ;;; 0.3.6 : beginning work on additional mode support
 ;;;       : added git-gutter
 ;;;       : added dropdown-list
-;;;       : added stubs/extention lists for guns, rcirc, message
+;;;       : added stubs/extention lists for gnus, rcirc, message
 ;;;       :       ido + magit (more),
 ;;;       :       ac, compilation,
 ;;;       :       dired, diff, iedit,
