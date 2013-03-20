@@ -1,34 +1,35 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 0.3.9
+;;; Version: 0.3.10
 ;;;
 ;;; Changelog:
-;;; 0.3.9 : Slightly improved dired support
-;;; 0.3.8 : Added support for isearch
-;;;       : Additional support for mode-line
-;;;       : modified main-line colors
-;;;       : modified link / link-visited
-;;;       : added tooltip face
-;;; 0.3.7 : extended magit support
-;;;       : added iedit support
-;;;       : added CUA support
-;;;       : added AutoComplete support
-;;;       : changed rainbow delimiters for better visibility
-;;; 0.3.6 : beginning work on additional mode support
-;;;       : added git-gutter
-;;;       : added dropdown-list
-;;;       : added stubs/extention lists for gnus, rcirc, message
-;;;       :       ido + magit (more),
-;;;       :       ac, compilation,
-;;;       :       dired, diff, iedit,
-;;;       :       cua, change, Man, woman,
-;;;       :       commint, info, custom, popup
-;;;       :       widget, whitespace, w3m, more...
-;;; 0.3.5 : bugfix
-;;; 0.3.4 : added support for main-line and flymake
-;;; 0.3.0 : cleaned up for elpa
-;;; 0.1.0 : initial version
+;;; 0.3.10 : Themed Mode line emphasis 
+;;; 0.3.9  : Slightly improved dired support
+;;; 0.3.8  : Added support for isearch
+;;;        : Additional support for mode-line
+;;;        : modified main-line colors
+;;;        : modified link / link-visited
+;;;        : added tooltip face
+;;; 0.3.7  : extended magit support
+;;;        : added iedit support
+;;;        : added CUA support
+;;;        : added AutoComplete support
+;;;        : changed rainbow delimiters for better visibility
+;;; 0.3.6  : beginning work on additional mode support
+;;;        : added git-gutter
+;;;        : added dropdown-list
+;;;        : added stubs/extention lists for gnus, rcirc, message
+;;;        :       ido + magit (more),
+;;;        :       ac, compilation,
+;;;        :       dired, diff, iedit,
+;;;        :       cua, change, Man, woman,
+;;;        :       commint, info, custom, popup
+;;;        :       widget, whitespace, w3m, more...
+;;; 0.3.5  : bugfix
+;;; 0.3.4  : added support for main-line and flymake
+;;; 0.3.0  : cleaned up for elpa
+;;; 0.1.0  : initial version
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -193,7 +194,7 @@
    `(mode-line-inactive                        ((t (:foreground ,gray-5      :background ,gray-2bg  :box nil :height 85 ))))
    `(mode-line-highlight                       ((t (:box nil))))
    ;; mode-line-buffer-id
-   ;; mode-line-emphasis
+   `(mode-line-emphasis                        ((t (:bold))))
    ;; mode-line-inactive
 
    ;;-----------------------------------------------------------------------------------------------------------------------
@@ -317,10 +318,10 @@
 
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Linum
-   `(linum                                     ((t (:foreground ,dirty-crem-bg :background ,alt-background :height 90     ))))
+   `(linum                                     ((t (:foreground ,dirty-crem-bg :background ,alt-background :height 90   ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; show-paren-mode
-   `(show-paren-match                          ((t (:foreground ,foam        :background ,red-1bg                       ))))
+   `(show-paren-match                          ((t (:foreground ,foam        :background ,orange-1                      ))))
    `(show-paren-mismatch                       ((t (:foreground ,orange-1    :background ,red-2bg                       ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; ido
