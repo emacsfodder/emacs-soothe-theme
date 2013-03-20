@@ -1,9 +1,10 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 0.3.8
+;;; Version: 0.3.9
 ;;;
 ;;; Changelog:
+;;; 0.3.9 : Slightly improved dired support
 ;;; 0.3.8 : Added support for isearch
 ;;;       : Additional support for mode-line
 ;;;       : modified main-line colors
@@ -241,14 +242,14 @@
    ;;; popup-summary-face  
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Dired
-   `(dired-directory                           ((t (:foreground ,dirty-crem  :background ,background                    )))) 
+   `(dired-directory                           ((t (:foreground ,purple-1    :background ,purple-1bg                    )))) 
    `(dired-flagged                             ((t (:foreground ,red-1       :background ,orange-1bg                    )))) 
    `(dired-header                              ((t (:foreground ,orange-1    :background ,background                    )))) 
    `(dired-ignored                             ((t (:foreground ,turquoise-1 :background ,background                    )))) 
    `(dired-mark                                ((t (:foreground ,orange-2    :background ,background                    )))) 
    `(dired-marked                              ((t (:foreground ,green-3     :background ,orange-1bg                    )))) 
    `(dired-perm-write                          ((t (:foreground ,foam        :background ,background                    )))) 
-   `(dired-symlink                             ((t (:foreground ,purple-3    :background ,purple-1bg                    )))) 
+   `(dired-symlink                             ((t (:foreground ,blue-1      :background ,blue-4bg                      )))) 
    `(dired-warning                             ((t (:foreground ,red-1       :background ,red-2bg                       )))) 
 
    ;;-----------------------------------------------------------------------------------------------------------------------
