@@ -1,9 +1,10 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 0.3.10
+;;; Version: 0.3.11
 ;;;
 ;;; Changelog:
+;;; 0.3.11 : Added rainbow-mode switch for editing
 ;;; 0.3.10 : Themed Mode line emphasis 
 ;;; 0.3.9  : Slightly improved dired support
 ;;; 0.3.8  : Added support for isearch
@@ -734,5 +735,9 @@
 
 ;;; yas--field-debug-face
 ;;; yas-field-highlight-face
+
+;; Local Variables:
+;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode +1))
+;; End:
 
 ;;; soothe-theme.el ends here
