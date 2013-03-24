@@ -1,9 +1,10 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 0.3.13
+;;; Version: 0.3.14
 ;;;
 ;;; Changelog:
+;;; 0.3.14 : Changed main-line colors and style, added powerline colors
 ;;; 0.3.13 : Different colors for hl-line and region 
 ;;; 0.3.12 : Fixed issue #4 - region bg contrast too low.
 ;;; 0.3.11 : Added rainbow-mode switch for editing
@@ -422,8 +423,16 @@
   (custom-theme-set-variables
    'soothe
 
-   `(main-line-color1 ,purple-1bg)
+   `(main-line-color1 ,gray-6bg)
    `(main-line-color2 ,gray-2bg)
+
+   `(main-line-separator-style
+     'chamfer
+     )
+   
+   `(powerline-color1 ,gray-6bg)
+   `(powerline-color2 ,gray-2bg)
+   
    `(Linum-format "%7i ")
    `(fringe-mode 4)
 
