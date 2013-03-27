@@ -303,13 +303,14 @@
 
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Diff
-   ;; diff-added
+   `(diff-added                                ((t (:foreground ,green-3     :background ,green-2bg                     ))))
+   `(diff-removed                              ((t (:foreground ,red-1       :background ,red-1bg                       ))))
+   `(diff-file-header                          ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
+   `(diff-context                              ((t (:foreground ,foam                                                   ))))
+   `(diff-hunk-header                          ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
    ;; diff-changed
-   ;; diff-context   
-   ;; diff-file-header
    ;; diff-function
    ;; diff-header
-   ;; diff-hunk-header
    ;; diff-index
    ;; diff-indicator-added
    ;; diff-indicator-changed
@@ -318,7 +319,6 @@
    ;; diff-refine-added
    ;; diff-refine-change
    ;; diff-refine-removed
-   ;; diff-removed
 
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Linum
@@ -366,18 +366,13 @@
    `(git-gutter:unchanged                      ((t (                         :background ,yellow-1bg                    ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; magit
-   `(magit-diff-add                            ((t (:foreground ,green-3     :background ,green-2bg                     ))))
-   `(magit-diff-del                            ((t (:foreground ,red-1       :background ,red-1bg                       ))))
    `(magit-item-highlight                      ((t (                         :background ,purple-3bg                    ))))
    `(magit-branch                              ((t (:foreground ,green-2     :background ,green-2bg                     ))))
    `(magit-whitespace-warning-face             ((t (:foreground ,red-3       :background ,red-1bg                       ))))
    `(magit-section-title                       ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
    `(magit-header                              ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
    `(magit-item-mark                           ((t (:foreground ,green-1                                                ))))
-   `(magit-diff-hunk-header                    ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
    `(magit-diff-merge-proposed                 ((t (:foreground ,foam                                                   ))))
-   `(magit-diff-none                           ((t (:foreground ,foam                                                   ))))
-   `(magit-diff-file-header                    ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
    `(magit-diff-merge-current                  ((t (:foreground ,blue-1                                                 ))))
    `(magit-diff-merge-separator                ((t (:foreground ,blue-2                                                 ))))
    `(magit-log-author                          ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
