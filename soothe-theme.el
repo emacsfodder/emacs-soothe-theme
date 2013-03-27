@@ -1,9 +1,11 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 0.3.14
+;;; Version: 0.3.15
 ;;;
 ;;; Changelog:
+;;; 0.3.15 : update by Sabof: Magit diff settings migrated over to diff
+;;;        : (magit will inherit from diff)
 ;;; 0.3.14 : Changed main-line colors and style, added powerline colors
 ;;; 0.3.13 : Different colors for hl-line and region 
 ;;; 0.3.12 : Fixed issue #4 - region bg contrast too low.
