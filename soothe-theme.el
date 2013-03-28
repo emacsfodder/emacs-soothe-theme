@@ -2,6 +2,7 @@
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
 ;;; Version: 0.3.15
+;;; Package-Requires: ((emacs "24.1"))
 ;;;
 ;;; Changelog:
 ;;; 0.3.15 : update by Sabof: Magit diff settings migrated over to diff
