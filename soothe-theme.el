@@ -1,11 +1,12 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 0.3.15
+;;; Version: 0.3.16
 ;;; Package-Requires: ((emacs "24.1"))
 ;;;
-;;; Changelog:
-;;; 0.3.15 : update by Sabof: Magit diff settings migrated over to diff
+;;; Change Log:
+;;; 0.3.16 : Fixed flymake colors; also added Package Requres Emacs 24 by Steve Purcell
+;;; 0.3.15 : update by Sabof; Magit diff settings migrated over to diff
 ;;;        : (magit will inherit from diff)
 ;;; 0.3.14 : Changed main-line colors and style, added powerline colors
 ;;; 0.3.13 : Different colors for hl-line and region 
@@ -355,8 +356,8 @@
    `(flyspell-duplicate                        ((t (:underline ,green-2                                                 ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; flymake-mode
-   `(flymake-errline                           ((t (:underline ,red-2        :inherit nil                               ))))
-   `(flymake-warnline                          ((t (:underline ,green-2      :inherit nil                               ))))
+   `(flymake-errline                           ((t (:underline ,red-2        :background nil :inherit nil               ))))
+   `(flymake-warnline                          ((t (:underline ,green-2      :background nil :inherit nil               ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; dropdown-list
    `(dropdown-list-selection-face              ((t (:foreground ,foam        :background ,purple-1bg                    ))))
