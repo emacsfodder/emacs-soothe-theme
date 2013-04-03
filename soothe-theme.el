@@ -326,7 +326,7 @@
 
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Linum
-   `(linum                                     ((t (:foreground ,dirty-crem-bg :background ,alt-background :height 90   ))))
+   `(linum                                     ((t (:foreground ,gray-6 :background ,alt-background :height 90   ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; show-paren-mode
    `(show-paren-match                          ((t (:foreground ,foam        :background ,orange-1                      ))))
