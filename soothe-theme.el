@@ -9,10 +9,10 @@
 ;;; 0.3.15 : update by Sabof; Magit diff settings migrated over to diff
 ;;;        : (magit will inherit from diff)
 ;;; 0.3.14 : Changed main-line colors and style, added powerline colors
-;;; 0.3.13 : Different colors for hl-line and region 
+;;; 0.3.13 : Different colors for hl-line and region
 ;;; 0.3.12 : Fixed issue #4 - region bg contrast too low.
 ;;; 0.3.11 : Added rainbow-mode switch for editing
-;;; 0.3.10 : Themed Mode line emphasis 
+;;; 0.3.10 : Themed Mode line emphasis
 ;;; 0.3.9  : Slightly improved dired support
 ;;; 0.3.8  : Added support for isearch
 ;;;        : Additional support for mode-line
@@ -68,7 +68,7 @@
    highlight indentation, show-paren-mode, further mode support
    to come.")
 
-(let  (      
+(let  (
        ;; Palette
        (foam             "#E0E4CC")
        (snow-code        "#ECE5CE")
@@ -100,7 +100,7 @@
        (orange-1bg       "#1F1710")
        (yellow-1         "#ceae3e")
        (yellow-1bg       "#18140C")
-       (green-1          "#719f34")       
+       (green-1          "#719f34")
        (green-2          "#3e8f75")
        (green-3          "#839F5E")
        (green-1bg        "#1a2321")
@@ -133,7 +133,7 @@
 
   ;; Terminal colors - set background to black.
   ;; TODO: Use defface method (class color) (min-colors ...)
- 
+
   (unless (window-system)
     (setq background      "#000000")
     (setq background-dark "#000000")
@@ -207,35 +207,35 @@
 
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; isearch
-   `(isearch                                   ((t (:foreground ,foam        :background ,purple-3                      )))) 
+   `(isearch                                   ((t (:foreground ,foam        :background ,purple-3                      ))))
    `(isearch-fail                              ((t (:foreground ,foam        :background ,red-4                         ))))
    `(lazy-highlight                            ((t (:foreground ,purple-1    :background ,green-2bg                     ))))
 
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Compilation mode
-   ;; `(compilation-column-number              ((t (:foreground ,foam        :background ,background                    )))) 
-   ;; `(compilation-error                      ((t (:foreground ,foam        :background ,background                    )))) 
-   ;; `(compilation-info                       ((t (:foreground ,foam        :background ,background                    )))) 
-   ;; `(compilation-line-number                ((t (:foreground ,foam        :background ,background                    )))) 
-   ;; `(compilation-mode-line-exit             ((t (:foreground ,foam        :background ,background                    )))) 
-   ;; `(compilation-mode-line-fail             ((t (:foreground ,foam        :background ,background                    )))) 
-   ;; `(compilation-mode-line-run              ((t (:foreground ,foam        :background ,background                    )))) 
-   ;; `(compilation-warning                    ((t (:foreground ,foam        :background ,background                    )))) 
-   ;; `(completions-annotations                ((t (:foreground ,foam        :background ,background                    )))) 
-   ;; `(completions-common-part                ((t (:foreground ,foam        :background ,background                    )))) 
-   ;; `(completions-first-difference           ((t (:foreground ,foam        :background ,background                    )))) 
+   ;; `(compilation-column-number              ((t (:foreground ,foam        :background ,background                    ))))
+   ;; `(compilation-error                      ((t (:foreground ,foam        :background ,background                    ))))
+   ;; `(compilation-info                       ((t (:foreground ,foam        :background ,background                    ))))
+   ;; `(compilation-line-number                ((t (:foreground ,foam        :background ,background                    ))))
+   ;; `(compilation-mode-line-exit             ((t (:foreground ,foam        :background ,background                    ))))
+   ;; `(compilation-mode-line-fail             ((t (:foreground ,foam        :background ,background                    ))))
+   ;; `(compilation-mode-line-run              ((t (:foreground ,foam        :background ,background                    ))))
+   ;; `(compilation-warning                    ((t (:foreground ,foam        :background ,background                    ))))
+   ;; `(completions-annotations                ((t (:foreground ,foam        :background ,background                    ))))
+   ;; `(completions-common-part                ((t (:foreground ,foam        :background ,background                    ))))
+   ;; `(completions-first-difference           ((t (:foreground ,foam        :background ,background                    ))))
 
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Auto Complete
    ;;
-   `(ac-selection-face                         ((t (:foreground ,dirty-crem  :background ,dirty-crem-bg                 )))) 
-   `(ac-candidate-face                         ((t (:foreground ,background  :background ,dirty-crem                    )))) 
+   `(ac-selection-face                         ((t (:foreground ,dirty-crem  :background ,dirty-crem-bg                 ))))
+   `(ac-candidate-face                         ((t (:foreground ,background  :background ,dirty-crem                    ))))
    `(ac-yasnippet-candidate-face               ((t (:foreground ,background  :background ,green-2                       ))))
-   `(ac-yasnippet-selection-face               ((t (:foreground ,foam        :background ,dirty-crem-bg                 )))) 
-   `(ac-gtags-candidate-face                   ((t (:foreground ,background  :background ,purple-3                      )))) 
-   `(ac-gtags-selection-face                   ((t (:foreground ,dirty-crem  :background ,dirty-crem-bg                 )))) 
-   `(ac-candidate-mouse-face                   ((t (:foreground ,foam        :background ,turquoise-1                   )))) 
-   `(ac-completion-face                        ((t (:foreground ,snow-code   :background ,purple-3bg :underline t       )))) 
+   `(ac-yasnippet-selection-face               ((t (:foreground ,foam        :background ,dirty-crem-bg                 ))))
+   `(ac-gtags-candidate-face                   ((t (:foreground ,background  :background ,purple-3                      ))))
+   `(ac-gtags-selection-face                   ((t (:foreground ,dirty-crem  :background ,dirty-crem-bg                 ))))
+   `(ac-candidate-mouse-face                   ((t (:foreground ,foam        :background ,turquoise-1                   ))))
+   `(ac-completion-face                        ((t (:foreground ,snow-code   :background ,purple-3bg :underline t       ))))
    ;; used by AC
    `(popup-tip-face                            ((t (:foreground ,dirty-crem  :background ,dirty-crem-bg                 ))))
    `(tooltip                                   ((t (:foreground ,dirty-crem-bg  :background ,dirty-crem :height 110 ))))
@@ -248,18 +248,18 @@
    ;;; popup-menu-summary-face
    ;;; popup-scroll-bar-background-face
    ;;; popup-scroll-bar-foreground-face
-   ;;; popup-summary-face  
+   ;;; popup-summary-face
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Dired
-   `(dired-directory                           ((t (:foreground ,purple-1    :background ,purple-1bg                    )))) 
-   `(dired-flagged                             ((t (:foreground ,red-1       :background ,orange-1bg                    )))) 
-   `(dired-header                              ((t (:foreground ,orange-1    :background ,background                    )))) 
-   `(dired-ignored                             ((t (:foreground ,turquoise-1 :background ,background                    )))) 
-   `(dired-mark                                ((t (:foreground ,orange-2    :background ,background                    )))) 
-   `(dired-marked                              ((t (:foreground ,green-3     :background ,orange-1bg                    )))) 
-   `(dired-perm-write                          ((t (:foreground ,foam        :background ,background                    )))) 
-   `(dired-symlink                             ((t (:foreground ,blue-1      :background ,blue-4bg                      )))) 
-   `(dired-warning                             ((t (:foreground ,red-1       :background ,red-2bg                       )))) 
+   `(dired-directory                           ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
+   `(dired-flagged                             ((t (:foreground ,red-1       :background ,orange-1bg                    ))))
+   `(dired-header                              ((t (:foreground ,orange-1    :background ,background                    ))))
+   `(dired-ignored                             ((t (:foreground ,turquoise-1 :background ,background                    ))))
+   `(dired-mark                                ((t (:foreground ,orange-2    :background ,background                    ))))
+   `(dired-marked                              ((t (:foreground ,green-3     :background ,orange-1bg                    ))))
+   `(dired-perm-write                          ((t (:foreground ,foam        :background ,background                    ))))
+   `(dired-symlink                             ((t (:foreground ,blue-1      :background ,blue-4bg                      ))))
+   `(dired-warning                             ((t (:foreground ,red-1       :background ,red-2bg                       ))))
 
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Gnus
@@ -393,8 +393,8 @@
    `(magit-log-sha1                            ((t (:foreground ,turquoise-1 :background ,turquoise-1bg                 ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; IEdit
-   `(iedit-occurrence                          ((t (:foreground ,green-3   :background ,orange-1bg                     )))) 
-   `(iedit-read-only-occurrence                ((t (:foreground ,red-1     :background ,orange-1bg                     )))) 
+   `(iedit-occurrence                          ((t (:foreground ,green-3   :background ,orange-1bg                     ))))
+   `(iedit-read-only-occurrence                ((t (:foreground ,red-1     :background ,orange-1bg                     ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; highlight-indentation-mode
    `(highlight-indentation-face                ((t (                         :background ,background-dark               ))))
@@ -414,9 +414,9 @@
    `(org-todo                                  ((t (:foreground ,red-1       :background ,red-1bg                       ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; cua-mode
-   `(cua-global-mark        ((t(:foreground ,foam :background ,turquoise-1                                              )))) 
-   `(cua-rectangle          ((t(:foreground ,foam :background ,purple-4                                                 )))) 
-   `(cua-rectangle-noselect ((t(:foreground ,foam :background ,orange-1                                                 )))) 
+   `(cua-global-mark        ((t(:foreground ,foam :background ,turquoise-1                                              ))))
+   `(cua-rectangle          ((t(:foreground ,foam :background ,purple-4                                                 ))))
+   `(cua-rectangle-noselect ((t(:foreground ,foam :background ,orange-1                                                 ))))
    )
 
   (custom-theme-set-variables
@@ -428,10 +428,10 @@
    `(main-line-separator-style
      'chamfer
      )
-   
+
    `(powerline-color1 ,gray-6bg)
    `(powerline-color2 ,gray-2bg)
-   
+
    `(Linum-format "%7i ")
    `(fringe-mode 4)
 
@@ -454,10 +454,10 @@
   (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#2B5858")
   (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#2B3C58")
   (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#342B58")
-  (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#4F2B58") 
+  (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#4F2B58")
   (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#582B45")
   (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#58462B")
-  (set-face-attribute 'rainbow-delimiters-depth-8-face   nil :foreground "#4E582B")   
+  (set-face-attribute 'rainbow-delimiters-depth-8-face   nil :foreground "#4E582B")
   (set-face-attribute 'rainbow-delimiters-depth-9-face   nil :foreground "#33582B")
   (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#660000"))
 
