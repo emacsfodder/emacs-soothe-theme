@@ -199,11 +199,11 @@
    `(fringe                                    ((t (                         :background ,gray-3bg                      ))))
    `(vertical-border                           ((t (:foreground ,gray-4      :background ,background                    ))))
    `(mode-line                                 ((t (:foreground ,gray-2      :background ,gray-3bg  :box nil :height 85 ))))
-   `(mode-line-inactive                        ((t (:foreground ,gray-5      :background ,gray-2bg  :box nil :height 85 ))))
-   `(mode-line-highlight                       ((t (:box nil))))
-   ;; mode-line-buffer-id
+   `(mode-line-inactive                        ((t (:foreground ,gray-5      :background ,gray-2bg  :inherit mode-line  ))))
+   `(mode-line-highlight                       ((t (:foreground ,red-1))))
+   `(mode-line-buffer-id                       ((t (:foreground ,orange-1))))
    `(mode-line-emphasis                        ((t (:bold))))
-   ;; mode-line-inactive
+   `(which-func                                ((t (:foreground ,blue-1))))
 
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; isearch
