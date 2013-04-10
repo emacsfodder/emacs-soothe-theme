@@ -1,10 +1,11 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 0.3.16
+;;; Version: 0.3.17
 ;;; Package-Requires: ((emacs "24.1"))
 ;;;
 ;;; Change Log:
+;;; 0.3.17 : Added support for which-func face (milkypostman)
 ;;; 0.3.16 : Fixed flymake colors; also added Package Requres Emacs 24 by Steve Purcell
 ;;; 0.3.15 : update by Sabof; Magit diff settings migrated over to diff
 ;;;        : (magit will inherit from diff)
