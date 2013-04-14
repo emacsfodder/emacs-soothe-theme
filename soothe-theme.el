@@ -1,10 +1,11 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 0.3.17
+;;; Version: 0.3.18
 ;;; Package-Requires: ((emacs "24.1"))
 ;;;
 ;;; Change Log:
+;;; 0.3.18 : Added stubs for helm and js3
 ;;; 0.3.17 : Added support for which-func face (milkypostman)
 ;;; 0.3.16 : Fixed flymake colors; also added Package Requres Emacs 24 by Steve Purcell
 ;;; 0.3.15 : update by Sabof; Magit diff settings migrated over to diff
@@ -250,6 +251,7 @@
    ;;; popup-scroll-bar-background-face
    ;;; popup-scroll-bar-foreground-face
    ;;; popup-summary-face
+
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Dired
    `(dired-directory                           ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
@@ -306,6 +308,64 @@
    ;; gnus-summary-normal-unread
    ;; gnus-summary-selected
 
+   ;; ------------------------------------------------------------------------------------------
+   ;; helm
+
+   ;; helm-M-x-key
+   ;; helm-action
+   ;; helm-bookmark-addressbook
+   ;; helm-bookmark-directory
+   ;; helm-bookmark-file
+   ;; helm-bookmark-gnus
+   ;; helm-bookmark-info
+   ;; helm-bookmark-man
+   ;; helm-bookmark-w3m
+   ;; helm-buffer-not-saved
+   ;; helm-buffer-process
+   ;; helm-buffer-saved-out
+   ;; helm-buffer-size
+   ;; helm-candidate-number
+   ;; helm-ff-directory
+   ;; helm-ff-executable
+   ;; helm-ff-file
+   ;; helm-ff-invalid-symlink
+   ;; helm-ff-prefix
+   ;; helm-ff-symlink
+   ;; helm-grep-cmd-line
+   ;; helm-grep-file
+   ;; helm-grep-finish
+   ;; helm-grep-lineno
+   ;; helm-grep-match
+   ;; helm-grep-running
+   ;; helm-header
+   ;; helm-helper
+   ;; helm-history-deleted
+   ;; helm-history-remote
+   ;; helm-match
+   ;; helm-moccur-buffer
+   ;; helm-selection
+   ;; helm-selection-line
+   ;; helm-separator
+   ;; helm-source-header
+   ;; helm-visible-mark
+
+   ;; ------------------------------------------------------------------------------------------
+   ;; JS3 mode
+   
+   ;; js3-error-face
+   ;; js3-external-variable-face
+   ;; js3-function-param-face
+   ;; js3-instance-member-face
+   ;; js3-jsdoc-html-tag-delimiter-face
+   ;; js3-jsdoc-html-tag-name-face
+   ;; js3-jsdoc-tag-face
+   ;; js3-jsdoc-type-face
+   ;; js3-jsdoc-value-face
+   ;; js3-magic-paren-face
+   ;; js3-private-function-call-face
+   ;; js3-private-member-face
+   ;; js3-warning-face
+   
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Diff
    `(diff-added                                ((t (:foreground ,green-3     :background ,green-2bg                     ))))
