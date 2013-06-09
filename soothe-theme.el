@@ -453,6 +453,11 @@
    `(magit-log-head-label-tags                 ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
    `(magit-log-sha1                            ((t (:foreground ,turquoise-1 :background ,turquoise-1bg                 ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
+   ;; diff-hl
+   `(diff-hl-insert                            ((t (:foreground ,green-1     :background ,green-2bg                     ))))
+   `(diff-hl-delete                            ((t (:foreground ,red-1       :background ,red-1bg                       ))))
+   `(diff-hl-change                            ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
+   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; IEdit
    `(iedit-occurrence                          ((t (:foreground ,green-3   :background ,orange-1bg                     ))))
    `(iedit-read-only-occurrence                ((t (:foreground ,red-1     :background ,orange-1bg                     ))))
