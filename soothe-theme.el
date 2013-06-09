@@ -351,7 +351,7 @@
 
    ;; ------------------------------------------------------------------------------------------
    ;; JS3 mode
-   
+
    ;; js3-error-face
    ;; js3-external-variable-face
    ;; js3-function-param-face
@@ -365,7 +365,7 @@
    ;; js3-private-function-call-face
    ;; js3-private-member-face
    ;; js3-warning-face
-   
+
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Diff
    `(diff-added                                ((t (:foreground ,green-3     :background ,green-2bg                     ))))
@@ -485,7 +485,7 @@
    `(cua-rectangle-noselect ((t(:foreground ,foam :background ,orange-1                                                 ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; hl-sexp
-   `(hl-sexp-face                              ((t (                         :background ,hl-line                       ))))
+   `(hl-sexp-face                              ((t (                         :background ,turquoise-2bg                 ))))
    )
 
   (custom-theme-set-variables
