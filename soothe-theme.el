@@ -478,6 +478,9 @@
    `(cua-global-mark        ((t(:foreground ,foam :background ,turquoise-1                                              ))))
    `(cua-rectangle          ((t(:foreground ,foam :background ,purple-4                                                 ))))
    `(cua-rectangle-noselect ((t(:foreground ,foam :background ,orange-1                                                 ))))
+   ;;-----------------------------------------------------------------------------------------------------------------------
+   ;; hl-sexp
+   `(hl-sexp-face                              ((t (                         :background ,hl-line                       ))))
    )
 
   (custom-theme-set-variables
