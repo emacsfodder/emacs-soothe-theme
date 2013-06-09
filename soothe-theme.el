@@ -511,15 +511,15 @@
 
 ;; Rainbow delimiters
 (defun soothe-rainbow-delim-set-face ()
-  (set-face-attribute 'rainbow-delimiters-depth-1-face   nil :foreground "#2B583D")
-  (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#2B5858")
-  (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#2B3C58")
-  (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#342B58")
-  (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#4F2B58")
-  (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#582B45")
-  (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#58462B")
-  (set-face-attribute 'rainbow-delimiters-depth-8-face   nil :foreground "#4E582B")
-  (set-face-attribute 'rainbow-delimiters-depth-9-face   nil :foreground "#33582B")
+  (set-face-attribute 'rainbow-delimiters-depth-1-face   nil :foreground "#2B3C58")
+  (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#4E582B")
+  (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#2B5858")
+  (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#58462B")
+  (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#33582B")
+  (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#342B58")
+  (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#582B45")
+  (set-face-attribute 'rainbow-delimiters-depth-8-face   nil :foreground "#2B583D")
+  (set-face-attribute 'rainbow-delimiters-depth-9-face   nil :foreground "#4F2B58")
   (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#660000"))
 
 
