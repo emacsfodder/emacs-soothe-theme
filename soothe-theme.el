@@ -390,7 +390,7 @@
    `(linum                                     ((t (:foreground ,gray-6 :background ,alt-background :height 90   ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; show-paren-mode
-   `(show-paren-match                          ((t (:foreground ,foam        :background ,orange-1                      ))))
+   `(show-paren-match                          ((t (:foreground ,foam        :background ,green-3                       ))))
    `(show-paren-mismatch                       ((t (:foreground ,orange-1    :background ,red-2bg                       ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; ido
