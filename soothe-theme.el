@@ -351,7 +351,7 @@
 
    ;; ------------------------------------------------------------------------------------------
    ;; JS3 mode
-   
+
    ;; js3-error-face
    ;; js3-external-variable-face
    ;; js3-function-param-face
@@ -365,7 +365,7 @@
    ;; js3-private-function-call-face
    ;; js3-private-member-face
    ;; js3-warning-face
-   
+
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Diff
    `(diff-added                                ((t (:foreground ,green-3     :background ,green-2bg                     ))))
@@ -453,6 +453,11 @@
    `(magit-log-head-label-tags                 ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
    `(magit-log-sha1                            ((t (:foreground ,turquoise-1 :background ,turquoise-1bg                 ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
+   ;; diff-hl
+   `(diff-hl-insert                            ((t (:foreground ,green-1     :background ,green-2bg                     ))))
+   `(diff-hl-delete                            ((t (:foreground ,red-1       :background ,red-1bg                       ))))
+   `(diff-hl-change                            ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
+   ;;-----------------------------------------------------------------------------------------------------------------------
    ;; IEdit
    `(iedit-occurrence                          ((t (:foreground ,green-3   :background ,orange-1bg                     ))))
    `(iedit-read-only-occurrence                ((t (:foreground ,red-1     :background ,orange-1bg                     ))))
@@ -478,6 +483,9 @@
    `(cua-global-mark        ((t(:foreground ,foam :background ,turquoise-1                                              ))))
    `(cua-rectangle          ((t(:foreground ,foam :background ,purple-4                                                 ))))
    `(cua-rectangle-noselect ((t(:foreground ,foam :background ,orange-1                                                 ))))
+   ;;-----------------------------------------------------------------------------------------------------------------------
+   ;; hl-sexp
+   `(hl-sexp-face                              ((t (                         :background ,turquoise-2bg                 ))))
    )
 
   (custom-theme-set-variables
