@@ -351,7 +351,7 @@
 
    ;; ------------------------------------------------------------------------------------------
    ;; JS3 mode
-   
+
    ;; js3-error-face
    ;; js3-external-variable-face
    ;; js3-function-param-face
@@ -365,7 +365,7 @@
    ;; js3-private-function-call-face
    ;; js3-private-member-face
    ;; js3-warning-face
-   
+
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Diff
    `(diff-added                                ((t (:foreground ,green-3     :background ,green-2bg                     ))))
@@ -471,7 +471,6 @@
    `(org-date                                  ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
    `(org-done                                  ((t (:foreground ,green-1     :background ,green-1bg                     ))))
    `(org-hide                                  ((t (:foreground ,gray-3      :background ,gray-1bg                      ))))
-   `(org-link                                  ((t (:foreground ,blue-1      :background ,blue-1bg                      ))))
    `(org-todo                                  ((t (:foreground ,red-1       :background ,red-1bg                       ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; cua-mode
@@ -640,9 +639,6 @@
 ;;; italic
 
 ;;; lazy-highlight
-
-;;; link
-;;; link-visited
 
 ;;; log-edit-header
 ;;; log-edit-summary
