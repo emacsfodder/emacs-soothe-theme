@@ -1,10 +1,11 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 20130805.0148
+;;; Version: 20130805.0658
 ;;; Package-Requires: ((emacs "24.1"))
 ;;;
 ;;; Change Log:
+;;; 20130805.0658 : Deferred ansi-term issue - will revist.
 ;;; 20130805.0148 : Fix ansi-term issue
 ;;; 0.3.19        : Styles for js3 added
 ;;; 0.3.18        : Added stubs for helm and js3
@@ -72,7 +73,7 @@
    highlight indentation, show-paren-mode, further mode support
    to come.")
 
-(let  (
+(let*  (
        ;; Palette
        (foam             "#E0E4CC")
        (snow-code        "#ECE5CE")
@@ -503,9 +504,6 @@
    `(fci-rule-character-color ,gray-6)
 
    `(ansi-color-names-vector
-     ;; black, red, green, yellow, blue, magenta, cyan, white
-     [,background ,red-1 ,green-1 ,yellow-1 ,blue-1 ,purple-1 ,blue-3 ,foreground])
-   `(ansi-term-color-vector
      ;; black, red, green, yellow, blue, magenta, cyan, white
      [,background ,red-1 ,green-1 ,yellow-1 ,blue-1 ,purple-1 ,blue-3 ,foreground])
    )
