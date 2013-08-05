@@ -1,45 +1,46 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 0.3.18
+;;; Version: 20130805.0148
 ;;; Package-Requires: ((emacs "24.1"))
 ;;;
 ;;; Change Log:
-;;; 0.3.18 : Added stubs for helm and js3
-;;; 0.3.17 : Added support for which-func face (milkypostman)
-;;; 0.3.16 : Fixed flymake colors; also added Package Requres Emacs 24 by Steve Purcell
-;;; 0.3.15 : update by Sabof; Magit diff settings migrated over to diff
-;;;        : (magit will inherit from diff)
-;;; 0.3.14 : Changed main-line colors and style, added powerline colors
-;;; 0.3.13 : Different colors for hl-line and region
-;;; 0.3.12 : Fixed issue #4 - region bg contrast too low.
-;;; 0.3.11 : Added rainbow-mode switch for editing
-;;; 0.3.10 : Themed Mode line emphasis
-;;; 0.3.9  : Slightly improved dired support
-;;; 0.3.8  : Added support for isearch
-;;;        : Additional support for mode-line
-;;;        : modified main-line colors
-;;;        : modified link / link-visited
-;;;        : added tooltip face
-;;; 0.3.7  : extended magit support
-;;;        : added iedit support
-;;;        : added CUA support
-;;;        : added AutoComplete support
-;;;        : changed rainbow delimiters for better visibility
-;;; 0.3.6  : beginning work on additional mode support
-;;;        : added git-gutter
-;;;        : added dropdown-list
-;;;        : added stubs/extention lists for gnus, rcirc, message
-;;;        :       ido + magit (more),
-;;;        :       ac, compilation,
-;;;        :       dired, diff, iedit,
-;;;        :       cua, change, Man, woman,
-;;;        :       commint, info, custom, popup
-;;;        :       widget, whitespace, w3m, more...
-;;; 0.3.5  : bugfix
-;;; 0.3.4  : added support for main-line and flymake
-;;; 0.3.0  : cleaned up for elpa
-;;; 0.1.0  : initial version
+;;; 20130805.0148 : Fix ansi-term issue
+;;; 0.3.18        : Added stubs for helm and js3
+;;; 0.3.17        : Added support for which-func face (milkypostman)
+;;; 0.3.16        : Fixed flymake colors; also added Package Requres Emacs 24 by Steve Purcell
+;;; 0.3.15        : update by Sabof; Magit diff settings migrated over to diff
+;;;               : (magit will inherit from diff)
+;;; 0.3.14        : Changed main-line colors and style, added powerline colors
+;;; 0.3.13        : Different colors for hl-line and region
+;;; 0.3.12        : Fixed issue #4 - region bg contrast too low.
+;;; 0.3.11        : Added rainbow-mode switch for editing
+;;; 0.3.10        : Themed Mode line emphasis
+;;; 0.3.9         : Slightly improved dired support
+;;; 0.3.8         : Added support for isearch
+;;;               : Additional support for mode-line
+;;;               : modified main-line colors
+;;;               : modified link / link-visited
+;;;               : added tooltip face
+;;; 0.3.7         : extended magit support
+;;;               : added iedit support
+;;;               : added CUA support
+;;;               : added AutoComplete support
+;;;               : changed rainbow delimiters for better visibility
+;;; 0.3.6         : beginning work on additional mode support
+;;;               : added git-gutter
+;;;               : added dropdown-list
+;;;               : added stubs/extention lists for gnus, rcirc, message
+;;;               :       ido + magit (more),
+;;;               :       ac, compilation,
+;;;               :       dired, diff, iedit,
+;;;               :       cua, change, Man, woman,
+;;;               :       commint, info, custom, popup
+;;;               :       widget, whitespace, w3m, more...
+;;; 0.3.5         : bugfix
+;;; 0.3.4         : added support for main-line and flymake
+;;; 0.3.0         : cleaned up for elpa
+;;; 0.1.0         : initial version
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -77,49 +78,49 @@
        (crem             "#F4EAD5")
        (dirty-crem       "#DBD2BF")
        (dirty-crem-bg    "#2B2A26")
-       (gray-1           "#aaaaaa")
+       (gray-1           "#AAAAAA")
        (gray-2           "#828282")
        (gray-3           "#333333")
-       (gray-4           "#2a2a2a")
+       (gray-4           "#2A2A2A")
        (gray-5           "#252525")
        (gray-6           "#202020")
-       (gray-1bg         "#0a0a0a")
+       (gray-1bg         "#0A0A0A")
        (gray-2bg         "#111111")
        (gray-3bg         "#141414")
        (gray-4bg         "#171717")
-       (gray-5bg         "#1a1a1a")
-       (gray-6bg         "#1e1e1e")
-       (red-1            "#b13120")
-       (red-2            "#a23f1e")
+       (gray-5bg         "#1A1A1A")
+       (gray-6bg         "#1E1E1E")
+       (red-1            "#B13120")
+       (red-2            "#A23F1E")
        (red-3            "#AA1100")
        (red-4            "#660000")
        (red-1bg          "#1D1515")
-       (red-2bg          "#251c1e")
-       (brown-1          "#8f621d")
-       (brown-1bg        "#2a1f1f")
-       (orange-1         "#d94a05")
+       (red-2bg          "#251C1E")
+       (brown-1          "#8F621D")
+       (brown-1bg        "#2A1F1F")
+       (orange-1         "#D94A05")
        (orange-2         "#FF5211")
        (orange-1bg       "#1F1710")
-       (yellow-1         "#ceae3e")
+       (yellow-1         "#CEAE3E")
        (yellow-1bg       "#18140C")
-       (green-1          "#719f34")
-       (green-2          "#3e8f75")
+       (green-1          "#719F34")
+       (green-2          "#3E8F75")
        (green-3          "#839F5E")
-       (green-1bg        "#1a2321")
-       (green-2bg        "#1a2321")
+       (green-1bg        "#1A2321")
+       (green-2bg        "#1A2321")
        (turquoise-1      "#01535F")
        (turquoise-2      "#073E46")
        (turquoise-1bg    "#04181C")
        (turquoise-2bg    "#031316")
-       (blue-1           "#7c9fc9")
+       (blue-1           "#7C9FC9")
        (blue-2           "#317598")
        (blue-3           "#009090")
-       (blue-4           "#364e7a")
-       (blue-1bg         "#1e252f")
-       (blue-2bg         "#1b333e")
+       (blue-4           "#364E7A")
+       (blue-1bg         "#1E252F")
+       (blue-2bg         "#1B333E")
        (blue-3bg         "#132228")
        (blue-4bg         "#172028")
-       (purple-1         "#7868b5")
+       (purple-1         "#7868B5")
        (purple-2         "#8A7FB5")
        (purple-3         "#483E6C")
        (purple-4         "#342B58")
@@ -127,8 +128,8 @@
        (purple-2bg       "#302948")
        (purple-3bg       "#241F36")
        (foreground       "#F4EAD5")
-       (hl-line          "#11252a")
-       (selection        "#11253a")
+       (hl-line          "#11252A")
+       (selection        "#11253A")
        (background       "#110F13")
        (background-dark  "#0F0D11")
        (alt-background   "#111013"))
@@ -242,15 +243,15 @@
    `(popup-tip-face                            ((t (:foreground ,dirty-crem  :background ,dirty-crem-bg                 ))))
    `(tooltip                                   ((t (:foreground ,dirty-crem-bg  :background ,dirty-crem :height 110 ))))
 
-   ;;; popup-face
-   ;;; popup-isearch-match
-   ;;; popup-menu-face
-   ;;; popup-menu-mouse-face
-   ;;; popup-menu-selection-face
-   ;;; popup-menu-summary-face
-   ;;; popup-scroll-bar-background-face
-   ;;; popup-scroll-bar-foreground-face
-   ;;; popup-summary-face
+   ;; `(popup-face                       ((t (:foreground nil :background nil ))))
+   ;; `(popup-isearch-match              ((t (:foreground nil :background nil ))))
+   ;; `(popup-menu-face                  ((t (:foreground nil :background nil ))))
+   ;; `(popup-menu-mouse-face            ((t (:foreground nil :background nil ))))
+   ;; `(popup-menu-selection-face        ((t (:foreground nil :background nil ))))
+   ;; `(popup-menu-summary-face          ((t (:foreground nil :background nil ))))
+   ;; `(popup-scroll-bar-background-face ((t (:foreground nil :background nil ))))
+   ;; `(popup-scroll-bar-foreground-face ((t (:foreground nil :background nil ))))
+   ;; `(popup-summary-face               ((t (:foreground nil :background nil ))))
 
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Dired
@@ -267,104 +268,104 @@
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Gnus
 
-   ;; gnus-group-mail-1
-   ;; gnus-group-mail-1-empty
-   ;; gnus-group-mail-2
-   ;; gnus-group-mail-2-empty
-   ;; gnus-group-mail-3
-   ;; gnus-group-mail-3-empty
-   ;; gnus-group-mail-low
-   ;; gnus-group-mail-low-empty
-   ;; gnus-group-news-1
-   ;; gnus-group-news-1-empty
-   ;; gnus-group-news-2
-   ;; gnus-group-news-2-empty
-   ;; gnus-group-news-3
-   ;; gnus-group-news-3-empty
-   ;; gnus-group-news-4
-   ;; gnus-group-news-4-empty
-   ;; gnus-group-news-5
-   ;; gnus-group-news-5-empty
-   ;; gnus-group-news-6
-   ;; gnus-group-news-6-empty
-   ;; gnus-group-news-low
-   ;; gnus-group-news-low-empty
-   ;; gnus-splash
-   ;; gnus-summary-cancelled
-   ;; gnus-summary-high-ancient
-   ;; gnus-summary-high-read
-   ;; gnus-summary-high-ticked
-   ;; gnus-summary-high-undownloaded
-   ;; gnus-summary-high-unread
-   ;; gnus-summary-low-ancient
-   ;; gnus-summary-low-read
-   ;; gnus-summary-low-ticked
-   ;; gnus-summary-low-undownloaded
-   ;; gnus-summary-low-unread
-   ;; gnus-summary-normal-ancient
-   ;; gnus-summary-normal-read
-   ;; gnus-summary-normal-ticked
-   ;; gnus-summary-normal-undownloaded
-   ;; gnus-summary-normal-unread
-   ;; gnus-summary-selected
+   ;; `(gnus-group-mail-1                ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-mail-1-empty          ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-mail-2                ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-mail-2-empty          ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-mail-3                ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-mail-3-empty          ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-mail-low              ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-mail-low-empty        ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-news-1                ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-news-1-empty          ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-news-2                ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-news-2-empty          ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-news-3                ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-news-3-empty          ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-news-4                ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-news-4-empty          ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-news-5                ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-news-5-empty          ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-news-6                ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-news-6-empty          ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-news-low              ((t (:foreground nil :background nil ))))
+   ;; `(gnus-group-news-low-empty        ((t (:foreground nil :background nil ))))
+   ;; `(gnus-splash                      ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-cancelled           ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-high-ancient        ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-high-read           ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-high-ticked         ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-high-undownloaded   ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-high-unread         ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-low-ancient         ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-low-read            ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-low-ticked          ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-low-undownloaded    ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-low-unread          ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-normal-ancient      ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-normal-read         ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-normal-ticked       ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-normal-undownloaded ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-normal-unread       ((t (:foreground nil :background nil ))))
+   ;; `(gnus-summary-selected            ((t (:foreground nil :background nil ))))
 
    ;; ------------------------------------------------------------------------------------------
    ;; helm
 
-   ;; helm-M-x-key
-   ;; helm-action
-   ;; helm-bookmark-addressbook
-   ;; helm-bookmark-directory
-   ;; helm-bookmark-file
-   ;; helm-bookmark-gnus
-   ;; helm-bookmark-info
-   ;; helm-bookmark-man
-   ;; helm-bookmark-w3m
-   ;; helm-buffer-not-saved
-   ;; helm-buffer-process
-   ;; helm-buffer-saved-out
-   ;; helm-buffer-size
-   ;; helm-candidate-number
-   ;; helm-ff-directory
-   ;; helm-ff-executable
-   ;; helm-ff-file
-   ;; helm-ff-invalid-symlink
-   ;; helm-ff-prefix
-   ;; helm-ff-symlink
-   ;; helm-grep-cmd-line
-   ;; helm-grep-file
-   ;; helm-grep-finish
-   ;; helm-grep-lineno
-   ;; helm-grep-match
-   ;; helm-grep-running
-   ;; helm-header
-   ;; helm-helper
-   ;; helm-history-deleted
-   ;; helm-history-remote
-   ;; helm-match
-   ;; helm-moccur-buffer
-   ;; helm-selection
-   ;; helm-selection-line
-   ;; helm-separator
-   ;; helm-source-header
-   ;; helm-visible-mark
+   ;; `(helm-M-x-key              ((t (:foreground nil :background nil ))))
+   ;; `(helm-action               ((t (:foreground nil :background nil ))))
+   ;; `(helm-bookmark-addressbook ((t (:foreground nil :background nil ))))
+   ;; `(helm-bookmark-directory   ((t (:foreground nil :background nil ))))
+   ;; `(helm-bookmark-file        ((t (:foreground nil :background nil ))))
+   ;; `(helm-bookmark-gnus        ((t (:foreground nil :background nil ))))
+   ;; `(helm-bookmark-info        ((t (:foreground nil :background nil ))))
+   ;; `(helm-bookmark-man         ((t (:foreground nil :background nil ))))
+   ;; `(helm-bookmark-w3m         ((t (:foreground nil :background nil ))))
+   ;; `(helm-buffer-not-saved     ((t (:foreground nil :background nil ))))
+   ;; `(helm-buffer-process       ((t (:foreground nil :background nil ))))
+   ;; `(helm-buffer-saved-out     ((t (:foreground nil :background nil ))))
+   ;; `(helm-buffer-size          ((t (:foreground nil :background nil ))))
+   ;; `(helm-candidate-number     ((t (:foreground nil :background nil ))))
+   ;; `(helm-ff-directory         ((t (:foreground nil :background nil ))))
+   ;; `(helm-ff-executable        ((t (:foreground nil :background nil ))))
+   ;; `(helm-ff-file              ((t (:foreground nil :background nil ))))
+   ;; `(helm-ff-invalid-symlink   ((t (:foreground nil :background nil ))))
+   ;; `(helm-ff-prefix            ((t (:foreground nil :background nil ))))
+   ;; `(helm-ff-symlink           ((t (:foreground nil :background nil ))))
+   ;; `(helm-grep-cmd-line        ((t (:foreground nil :background nil ))))
+   ;; `(helm-grep-file            ((t (:foreground nil :background nil ))))
+   ;; `(helm-grep-finish          ((t (:foreground nil :background nil ))))
+   ;; `(helm-grep-lineno          ((t (:foreground nil :background nil ))))
+   ;; `(helm-grep-match           ((t (:foreground nil :background nil ))))
+   ;; `(helm-grep-running         ((t (:foreground nil :background nil ))))
+   ;; `(helm-header               ((t (:foreground nil :background nil ))))
+   ;; `(helm-helper               ((t (:foreground nil :background nil ))))
+   ;; `(helm-history-deleted      ((t (:foreground nil :background nil ))))
+   ;; `(helm-history-remote       ((t (:foreground nil :background nil ))))
+   ;; `(helm-match                ((t (:foreground nil :background nil ))))
+   ;; `(helm-moccur-buffer        ((t (:foreground nil :background nil ))))
+   ;; `(helm-selection            ((t (:foreground nil :background nil ))))
+   ;; `(helm-selection-line       ((t (:foreground nil :background nil ))))
+   ;; `(helm-separator            ((t (:foreground nil :background nil ))))
+   ;; `(helm-source-header        ((t (:foreground nil :background nil ))))
+   ;; `(helm-visible-mark         ((t (:foreground nil :background nil ))))
 
    ;; ------------------------------------------------------------------------------------------
    ;; JS3 mode
    
-   ;; js3-error-face
-   ;; js3-external-variable-face
-   ;; js3-function-param-face
-   ;; js3-instance-member-face
-   ;; js3-jsdoc-html-tag-delimiter-face
-   ;; js3-jsdoc-html-tag-name-face
-   ;; js3-jsdoc-tag-face
-   ;; js3-jsdoc-type-face
-   ;; js3-jsdoc-value-face
-   ;; js3-magic-paren-face
-   ;; js3-private-function-call-face
-   ;; js3-private-member-face
-   ;; js3-warning-face
+   ;; `(js3-error-face                    ((t (:foreground nil :background nil ))))
+   ;; `(js3-external-variable-face        ((t (:foreground nil :background nil ))))
+   ;; `(js3-function-param-face           ((t (:foreground nil :background nil ))))
+   ;; `(js3-instance-member-face          ((t (:foreground nil :background nil ))))
+   ;; `(js3-jsdoc-html-tag-delimiter-face ((t (:foreground nil :background nil ))))
+   ;; `(js3-jsdoc-html-tag-name-face      ((t (:foreground nil :background nil ))))
+   ;; `(js3-jsdoc-tag-face                ((t (:foreground nil :background nil ))))
+   ;; `(js3-jsdoc-type-face               ((t (:foreground nil :background nil ))))
+   ;; `(js3-jsdoc-value-face              ((t (:foreground nil :background nil ))))
+   ;; `(js3-magic-paren-face              ((t (:foreground nil :background nil ))))
+   ;; `(js3-private-function-call-face    ((t (:foreground nil :background nil ))))
+   ;; `(js3-private-member-face           ((t (:foreground nil :background nil ))))
+   ;; `(js3-warning-face                  ((t (:foreground nil :background nil ))))
    
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Diff
@@ -373,18 +374,17 @@
    `(diff-file-header                          ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
    `(diff-context                              ((t (:foreground ,foam                                                   ))))
    `(diff-hunk-header                          ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
-   ;; diff-changed
-   ;; diff-function
-   ;; diff-header
-   ;; diff-index
-   ;; diff-indicator-added
-   ;; diff-indicator-changed
-   ;; diff-indicator-removed
-   ;; diff-nonexistent
-   ;; diff-refine-added
-   ;; diff-refine-change
-   ;; diff-refine-removed
-
+   ;; `(diff-changed           ((t (:foreground nil :background nil ))))
+   ;; `(diff-function          ((t (:foreground nil :background nil ))))
+   ;; `(diff-header            ((t (:foreground nil :background nil ))))
+   ;; `(diff-index             ((t (:foreground nil :background nil ))))
+   ;; `(diff-indicator-added   ((t (:foreground nil :background nil ))))
+   ;; `(diff-indicator-changed ((t (:foreground nil :background nil ))))
+   ;; `(diff-indicator-removed ((t (:foreground nil :background nil ))))
+   ;; `(diff-nonexistent       ((t (:foreground nil :background nil ))))
+   ;; `(diff-refine-added      ((t (:foreground nil :background nil ))))
+   ;; `(diff-refine-change     ((t (:foreground nil :background nil ))))
+   ;; `(diff-refine-removed    ((t (:foreground nil :background nil ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Linum
    `(linum                                     ((t (:foreground ,gray-6 :background ,alt-background :height 90   ))))
@@ -505,7 +505,7 @@
      [,background ,red-1 ,green-1 ,yellow-1 ,blue-1 ,purple-1 ,blue-3 ,foreground])
    `(ansi-term-color-vector
      ;; black, red, green, yellow, blue, magenta, cyan, white
-     [unspecified ,background ,red-1 ,green-1 ,yellow-1 ,blue-1 ,purple-1 ,blue-3 ,foreground])
+     [,background ,red-1 ,green-1 ,yellow-1 ,blue-1 ,purple-1 ,blue-3 ,foreground])
    )
   )
 
@@ -534,278 +534,278 @@
 
 ;;; List of themes to include...
 
-;;; Man-overstrike
-;;; Man-reverse
-;;; Man-underline
+;; `(Man-overstrike                            ((t (:foreground nil :background nil ))))
+;; `(Man-reverse                               ((t (:foreground nil :background nil ))))
+;; `(Man-underline                             ((t (:foreground nil :background nil ))))
 
-;;; bold
-;;; bold-italic
-;;; border
-;;; buffer-menu-buffer
-;;; button
+;; `(bold                                      ((t (:foreground nil :background nil ))))
+;; `(bold-italic                               ((t (:foreground nil :background nil ))))
+;; `(border                                    ((t (:foreground nil :background nil ))))
+;; `(buffer-menu-buffer                        ((t (:foreground nil :background nil ))))
+;; `(button                                    ((t (:foreground nil :background nil ))))
 
-;;; c-annotation-face
+;; `(c-annotation-face                         ((t (:foreground nil :background nil ))))
 
-;;; change-log-acknowledgment
-;;; change-log-conditionals
-;;; change-log-date
-;;; change-log-email
-;;; change-log-file
-;;; change-log-function
-;;; change-log-list
-;;; change-log-name
+;; `(change-log-acknowledgment                 ((t (:foreground nil :background nil ))))
+;; `(change-log-conditionals                   ((t (:foreground nil :background nil ))))
+;; `(change-log-date                           ((t (:foreground nil :background nil ))))
+;; `(change-log-email                          ((t (:foreground nil :background nil ))))
+;; `(change-log-file                           ((t (:foreground nil :background nil ))))
+;; `(change-log-function                       ((t (:foreground nil :background nil ))))
+;; `(change-log-list                           ((t (:foreground nil :background nil ))))
+;; `(change-log-name                           ((t (:foreground nil :background nil ))))
 
-;;; comint-highlight-input
-;;; comint-highlight-prompt
+;; `(comint-highlight-input                    ((t (:foreground nil :background nil ))))
+;; `(comint-highlight-prompt                   ((t (:foreground nil :background nil ))))
 
-;;; completions-annotations
-;;; completions-common-part
-;;; completions-first-difference
+;; `(completions-annotations                   ((t (:foreground nil :background nil ))))
+;; `(completions-common-part                   ((t (:foreground nil :background nil ))))
+;; `(completions-first-difference              ((t (:foreground nil :background nil ))))
 
-;;; custom-button
-;;; custom-button-mouse
-;;; custom-button-pressed
-;;; custom-button-pressed-unraised
-;;; custom-button-unraised
-;;; custom-changed
-;;; custom-comment
-;;; custom-comment-tag
-;;; custom-documentation
-;;; custom-face-tag
-;;; custom-group-subtitle
-;;; custom-group-tag
-;;; custom-group-tag-1
-;;; custom-invalid
-;;; custom-link
-;;; custom-modified
-;;; custom-rogue
-;;; custom-saved
-;;; custom-set
-;;; custom-state
-;;; custom-themed
-;;; custom-variable-button
-;;; custom-variable-tag
-;;; custom-visibility
+;; `(custom-button                             ((t (:foreground nil :background nil ))))
+;; `(custom-button-mouse                       ((t (:foreground nil :background nil ))))
+;; `(custom-button-pressed                     ((t (:foreground nil :background nil ))))
+;; `(custom-button-pressed-unraised            ((t (:foreground nil :background nil ))))
+;; `(custom-button-unraised                    ((t (:foreground nil :background nil ))))
+;; `(custom-changed                            ((t (:foreground nil :background nil ))))
+;; `(custom-comment                            ((t (:foreground nil :background nil ))))
+;; `(custom-comment-tag                        ((t (:foreground nil :background nil ))))
+;; `(custom-documentation                      ((t (:foreground nil :background nil ))))
+;; `(custom-face-tag                           ((t (:foreground nil :background nil ))))
+;; `(custom-group-subtitle                     ((t (:foreground nil :background nil ))))
+;; `(custom-group-tag                          ((t (:foreground nil :background nil ))))
+;; `(custom-group-tag-1                        ((t (:foreground nil :background nil ))))
+;; `(custom-invalid                            ((t (:foreground nil :background nil ))))
+;; `(custom-link                               ((t (:foreground nil :background nil ))))
+;; `(custom-modified                           ((t (:foreground nil :background nil ))))
+;; `(custom-rogue                              ((t (:foreground nil :background nil ))))
+;; `(custom-saved                              ((t (:foreground nil :background nil ))))
+;; `(custom-set                                ((t (:foreground nil :background nil ))))
+;; `(custom-state                              ((t (:foreground nil :background nil ))))
+;; `(custom-themed                             ((t (:foreground nil :background nil ))))
+;; `(custom-variable-button                    ((t (:foreground nil :background nil ))))
+;; `(custom-variable-tag                       ((t (:foreground nil :background nil ))))
+;; `(custom-visibility                         ((t (:foreground nil :background nil ))))
 
-;;; ecb-default-general-face
-;;; ecb-default-highlight-face
-;;; ecb-method-face
-;;; ecb-tag-header-face
+;; `(ecb-default-general-face                  ((t (:foreground nil :background nil ))))
+;; `(ecb-default-highlight-face                ((t (:foreground nil :background nil ))))
+;; `(ecb-method-face                           ((t (:foreground nil :background nil ))))
+;; `(ecb-tag-header-face                       ((t (:foreground nil :background nil ))))
 
-;;; error
-;;; escape-glyph
-;;; file-name-shadow
-;;; fixed-pitch
+;; `(error                                     ((t (:foreground nil :background nil ))))
+;; `(escape-glyph                              ((t (:foreground nil :background nil ))))
+;; `(file-name-shadow                          ((t (:foreground nil :background nil ))))
+;; `(fixed-pitch                               ((t (:foreground nil :background nil ))))
 
-;;; glyphless-char
+;; `(glyphless-char                            ((t (:foreground nil :background nil ))))
 
-;;; header-line
-;;; help-argument-name
+;; `(header-line                               ((t (:foreground nil :background nil ))))
+;; `(help-argument-name                        ((t (:foreground nil :background nil ))))
 
-;;; hi-black-b
-;;; hi-black-hb
-;;; hi-blue
-;;; hi-blue-b
-;;; hi-green
-;;; hi-green-b
-;;; hi-pink
-;;; hi-red-b
-;;; hi-yellow
+;; `(hi-black-b                                ((t (:foreground nil :background nil ))))
+;; `(hi-black-hb                               ((t (:foreground nil :background nil ))))
+;; `(hi-blue                                   ((t (:foreground nil :background nil ))))
+;; `(hi-blue-b                                 ((t (:foreground nil :background nil ))))
+;; `(hi-green                                  ((t (:foreground nil :background nil ))))
+;; `(hi-green-b                                ((t (:foreground nil :background nil ))))
+;; `(hi-pink                                   ((t (:foreground nil :background nil ))))
+;; `(hi-red-b                                  ((t (:foreground nil :background nil ))))
+;; `(hi-yellow                                 ((t (:foreground nil :background nil ))))
 
-;;; hideshowvis-hidable-face
+;; `(hideshowvis-hidable-face                  ((t (:foreground nil :background nil ))))
 
-;;; highlight
-;;; highlight-changes
-;;; highlight-changes-delete
-;;; highlight-indentation-current-column-face
-;;; highlight-indentation-face
+;; `(highlight                                 ((t (:foreground nil :background nil ))))
+;; `(highlight-changes                         ((t (:foreground nil :background nil ))))
+;; `(highlight-changes-delete                  ((t (:foreground nil :background nil ))))
+;; `(highlight-indentation-current-column-face ((t (:foreground nil :background nil ))))
+;; `(highlight-indentation-face                ((t (:foreground nil :background nil ))))
 
-;;; hl-line
+;; `(hl-line                                   ((t (:foreground nil :background nil ))))
 
-;;; hs-face
-;;; hs-fringe-face
+;; `(hs-face                                   ((t (:foreground nil :background nil ))))
+;; `(hs-fringe-face                            ((t (:foreground nil :background nil ))))
 
-;;; info-header-node
-;;; info-header-xref
-;;; info-menu-header
-;;; info-menu-star
-;;; info-node
-;;; info-title-1
-;;; info-title-2
-;;; info-title-3
-;;; info-title-4
-;;; info-xref
-;;; info-xref-visited
+;; `(info-header-node                          ((t (:foreground nil :background nil ))))
+;; `(info-header-xref                          ((t (:foreground nil :background nil ))))
+;; `(info-menu-header                          ((t (:foreground nil :background nil ))))
+;; `(info-menu-star                            ((t (:foreground nil :background nil ))))
+;; `(info-node                                 ((t (:foreground nil :background nil ))))
+;; `(info-title-1                              ((t (:foreground nil :background nil ))))
+;; `(info-title-2                              ((t (:foreground nil :background nil ))))
+;; `(info-title-3                              ((t (:foreground nil :background nil ))))
+;; `(info-title-4                              ((t (:foreground nil :background nil ))))
+;; `(info-xref                                 ((t (:foreground nil :background nil ))))
+;; `(info-xref-visited                         ((t (:foreground nil :background nil ))))
 
-;;; italic
+;; `(italic                                    ((t (:foreground nil :background nil ))))
 
-;;; lazy-highlight
+;; `(lazy-highlight                            ((t (:foreground nil :background nil ))))
 
-;;; link
-;;; link-visited
+;; `(link                                      ((t (:foreground nil :background nil ))))
+;; `(link-visited                              ((t (:foreground nil :background nil ))))
 
-;;; log-edit-header
-;;; log-edit-summary
-;;; log-edit-unknown-header
+;; `(log-edit-header                           ((t (:foreground nil :background nil ))))
+;; `(log-edit-summary                          ((t (:foreground nil :background nil ))))
+;; `(log-edit-unknown-header                   ((t (:foreground nil :background nil ))))
 
-;;; mac-ts-caret-position
-;;; mac-ts-converted-text
-;;; mac-ts-raw-text
-;;; mac-ts-selected-converted-text
+;; `(mac-ts-caret-position                     ((t (:foreground nil :background nil ))))
+;; `(mac-ts-converted-text                     ((t (:foreground nil :background nil ))))
+;; `(mac-ts-raw-text                           ((t (:foreground nil :background nil ))))
+;; `(mac-ts-selected-converted-text            ((t (:foreground nil :background nil ))))
 
-;;; match
-;;; menu
+;; `(match                                     ((t (:foreground nil :background nil ))))
+;; `(menu                                      ((t (:foreground nil :background nil ))))
 
-;;; message-cited-text
-;;; message-header-cc
-;;; message-header-name
-;;; message-header-newsgroups
-;;; message-header-other
-;;; message-header-subject
-;;; message-header-to
-;;; message-header-xheader
-;;; message-mml
-;;; message-separator
+;; `(message-cited-text                        ((t (:foreground nil :background nil ))))
+;; `(message-header-cc                         ((t (:foreground nil :background nil ))))
+;; `(message-header-name                       ((t (:foreground nil :background nil ))))
+;; `(message-header-newsgroups                 ((t (:foreground nil :background nil ))))
+;; `(message-header-other                      ((t (:foreground nil :background nil ))))
+;; `(message-header-subject                    ((t (:foreground nil :background nil ))))
+;; `(message-header-to                         ((t (:foreground nil :background nil ))))
+;; `(message-header-xheader                    ((t (:foreground nil :background nil ))))
+;; `(message-mml                               ((t (:foreground nil :background nil ))))
+;; `(message-separator                         ((t (:foreground nil :background nil ))))
 
-;;; minibuffer-prompt
-
-
-;;; mouse
-
-;;; next-error
-
-;;; nobreak-space
-
-;;; org-date
-;;; org-done
-;;; org-hide
-;;; org-link
-;;; org-todo
-
-;;; powerline-active1
-;;; powerline-active2
-;;; powerline-inactive1
-;;; powerline-inactive2
-
-;;; proced-mark
-;;; proced-marked
-;;; proced-sort-header
-
-;;; query-replace
-
-;;; rcirc-bright-nick
-;;; rcirc-dim-nick
-;;; rcirc-keyword
-;;; rcirc-my-nick
-;;; rcirc-nick-in-message
-;;; rcirc-nick-in-message-full-line
-;;; rcirc-other-nick
-;;; rcirc-prompt
-;;; rcirc-server
-;;; rcirc-server-prefix
-;;; rcirc-timestamp
-;;; rcirc-track-keyword
-;;; rcirc-track-nick
-;;; rcirc-url
-
-;;; rst-adornment
-;;; rst-block
-;;; rst-comment
-;;; rst-definition
-;;; rst-directive
-;;; rst-emphasis1
-;;; rst-emphasis2
-;;; rst-external
-;;; rst-level-1
-;;; rst-level-2
-;;; rst-level-3
-;;; rst-level-4
-;;; rst-level-5
-;;; rst-level-6
-;;; rst-literal
-;;; rst-reference
-;;; rst-transition
-
-;;; scroll-bar
-
-;;; secondary-selection
-;;; shadow
-
-;;; show-paren-match
-;;; show-paren-mismatch
-
-;;; speedbar-button-face
-;;; speedbar-directory-face
-;;; speedbar-file-face
-;;; speedbar-highlight-face
-;;; speedbar-selected-face
-;;; speedbar-separator-face
-;;; speedbar-tag-face
-
-;;; success
-
-;;; tool-bar
+;; `(minibuffer-prompt                         ((t (:foreground nil :background nil ))))
 
 
-;;; trailing-whitespace
+;; `(mouse                                     ((t (:foreground nil :background nil ))))
 
-;;; underline
+;; `(next-error                                ((t (:foreground nil :background nil ))))
 
-;;; variable-pitch
+;; `(nobreak-space                             ((t (:foreground nil :background nil ))))
 
-;;; vertical-border
+;; `(org-date                                  ((t (:foreground nil :background nil ))))
+;; `(org-done                                  ((t (:foreground nil :background nil ))))
+;; `(org-hide                                  ((t (:foreground nil :background nil ))))
+;; `(org-link                                  ((t (:foreground nil :background nil ))))
+;; `(org-todo                                  ((t (:foreground nil :background nil ))))
 
-;;; w3m-anchor
-;;; w3m-arrived-anchor
-;;; w3m-bold
-;;; w3m-current-anchor
-;;; w3m-form-button
-;;; w3m-form-button-mouse
-;;; w3m-form-button-pressed
-;;; w3m-header-line-location-content
-;;; w3m-header-line-location-title
-;;; w3m-history-current-url
-;;; w3m-image
-;;; w3m-image-anchor
-;;; w3m-insert
-;;; w3m-italic
-;;; w3m-strike-through
-;;; w3m-tab-background
-;;; w3m-tab-mouse
-;;; w3m-tab-selected
-;;; w3m-tab-selected-background
-;;; w3m-tab-selected-retrieving
-;;; w3m-tab-unselected
-;;; w3m-tab-unselected-retrieving
-;;; w3m-tab-unselected-unseen
-;;; w3m-underline
+;; `(powerline-active1                         ((t (:foreground nil :background nil ))))
+;; `(powerline-active2                         ((t (:foreground nil :background nil ))))
+;; `(powerline-inactive1                       ((t (:foreground nil :background nil ))))
+;; `(powerline-inactive2                       ((t (:foreground nil :background nil ))))
 
-;;; warning
+;; `(proced-mark                               ((t (:foreground nil :background nil ))))
+;; `(proced-marked                             ((t (:foreground nil :background nil ))))
+;; `(proced-sort-header                        ((t (:foreground nil :background nil ))))
 
-;;; whitespace-empty
-;;; whitespace-hspace
-;;; whitespace-indentation
-;;; whitespace-line
-;;; whitespace-newline
-;;; whitespace-space
-;;; whitespace-space-after-tab
-;;; whitespace-tab
-;;; whitespace-trailing
+;; `(query-replace                             ((t (:foreground nil :background nil ))))
 
-;;; widget-button
-;;; widget-button-pressed
-;;; widget-documentation
-;;; widget-field
-;;; widget-inactive
-;;; widget-single-line-field
+;; `(rcirc-bright-nick                         ((t (:foreground nil :background nil ))))
+;; `(rcirc-dim-nick                            ((t (:foreground nil :background nil ))))
+;; `(rcirc-keyword                             ((t (:foreground nil :background nil ))))
+;; `(rcirc-my-nick                             ((t (:foreground nil :background nil ))))
+;; `(rcirc-nick-in-message                     ((t (:foreground nil :background nil ))))
+;; `(rcirc-nick-in-message-full-line           ((t (:foreground nil :background nil ))))
+;; `(rcirc-other-nick                          ((t (:foreground nil :background nil ))))
+;; `(rcirc-prompt                              ((t (:foreground nil :background nil ))))
+;; `(rcirc-server                              ((t (:foreground nil :background nil ))))
+;; `(rcirc-server-prefix                       ((t (:foreground nil :background nil ))))
+;; `(rcirc-timestamp                           ((t (:foreground nil :background nil ))))
+;; `(rcirc-track-keyword                       ((t (:foreground nil :background nil ))))
+;; `(rcirc-track-nick                          ((t (:foreground nil :background nil ))))
+;; `(rcirc-url                                 ((t (:foreground nil :background nil ))))
 
-;;; woman-addition
-;;; woman-bold
-;;; woman-italic
-;;; woman-unknown
+;; `(rst-adornment                             ((t (:foreground nil :background nil ))))
+;; `(rst-block                                 ((t (:foreground nil :background nil ))))
+;; `(rst-comment                               ((t (:foreground nil :background nil ))))
+;; `(rst-definition                            ((t (:foreground nil :background nil ))))
+;; `(rst-directive                             ((t (:foreground nil :background nil ))))
+;; `(rst-emphasis1                             ((t (:foreground nil :background nil ))))
+;; `(rst-emphasis2                             ((t (:foreground nil :background nil ))))
+;; `(rst-external                              ((t (:foreground nil :background nil ))))
+;; `(rst-level-1                               ((t (:foreground nil :background nil ))))
+;; `(rst-level-2                               ((t (:foreground nil :background nil ))))
+;; `(rst-level-3                               ((t (:foreground nil :background nil ))))
+;; `(rst-level-4                               ((t (:foreground nil :background nil ))))
+;; `(rst-level-5                               ((t (:foreground nil :background nil ))))
+;; `(rst-level-6                               ((t (:foreground nil :background nil ))))
+;; `(rst-literal                               ((t (:foreground nil :background nil ))))
+;; `(rst-reference                             ((t (:foreground nil :background nil ))))
+;; `(rst-transition                            ((t (:foreground nil :background nil ))))
 
-;;; yas--field-debug-face
-;;; yas-field-highlight-face
+;; `(scroll-bar                                ((t (:foreground nil :background nil ))))
+
+;; `(secondary-selection                       ((t (:foreground nil :background nil ))))
+;; `(shadow                                    ((t (:foreground nil :background nil ))))
+
+;; `(show-paren-match                          ((t (:foreground nil :background nil ))))
+;; `(show-paren-mismatch                       ((t (:foreground nil :background nil ))))
+
+;; `(speedbar-button-face                      ((t (:foreground nil :background nil ))))
+;; `(speedbar-directory-face                   ((t (:foreground nil :background nil ))))
+;; `(speedbar-file-face                        ((t (:foreground nil :background nil ))))
+;; `(speedbar-highlight-face                   ((t (:foreground nil :background nil ))))
+;; `(speedbar-selected-face                    ((t (:foreground nil :background nil ))))
+;; `(speedbar-separator-face                   ((t (:foreground nil :background nil ))))
+;; `(speedbar-tag-face                         ((t (:foreground nil :background nil ))))
+
+;; `(success                                   ((t (:foreground nil :background nil ))))
+
+;; `(tool-bar                                  ((t (:foreground nil :background nil ))))
+
+
+;; `(trailing-whitespace                       ((t (:foreground nil :background nil ))))
+
+;; `(underline                                 ((t (:foreground nil :background nil ))))
+
+;; `(variable-pitch                            ((t (:foreground nil :background nil ))))
+
+;; `(vertical-border                           ((t (:foreground nil :background nil ))))
+
+;; `(w3m-anchor                                ((t (:foreground nil :background nil ))))
+;; `(w3m-arrived-anchor                        ((t (:foreground nil :background nil ))))
+;; `(w3m-bold                                  ((t (:foreground nil :background nil ))))
+;; `(w3m-current-anchor                        ((t (:foreground nil :background nil ))))
+;; `(w3m-form-button                           ((t (:foreground nil :background nil ))))
+;; `(w3m-form-button-mouse                     ((t (:foreground nil :background nil ))))
+;; `(w3m-form-button-pressed                   ((t (:foreground nil :background nil ))))
+;; `(w3m-header-line-location-content          ((t (:foreground nil :background nil ))))
+;; `(w3m-header-line-location-title            ((t (:foreground nil :background nil ))))
+;; `(w3m-history-current-url                   ((t (:foreground nil :background nil ))))
+;; `(w3m-image                                 ((t (:foreground nil :background nil ))))
+;; `(w3m-image-anchor                          ((t (:foreground nil :background nil ))))
+;; `(w3m-insert                                ((t (:foreground nil :background nil ))))
+;; `(w3m-italic                                ((t (:foreground nil :background nil ))))
+;; `(w3m-strike-through                        ((t (:foreground nil :background nil ))))
+;; `(w3m-tab-background                        ((t (:foreground nil :background nil ))))
+;; `(w3m-tab-mouse                             ((t (:foreground nil :background nil ))))
+;; `(w3m-tab-selected                          ((t (:foreground nil :background nil ))))
+;; `(w3m-tab-selected-background               ((t (:foreground nil :background nil ))))
+;; `(w3m-tab-selected-retrieving               ((t (:foreground nil :background nil ))))
+;; `(w3m-tab-unselected                        ((t (:foreground nil :background nil ))))
+;; `(w3m-tab-unselected-retrieving             ((t (:foreground nil :background nil ))))
+;; `(w3m-tab-unselected-unseen                 ((t (:foreground nil :background nil ))))
+;; `(w3m-underline                             ((t (:foreground nil :background nil ))))
+
+;; `(warning                                   ((t (:foreground nil :background nil ))))
+
+;; `(whitespace-empty                          ((t (:foreground nil :background nil ))))
+;; `(whitespace-hspace                         ((t (:foreground nil :background nil ))))
+;; `(whitespace-indentation                    ((t (:foreground nil :background nil ))))
+;; `(whitespace-line                           ((t (:foreground nil :background nil ))))
+;; `(whitespace-newline                        ((t (:foreground nil :background nil ))))
+;; `(whitespace-space                          ((t (:foreground nil :background nil ))))
+;; `(whitespace-space-after-tab                ((t (:foreground nil :background nil ))))
+;; `(whitespace-tab                            ((t (:foreground nil :background nil ))))
+;; `(whitespace-trailing                       ((t (:foreground nil :background nil ))))
+
+;; `(widget-button                             ((t (:foreground nil :background nil ))))
+;; `(widget-button-pressed                     ((t (:foreground nil :background nil ))))
+;; `(widget-documentation                      ((t (:foreground nil :background nil ))))
+;; `(widget-field                              ((t (:foreground nil :background nil ))))
+;; `(widget-inactive                           ((t (:foreground nil :background nil ))))
+;; `(widget-single-line-field                  ((t (:foreground nil :background nil ))))
+
+;; `(woman-addition                            ((t (:foreground nil :background nil ))))
+;; `(woman-bold                                ((t (:foreground nil :background nil ))))
+;; `(woman-italic                              ((t (:foreground nil :background nil ))))
+;; `(woman-unknown                             ((t (:foreground nil :background nil ))))
+
+;; `(yas--field-debug-face                     ((t (:foreground nil :background nil ))))
+;; `(yas-field-highlight-face                  ((t (:foreground nil :background nil ))))
 
 ;; Local Variables:
 ;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode +1))
