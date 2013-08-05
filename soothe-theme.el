@@ -6,6 +6,7 @@
 ;;;
 ;;; Change Log:
 ;;; 20130805.0148 : Fix ansi-term issue
+;;; 0.3.19        : Styles for js3 added
 ;;; 0.3.18        : Added stubs for helm and js3
 ;;; 0.3.17        : Added support for which-func face (milkypostman)
 ;;; 0.3.16        : Fixed flymake colors; also added Package Requres Emacs 24 by Steve Purcell
@@ -352,20 +353,21 @@
 
    ;; ------------------------------------------------------------------------------------------
    ;; JS3 mode
-   
-   ;; `(js3-error-face                    ((t (:foreground nil :background nil ))))
-   ;; `(js3-external-variable-face        ((t (:foreground nil :background nil ))))
-   ;; `(js3-function-param-face           ((t (:foreground nil :background nil ))))
-   ;; `(js3-instance-member-face          ((t (:foreground nil :background nil ))))
-   ;; `(js3-jsdoc-html-tag-delimiter-face ((t (:foreground nil :background nil ))))
-   ;; `(js3-jsdoc-html-tag-name-face      ((t (:foreground nil :background nil ))))
-   ;; `(js3-jsdoc-tag-face                ((t (:foreground nil :background nil ))))
-   ;; `(js3-jsdoc-type-face               ((t (:foreground nil :background nil ))))
-   ;; `(js3-jsdoc-value-face              ((t (:foreground nil :background nil ))))
-   ;; `(js3-magic-paren-face              ((t (:foreground nil :background nil ))))
-   ;; `(js3-private-function-call-face    ((t (:foreground nil :background nil ))))
-   ;; `(js3-private-member-face           ((t (:foreground nil :background nil ))))
-   ;; `(js3-warning-face                  ((t (:foreground nil :background nil ))))
+
+   `(js3-error-face                    ((t (:underline ,red-1        :background ,red-1bg )))) 
+   `(js3-warning-face                  ((t (:underline ,yellow-1     :background ,yellow-1bg )))) 
+   `(js3-external-variable-face        ((t (:foreground ,purple-1    :background ,purple-1bg )))) 
+   `(js3-function-param-face           ((t (:foreground ,blue-3      :background ,blue-3bg )))) 
+   `(js3-instance-member-face          ((t (:foreground ,dirty-crem  :background ,purple-1bg )))) 
+   `(js3-magic-paren-face              ((t (:foreground ,snow-code   :background ,purple-1bg )))) 
+   `(js3-private-function-call-face    ((t (:foreground ,orange-1    :background ,orange-1bg )))) 
+   `(js3-private-member-face           ((t (:foreground ,orange-2    :background ,orange-1bg )))) 
+   `(js3-jsdoc-html-tag-delimiter-face ((t (:foreground ,blue-4      :background ,blue-2bg )))) 
+   `(js3-jsdoc-html-tag-name-face      ((t (:foreground ,foam        :background ,blue-3bg )))) 
+   `(js3-jsdoc-tag-face                ((t (:foreground ,green-3     :background ,green-2bg )))) 
+   `(js3-jsdoc-type-face               ((t (:foreground ,green-2     :background ,green-2bg )))) 
+   `(js3-jsdoc-value-face              ((t (:foreground ,green-1     :background ,green-1bg )))) 
+
    
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Diff
