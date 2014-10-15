@@ -63,7 +63,7 @@
 ;;;   whitespace-mode, ECB, flyspell, ido, linum, highlight
 ;;;   indentation, show-paren-mode, further mode support to come.
 
-(unless (>= 24 emacs-major-version)
+(unless (>= emacs-major-version 24)
   (error "soothe-theme requires Emacs 24 or later."))
 
 (deftheme soothe
