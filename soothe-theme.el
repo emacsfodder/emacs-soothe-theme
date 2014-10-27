@@ -1,10 +1,11 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 20141023.2139
+;;; Version: 20141027.0939
 ;;; Package-Requires: ((emacs "24.1"))
 ;;;
 ;;; Change Log:
+;;; 20141027.0939 : Fix comment color
 ;;; 20141023.2139 : Fixed rainbow delimiters for better legibility, @osener
 ;;;                 Added new faces @osener
 ;;;                 Moved rainbow delimiters to custom faces
@@ -163,7 +164,7 @@
    ;; Font-lock stuff
    `(font-lock-builtin-face                    ((t (:foreground ,red-2       :background ,red-1bg                       ))))
    `(font-lock-constant-face                   ((t (:foreground ,purple-1    :background ,purple-1bg                    ))))
-   `(font-lock-comment-face                    ((t (:foreground ,turquoise-2 :background ,alt-background :italic t      ))))
+   `(font-lock-comment-face                    ((t (:foreground ,purple-1    :background ,alt-background :italic t      ))))
    `(font-lock-comment-delimiter-face          ((t (:foreground ,turquoise-1 :background ,alt-background :italic t      ))))
    `(font-lock-doc-face                        ((t (:foreground ,blue-3      :background ,gray-1bg                      ))))
    `(font-lock-doc-string-face                 ((t (:foreground ,blue-3      :background ,gray-1bg                      ))))
