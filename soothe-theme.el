@@ -1,10 +1,11 @@
 ;;; soothe-theme.el --- a dark colorful theme for Emacs24.
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-soothe-theme
-;;; Version: 20141027.0939
+;;; Version: 20141027.2233
 ;;; Package-Requires: ((emacs "24.1"))
 ;;;
 ;;; Change Log:
+;;; 20141027.2233 : Fix rainbow delimiters
 ;;; 20141027.0939 : Fix comment color
 ;;; 20141023.2139 : Fixed rainbow delimiters for better legibility, @osener
 ;;;                 Added new faces @osener
@@ -48,6 +49,15 @@
 ;;; 0.3.0         : cleaned up for elpa
 ;;; 0.1.0         : initial version
 ;;;
+;;;
+;;; Commentary:
+;;;   An amalgam of muted color tones and highlighted
+;;;   backgrounds.  Builtin support for rainbow-delimiters, org-mode,
+;;;   whitespace-mode, ECB, flyspell, ido, linum, highlight
+;;;   indentation, show-paren-mode, further mode support to come.
+;;;
+;;; License:
+;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
 ;;; the Free Software Foundation, version 3 of the License.
@@ -62,13 +72,10 @@
 ;;;
 ;;; This file is not a part of Emacs
 ;;;
-;;; Commentary: An amalgam of muted color tones and highlighted
-;;;   backgrounds.  Builtin support for rainbow-delimiters, org-mode,
-;;;   whitespace-mode, ECB, flyspell, ido, linum, highlight
-;;;   indentation, show-paren-mode, further mode support to come.
+;;; Code:
 
 (unless (>= emacs-major-version 24)
-  (error "soothe-theme requires Emacs 24 or later."))
+  (error "Soothe-theme requires Emacs 24 or later"))
 
 (deftheme soothe
   "soothe-theme An amalgam of muted color tones and highlighted
@@ -470,17 +477,16 @@
    `(hl-sexp-face                              ((t (                         :background ,turquoise-2bg                 ))))
    ;;-----------------------------------------------------------------------------------------------------------------------
    ;; Rainbow delimiters
-   `(rainbow-delimiters-depth-1-face           ((t (:foreground "#2B3C58"                                               ))))
-   `(rainbow-delimiters-depth-2-face           ((t (:foreground "#4E582B"                                               ))))
-   `(rainbow-delimiters-depth-3-face           ((t (:foreground "#2B5858"                                               ))))
-   `(rainbow-delimiters-depth-4-face           ((t (:foreground "#58462B"                                               ))))
-   `(rainbow-delimiters-depth-5-face           ((t (:foreground "#33582B"                                               ))))
-   `(rainbow-delimiters-depth-6-face           ((t (:foreground "#342B58"                                               ))))
-   `(rainbow-delimiters-depth-7-face           ((t (:foreground "#582B45"                                               ))))
-   `(rainbow-delimiters-depth-8-face           ((t (:foreground "#2B583D"                                               ))))
-   `(rainbow-delimiters-depth-9-face           ((t (:foreground "#4F2B58"                                               ))))
-   `(rainbow-delimiters-unmatched-face         ((t (:foreground "#660000"                                               ))))
-
+   `(rainbow-delimiters-depth-1-face           ((t (:foreground "#D65921"                                               ))))
+   `(rainbow-delimiters-depth-2-face           ((t (:foreground "#2B88A8"                                               ))))
+   `(rainbow-delimiters-depth-3-face           ((t (:foreground "#FFA07E"                                               ))))
+   `(rainbow-delimiters-depth-4-face           ((t (:foreground "#30D039"                                               ))))
+   `(rainbow-delimiters-depth-5-face           ((t (:foreground "#58A0A2"                                               ))))
+   `(rainbow-delimiters-depth-6-face           ((t (:foreground "#6070DF"                                               ))))
+   `(rainbow-delimiters-depth-7-face           ((t (:foreground "#D78060"                                               ))))
+   `(rainbow-delimiters-depth-8-face           ((t (:foreground "#FFDD77"                                               ))))
+   `(rainbow-delimiters-depth-9-face           ((t (:foreground "#44FF88"                                               ))))
+   `(rainbow-delimiters-unmatched-face         ((t (:foreground "#F92672"                                               ))))
    )
 
   (custom-theme-set-variables
