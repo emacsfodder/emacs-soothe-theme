@@ -5,7 +5,7 @@
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
-;; Version: 1.1.4
+;; Version: 1.1.5
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -389,7 +389,7 @@
   (magit-diff-file-heading-highlight         (:extend t :inherit 'magit-section-highlight))
   (magit-diff-file-heading-selection         (:extend t :foreground soothe-yellow-1 :inherit 'magit-diff-file-heading-highlight))
   (magit-diff-hunk-heading                   (:extend t :foreground soothe-foreground :background soothe-low-purple))
-  (magit-diff-hunk-heading-highlight         (:extend t :foreground soothe-foreground :background soothe-mid-purple))
+  (magit-diff-hunk-heading-highlight         (:extend t :foreground soothe-foreground :background soothe-low-purple))
   (magit-diff-hunk-heading-selection         (:extend t :foreground soothe-yellow-1 :inherit 'magit-diff-hunk-heading-highlight))
 
   (magit-diff-lines-heading                  (:extend t :foreground soothe-darker-crem :background soothe-red-2 :inherit 'magit-diff-hunk-heading-highlight))
@@ -410,6 +410,9 @@
   (magit-diff-their-highlight                (:inherit 'magit-diff-added-highlight))
   (magit-diff-whitespace-warning             (:inherit 'trailing-whitespace))
 
+  (magit-branch-current                      (:foreground soothe-purple-1    :background soothe-purple-1bg :box (:line-width -1 :color soothe-purple-1)))
+  (magit-branch-local                        (:foreground soothe-purple-1    :background soothe-purple-1bg))
+  (magit-log-author                          (:foreground soothe-purple-1    :background soothe-purple-1bg))
   (magit-log-author                          (:foreground soothe-purple-1    :background soothe-purple-1bg))
   (magit-log-graph                           (:foreground soothe-blue-2      :background soothe-blue-2bg))
   (magit-log-head-label-bisect-good          (:foreground soothe-turquoise-1 :background soothe-turquoise-1bg))
