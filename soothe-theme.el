@@ -4,8 +4,8 @@
 ;;
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
-;; URL: https://github.com/jason/soothe-theme
-;; Version: 1.1.1
+;; URL: https://github.com/emacsfodder/emacs-soothe-theme
+;; Version: 1.1.3
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
