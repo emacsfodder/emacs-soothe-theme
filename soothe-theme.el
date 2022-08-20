@@ -200,6 +200,7 @@
   (isearch                                    (:foreground soothe-foam        :background soothe-purple-2bg))
   (isearch-fail                               (:foreground soothe-foam        :background soothe-red-5))
   (lazy-highlight                             (:foreground soothe-purple-1    :background soothe-green-2bg))
+  (success                                    (:foreground soothe-foam        :background soothe-mid-blue))
 
   (ivy-cursor                                 (:foreground soothe-foam :background soothe-turquoise-3bg))
   (ivy-current-match                          (:inherit 'match))
