@@ -72,6 +72,7 @@
 
   (soothe-turquoise-1          "#0E545F")
   (soothe-turquoise-2          "#113E46")
+  (soothe-turquoise-3          "#0D3239")
   (soothe-turquoise-1bg        "#06181C")
   (soothe-turquoise-2bg        "#051316")
   (soothe-turquoise-3bg        "#15252A")
@@ -202,6 +203,23 @@
   (lazy-highlight                             (:foreground soothe-purple-1    :background soothe-green-2bg))
   (success                                    (:foreground soothe-foam        :background soothe-mid-blue))
 
+  (ediff-current-diff-A        (:background soothe-gray-3))
+  (ediff-current-diff-B        (:background soothe-gray-3))
+  (ediff-current-diff-C        (:background soothe-green-1))
+  (ediff-current-diff-Ancestor (:background soothe-turquoise-2))
+  (ediff-fine-diff-A           (:background soothe-red-3))
+  (ediff-fine-diff-B           (:background soothe-bright-green))
+  (ediff-fine-diff-C           (:background soothe-bright-green))
+  (ediff-fine-diff-Ancestor    (:background soothe-blue-3))
+  (ediff-even-diff-A           (:background soothe-gray-1))
+  (ediff-even-diff-B           (:background soothe-faded-purple))
+  (ediff-even-diff-C           (:background soothe-gray-1))
+  (ediff-even-diff-Ancestor    (:background soothe-faded-purple))
+  (ediff-odd-diff-A            (:background soothe-faded-purple))
+  (ediff-odd-diff-B            (:background soothe-gray-1))
+  (ediff-odd-diff-C            (:background soothe-alt-background))
+  (ediff-odd-diff-Ancestor     (:background soothe-faded-purple))
+
   (ivy-cursor                                 (:foreground soothe-foam :background soothe-turquoise-3bg))
   (ivy-current-match                          (:inherit 'match))
   (ivy-minibuffer-match-highlight             (:inherit 'highlight))
@@ -286,6 +304,10 @@
   (smerge-refined-added                       (:inherit 'diff-added))
   (smerge-refined-removed                     (:inherit 'diff-removed))
   (smerge-base                                (:inherit 'diff-context))
+
+  (smerge-markers                             (:foreground soothe-purple-1    :background soothe-purple-1bg))
+  (smerge-upper                               (:background soothe-blue-1bg))
+  (smerge-lower                               (:background soothe-turquoise-1bg))
 
   (diff-file-header                           (:foreground soothe-orange-1    :background soothe-orange-1bg))
   (diff-context                               (:foreground soothe-foam))
