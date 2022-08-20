@@ -5,7 +5,7 @@
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
-;; Version: 1.1.3
+;; Version: 1.1.4
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -358,14 +358,16 @@
   (git-gutter:unchanged                      (:background soothe-yellow-1bg))
 
   (magit-item-highlight                      (:background soothe-purple-3bg))
-  (magit-branch                              (:foreground soothe-green-2     :background soothe-green-2bg))
-  (magit-branch-remote                       (:foreground soothe-green-2     :background soothe-green-2bg))
+  (magit-branch                              (:foreground soothe-orange-1     :background soothe-orange-2bg))
+  (magit-branch-remote                       (:foreground soothe-orange-1     :background soothe-orange-2bg))
   (magit-whitespace-warning-face             (:foreground soothe-red-3       :background soothe-red-1bg))
   (magit-section-heading                     (:foreground soothe-orange-1    :background soothe-purple-1bg))
   (magit-section-title                       (:foreground soothe-purple-1    :background soothe-purple-1bg))
   (magit-section-highlight                   (:foreground soothe-purple-1    :background soothe-purple-1bg))
   (magit-section-highlight-selection         (:foreground soothe-purple-1    :background soothe-purple-1bg))
   (magit-header                              (:foreground soothe-orange-1    :background soothe-orange-1bg))
+  (magit-hash                                (:foreground soothe-purple-1    :background soothe-purple-1bg))
+  (magit-tag                                 (:foreground soothe-orange-1    :background soothe-orange-1bg))
   (magit-item-mark                           (:foreground soothe-green-1))
 
   (magit-diff-added-highlight                (:foreground soothe-foam :background soothe-dark-green))
