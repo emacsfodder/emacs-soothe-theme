@@ -24,13 +24,23 @@ To have Soothe always enabled when you start Emacs, add the following to your
 
 ### Screenshots
 
+#### Vertico Posframe
+
 ![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/master/vertico-posframe.png)
+
+#### EmacsLisp
 
 ![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/master/emacs-lisp.png)
 
+#### Markdown
+
 ![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/master/markdown.png)
 
+#### Swift
+
 ![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/master/swift.png)
+
+#### HTML & Which-key
 
 ![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/master/html-which-key.png)
 
