@@ -1,4 +1,5 @@
 [![MELPA](http://melpa.org/packages/soothe-theme-badge.svg)](http://melpa.org/#/soothe-theme)
+[![MELPA](http://stable.melpa.org/packages/soothe-theme-badge.svg)](http://stable.melpa.org/#/soothe-theme)
 
 # Soothe-theme
 
