@@ -22,7 +22,7 @@ To have Soothe always enabled when you start Emacs, add the following to your
 (load-theme 'soothe)
 ```
 
-### Screenshots
+### Emacs Screenshots
 
 #### Vertico Posframe
 
