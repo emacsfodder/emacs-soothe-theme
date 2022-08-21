@@ -288,7 +288,7 @@
   (diredfl-autofile-name                     (:foreground soothe-bright-blue :background soothe-dark-purple))
   (diredfl-compressed-file-name              (:foreground soothe-bright-blue))
   (diredfl-compressed-file-suffix            (:foreground soothe-bright-blue))
-  (diredfl-date-time                         (:foreground soothe-muted-purple :background soothe-dark-purple))
+  (diredfl-date-time                         (:foreground soothe-prime-orange :background soothe-dark-purple))
 
   (diredfl-deletion                          (:foreground soothe-bright-orange :background soothe-red-3))
   (diredfl-deletion-file-name                (:foreground soothe-red-3))
@@ -539,8 +539,8 @@
 
   (orderless-match-face-0                    (:inherit 'match :foreground soothe-prime-turquoise))
   (orderless-match-face-1                    (:inherit 'highlight :foreground soothe-prime-purple))
-  (orderless-match-face-2                    (:inherit 'lazy-highlight :foreground soothe-prime-blue))
-  (orderless-match-face-3                    (:inherit 'secondary-selection :foreground soothe-overexposed-orange))
+  (orderless-match-face-2                    (:inherit 'lazy-highlight :foreground soothe-prime-orange))
+  (orderless-match-face-3                    (:inherit 'secondary-selection :foreground soothe-prime-blue))
 
   (vertico-posframe                          (:background soothe-background-dark))
   (vertico-posframe-border                   (:background soothe-background-dark-0))
@@ -586,6 +586,21 @@
      (add-to-list 'custom-theme-load-path
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
+
+
+;; For development.
+
+(defun soothe-dev-reload ()
+  "For development, reload soothe-theme from development file."
+  (interactive)
+  (let (dev-file-name)
+   (when (featurep 'soothe-theme)
+    (unload-feature 'soothe-theme))
+   (disable-theme 'soothe)
+   (setq dev-file-name (read-file-name "Locate sooth-theme.el: " nil nil t nil))
+   (byte-compile-file dev-file-name)
+   (load-file (replace-regexp-in-string "[.]el" ".elc" dev-file-name))
+   (enable-theme 'soothe)))
 
 (provide-theme 'soothe)
 
