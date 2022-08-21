@@ -1,11 +1,11 @@
-;;; soothe-theme.el --- A dark colorful theme. -*- lexical-binding: t; -*-
+;;; soothe-theme.el --- A dark colorful theme -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2012-2022 Jason Milkins
 ;;
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
-;; Version: 1.2.0
+;; Version: 1.3.0
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -49,9 +49,12 @@
   (soothe-background-dark-0    "#000000")
   (soothe-background-dark      "#0F0E11")
   (soothe-background           "#111013")
+  (soothe-background-0         "#111013")
   (soothe-alt-background       "#121113")
+  (soothe-background-1         "#121113")
   (soothe-background-2         "#2B2A2A")
-  (soothe-background-3         "#333030")
+  (soothe-background-3         "#313030")
+  (soothe-background-4         "#343333")
 
   (soothe-gray-1               "#AAAAAA")
   (soothe-gray-2               "#828282")
@@ -173,7 +176,6 @@
   (font-lock-comment-face                    (:foreground soothe-prime-purple    :background soothe-alt-background :italic t))
   (font-lock-comment-delimiter-face          (:foreground soothe-turquoise-1 :background soothe-alt-background :italic t))
   (font-lock-doc-face                        (:foreground soothe-prime-turquoise      :background soothe-gray-1bg))
-  (font-lock-doc-string-face                 (:foreground soothe-prime-turquoise      :background soothe-gray-1bg))
   (font-lock-function-name-face              (:foreground soothe-prime-red       :background soothe-red-1bg))
   (font-lock-keyword-face                    (:foreground soothe-prime-orange    :background soothe-orange-1bg))
   (font-lock-negation-char-face              (:foreground soothe-prime-yellow    :background soothe-yellow-1bg))
@@ -238,14 +240,29 @@
   (ivy-completions-annotations               (:inherit 'completions-annotations))
   (ivy-yanked-word                           (:inherit 'highlight))
 
+  (company-echo-common                       (:foreground soothe-prime-blue :background nil))
+  (company-preview-common                    (:inherit 'font-lock-builtin-face :underline soothe-foreground-1))
+  (company-echo                              (:inherit 'company-echo-common))
+  (company-preview                           (:inherit 'company-preview-common))
+  (company-preview-search                    (:inherit 'company-preview-common))
+  (company-scrollbar-bg                      (:foreground nil :background soothe-turquoise-2bg))
+  (company-scrollbar-fg                      (:foreground nil :background soothe-turquoise-2))
+  (company-template-field                    (:foreground soothe-prime-blue :background nil :underline soothe-bg-blue))
+  (company-tooltip                           (:foreground soothe-foreground-0 :background soothe-turquoise-1bg))
+  (company-tooltip-annotation                (:foreground soothe-foreground-0 :background soothe-turquoise-2bg))
+  (company-tooltip-common                    (:foreground soothe-prime-turquoise :background soothe-turquoise-2bg))
+  (company-tooltip-common-selection          (:foreground soothe-prime-orange :background soothe-turquoise-2bg))
+  (company-tooltip-mouse                     (:foreground soothe-prime-purple :background soothe-turquoise-2bg))
+  (company-tooltip-selection                 (:inherit 'font-lock-constant-face :background soothe-background-dark-0))
+
   (ac-selection-face                         (:foreground soothe-foreground-2 :background soothe-background-2))
-  (ac-candidate-face                         (:foreground soothe-background  :background soothe-foreground-2))
-  (ac-yasnippet-candidate-face               (:foreground soothe-background  :background soothe-green-2))
-  (ac-yasnippet-selection-face               (:foreground soothe-foreground-1        :background soothe-background-2))
-  (ac-gtags-candidate-face                   (:foreground soothe-background  :background soothe-purple-3))
+  (ac-candidate-face                         (:foreground soothe-background   :background soothe-foreground-2))
+  (ac-yasnippet-candidate-face               (:foreground soothe-background   :background soothe-green-2))
+  (ac-yasnippet-selection-face               (:foreground soothe-foreground-1 :background soothe-background-2))
+  (ac-gtags-candidate-face                   (:foreground soothe-background   :background soothe-purple-3))
   (ac-gtags-selection-face                   (:foreground soothe-foreground-2 :background soothe-background-2))
-  (ac-candidate-mouse-face                   (:foreground soothe-foreground-1        :background soothe-turquoise-1))
-  (ac-completion-face                        (:foreground soothe-foreground-0   :background soothe-purple-3bg))
+  (ac-candidate-mouse-face                   (:foreground soothe-foreground-1 :background soothe-turquoise-1))
+  (ac-completion-face                        (:foreground soothe-foreground-0 :background soothe-purple-3bg))
   (popup-tip-face                            (:foreground soothe-foreground-2 :background soothe-background-2))
   (tooltip                                   (:foreground soothe-background-2 :background soothe-foreground-2))
 
@@ -279,7 +296,7 @@
   (diredfl-deletion                          (:foreground soothe-prime-orange :background soothe-red-3))
   (diredfl-deletion-file-name                (:foreground soothe-red-3 :background-color soothe-red-2bg))
 
-  (diredfl-dir-heading                       (:inherit font-lock-builtin-face))
+  (diredfl-dir-heading                       (:inherit 'font-lock-builtin-face))
   (diredfl-dir-priv                          (:foreground soothe-prime-orange :background soothe-bg-orange))
 
   (diredfl-exec-priv                         (:foreground soothe-prime-red :background soothe-bg-red))
