@@ -4,19 +4,21 @@
 
 A colorful, muted theme for Emacs, dark background with light text. 
 
-![](./palette.svg)
+![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/master/images/palette.svg)
 
 ## Installing
 
-Simply setup Emacs to use [MELPA](http://melpa.org/#/getting-started) and
-install Soothe like this:
+Setup [MELPA](http://melpa.org/#/getting-started) and install Soothe:
 
-    M-x package-install <RET> soothe-theme
+```
+M-x package-install <RET> soothe-theme
+```
     
-Now you can do: `M-x load-theme <RET> soothe`
+Now you can: `M-x load-theme <RET> soothe`
 
-To have Soothe always enabled when you start Emacs, add the following to your
-`~/.emacs` (or `~/.emacs.d/init.el`) file:
+#### Enable Soothe at startup:
+
+Add this to your `~/.emacs` (or `~/.emacs.d/init.el`) file:
 
 ```
 (load-theme 'soothe)
@@ -26,21 +28,25 @@ To have Soothe always enabled when you start Emacs, add the following to your
 
 #### Vertico Posframe
 
-![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/master/vertico-posframe.png)
+![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/vertico-posframe.png)
 
 #### EmacsLisp
 
-![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/master/emacs-lisp.png)
+![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/emacs-lisp.png)
 
 #### Markdown
 
-![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/master/markdown.png)
+![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/markdown.png)
 
 #### Swift
 
-![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/master/swift.png)
+![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/swift.png)
+
+#### Android Manifest / XML
+
+![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/xml.png)
 
 #### HTML & Which-key
 
-![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/master/html-which-key.png)
+![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/html-which-key.png)
 
