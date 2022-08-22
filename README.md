@@ -4,7 +4,7 @@
 
 A colorful, muted theme for Emacs, dark background with light text. 
 
-![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/master/images/palette.svg)
+![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/palette.svg)
 
 ## Installing
 
