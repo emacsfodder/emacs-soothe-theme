@@ -30,9 +30,17 @@ Add this to your `~/.emacs` (or `~/.emacs.d/init.el`) file:
 
 ![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/vertico-posframe.png)
 
+#### Diredfl
+
+![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/diredfl.png)
+
 #### EmacsLisp
 
 ![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/emacs-lisp.png)
+
+#### Which-key
+
+![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/html-which-key.png)
 
 #### Markdown
 
@@ -42,11 +50,15 @@ Add this to your `~/.emacs` (or `~/.emacs.d/init.el`) file:
 
 ![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/swift.png)
 
-#### Android Manifest / XML
+#### HTML
+
+![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/html.png)
+
+#### Yaml
+
+![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/yml.png)
+
+#### XML
 
 ![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/xml.png)
-
-#### HTML & Which-key
-
-![](https://raw.githubusercontent.com/emacsfodder/emacs-soothe-theme/images/images/html-which-key.png)
 
