@@ -531,9 +531,9 @@
 
   (web-mode-doctype-face                     (:foreground soothe-foreground-2 :weight 'bold))
   (web-mode-html-attr-equal-face             (:inherit 'default))
-  (web-mode-html-attr-name-face              (:inherit 'font-lock-variable-name-face))
+  (web-mode-html-attr-name-face              (:inherit 'font-lock-keyword-face))
   (web-mode-html-tag-bracket-face            (:inherit 'default))
-  (web-mode-html-tag-face                    (:foreground soothe-foreground-3))
+  (web-mode-html-tag-face                    (:inherit 'font-lock-builtin-face))
 
   (which-key-command-description-face        (:inherit 'font-lock-function-name-face))
   (which-key-group-description-face          (:inherit 'font-lock-keyword-face))
