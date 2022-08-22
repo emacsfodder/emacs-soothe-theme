@@ -40,12 +40,16 @@
 
 (autothemer-deftheme soothe
                       "A dark colorful theme"
+ ;;; Palette
  ((((class color) (min-colors #xFFFFFF))) ;; GUI/24bit only
+  ;;; Foreground colors
   (soothe-foreground           "#F4F1ED")
   (soothe-foreground-0         "#ECEAE5")
   (soothe-foreground-1         "#E3E4E2")
   (soothe-foreground-2         "#DBD9D4")
   (soothe-foreground-3         "#CECCC7")
+
+  ;;; Background colors
   (soothe-background-dark-0    "#000000")
   (soothe-background-dark      "#0F0E11")
   (soothe-background           "#111013")
@@ -56,6 +60,7 @@
   (soothe-background-3         "#313030")
   (soothe-background-4         "#343333")
 
+  ;;; Colors Gray
   (soothe-gray-1               "#AAAAAA")
   (soothe-gray-2               "#828282")
   (soothe-gray-3               "#333333")
@@ -66,6 +71,7 @@
   (soothe-gray-2bg             "#111111")
   (soothe-gray-3bg             "#141414")
 
+  ;;; Colors Prime
   (soothe-prime-red            "#B14E41")
   (soothe-prime-orange         "#D9662E")
   (soothe-prime-yellow         "#CEB666")
@@ -74,6 +80,7 @@
   (soothe-prime-purple         "#948CB5")
   (soothe-prime-turquoise      "#1FA8A8")
 
+  ;;; Colors Turquoise
   (soothe-turquoise-0          "#106A77")
   (soothe-turquoise-1          "#0E545F")
   (soothe-turquoise-2          "#113E46")
@@ -81,6 +88,7 @@
   (soothe-turquoise-1bg        "#06181C")
   (soothe-turquoise-2bg        "#051316")
 
+  ;;; Colors Accents
   (soothe-red-2                "#A24B2E")
   (soothe-red-3                "#AA2010")
   (soothe-orange-2             "#FF642A")
@@ -91,6 +99,7 @@
   (soothe-purple-3             "#50486C")
   (soothe-purple-4             "#3B3358")
 
+  ;;; Original Background Colors
   (soothe-red-1bg              "#1D1717")
   (soothe-red-2bg              "#251F20")
   (soothe-orange-1bg           "#1F1813")
@@ -107,42 +116,50 @@
   (soothe-purple-2bg           "#353048")
   (soothe-purple-3bg           "#282436")
 
+  ;;; 2022 Palette add-ons
+  ;;; Muted colors
   (soothe-muted-red            "#ED8E8E")
   (soothe-muted-orange         "#D7B181")
   (soothe-muted-green          "#90AC67")
   (soothe-muted-blue           "#72A9BF")
   (soothe-muted-purple         "#BD95FA")
 
+  ;;; Overexposed colors
   (soothe-overexposed-red      "#F2A9A9")
   (soothe-overexposed-orange   "#F2D0A9")
   (soothe-overexposed-green    "#D4F2A9")
   (soothe-overexposed-blue     "#A9DCF2")
   (soothe-overexposed-purple   "#C6A9F2")
 
+  ;;; Faded colors
   (soothe-faded-red            "#7F5858")
   (soothe-faded-orange         "#7F6D58")
   (soothe-faded-green          "#6F7F58")
   (soothe-faded-blue           "#58737F")
   (soothe-faded-purple         "#67587F")
 
+  ;;; Mid colors
   (soothe-mid-red              "#883B3B")
   (soothe-mid-orange           "#8B5000")
   (soothe-mid-green            "#3F610D")
   (soothe-mid-blue             "#195A73")
   (soothe-mid-purple           "#563C7C")
 
+  ;;; Low colors
   (soothe-low-red              "#411010")
   (soothe-low-orange           "#412500")
   (soothe-low-green            "#2A4107")
   (soothe-low-blue             "#0D3241")
   (soothe-low-purple           "#2C1F41")
 
+  ;;; Dark colors
   (soothe-dark-red             "#261010")
   (soothe-dark-orange          "#261500")
   (soothe-dark-green           "#182604")
   (soothe-dark-blue            "#071D26")
   (soothe-dark-purple          "#1A1226")
 
+  ;;; 2022 Background colors
   (soothe-bg-red               "#190A0A")
   (soothe-bg-orange            "#190E00")
   (soothe-bg-green             "#101902")
@@ -150,6 +167,7 @@
   (soothe-bg-purple            "#110C19")
   (soothe-bg-turquoise         "#15252A")
 
+  ;;; Rainbow Delimiter colors
   (soothe-rainbow-delimiters-0 "#476121")
   (soothe-rainbow-delimiters-1 "#306173")
   (soothe-rainbow-delimiters-2 "#65557C")
@@ -161,6 +179,7 @@
   (soothe-rainbow-delimiters-8 "#71687B")
   (soothe-rainbow-delimiters-9 "#503E69"))
 
+ ;;; Face Specs
  ((default                                   (:foreground soothe-foreground                :background soothe-background))
   (cursor                                    (:background soothe-prime-orange))
   (region                                    (:background soothe-blue-5bg))
@@ -173,23 +192,23 @@
   (error                                     (:foreground soothe-prime-red                 :background soothe-red-1bg))
   (font-lock-builtin-face                    (:foreground soothe-red-2                     :background soothe-red-1bg))
   (font-lock-constant-face                   (:foreground soothe-prime-purple              :background soothe-purple-1bg))
-  (font-lock-comment-face                    (:foreground soothe-prime-purple              :background soothe-alt-background     :italic t))
-  (font-lock-comment-delimiter-face          (:foreground soothe-turquoise-1               :background soothe-alt-background     :italic t))
+  (font-lock-comment-face                    (:foreground soothe-prime-purple              :background soothe-alt-background :italic t))
+  (font-lock-comment-delimiter-face          (:foreground soothe-turquoise-1               :background soothe-alt-background :italic t))
   (font-lock-doc-face                        (:foreground soothe-prime-turquoise           :background soothe-gray-1bg))
   (font-lock-function-name-face              (:foreground soothe-prime-red                 :background soothe-red-1bg))
   (font-lock-keyword-face                    (:foreground soothe-prime-orange              :background soothe-orange-1bg))
   (font-lock-negation-char-face              (:foreground soothe-prime-yellow              :background soothe-yellow-1bg))
   (font-lock-preprocessor-face               (:foreground soothe-prime-orange              :background soothe-orange-1bg))
   (font-lock-string-face                     (:foreground soothe-prime-turquoise           :background soothe-turquoise-2bg))
-  (font-lock-type-face                       (:foreground soothe-red-2                     :background soothe-red-1bg            :bold nil))
+  (font-lock-type-face                       (:foreground soothe-red-2                     :background soothe-red-1bg :bold nil))
   (font-lock-variable-name-face              (:foreground soothe-prime-blue                :background soothe-blue-1bg))
   (font-lock-warning-face                    (:foreground soothe-red-2                     :background soothe-red-2bg))
   (link                                      (:foreground soothe-prime-blue                :background soothe-blue-1bg))
   (link-visited                              (:foreground soothe-prime-turquoise           :background soothe-blue-4bg))
   (fringe                                    (:background soothe-gray-3bg))
   (vertical-border                           (:foreground soothe-gray-4                    :background soothe-background))
-  (mode-line                                 (:foreground soothe-gray-2                    :background soothe-gray-3bg           :box nil))
-  (mode-line-inactive                        (:foreground soothe-gray-5                    :background soothe-gray-2bg           :inherit 'mode-line))
+  (mode-line                                 (:foreground soothe-gray-2                    :background soothe-gray-3bg :box nil))
+  (mode-line-inactive                        (:foreground soothe-gray-5                    :background soothe-gray-2bg :inherit 'mode-line))
   (mode-line-highlight                       (:foreground soothe-prime-red))
   (mode-line-buffer-id                       (:foreground soothe-prime-orange))
   (mode-line-emphasis                        (:bold t))
