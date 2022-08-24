@@ -5,7 +5,7 @@
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
-;; Version: 1.4.0
+;; Version: 1.4.1
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -207,11 +207,33 @@
   (link-visited                              (:foreground soothe-prime-turquoise           :background soothe-blue-4bg))
   (fringe                                    (:background soothe-gray-3bg))
   (vertical-border                           (:foreground soothe-gray-4                    :background soothe-background))
-  (mode-line                                 (:foreground soothe-gray-2                    :background soothe-gray-3bg :box nil))
+
+  (mode-line                                 (:foreground soothe-gray-2                    :background soothe-background-2 :box nil))
   (mode-line-inactive                        (:foreground soothe-gray-5                    :background soothe-gray-2bg :inherit 'mode-line))
   (mode-line-highlight                       (:foreground soothe-prime-red))
   (mode-line-buffer-id                       (:foreground soothe-prime-orange))
   (mode-line-emphasis                        (:bold t))
+
+  (lambda-line-active                        (:inherit 'mode-line))
+  (lambda-line-inactive                      (:inherit 'mode-line-inactive))
+  (lambda-line-hspace-active                 (:family "Monospace" :inherit 'mode-line))
+  (lambda-line-hspace-inactive               (:family "Monospace" :inherit 'mode-line-inactive))
+  (lambda-line-active-name                   (:inherit 'mode-line))
+  (lambda-line-inactive-name                 (:inherit 'mode-line-inactive))
+  (lambda-line-active-primary                (:weight 'light :inherit 'mode-line))
+  (lambda-line-inactive-primary              (:inherit 'mode-line-inactive))
+  (lambda-line-active-secondary              (:inherit 'mode-line))
+  (lambda-line-inactive-secondary            (:inherit 'mode-line-inactive))
+  (lambda-line-active-tertiary               (:inherit 'mode-line))
+  (lambda-line-inactive-tertiary             (:inherit 'mode-line-inactive))
+  (lambda-line-active-status-RO              (:foreground soothe-mid-red :inherit 'mode-line))
+  (lambda-line-inactive-status-RO            (:foreground soothe-low-red :inherit 'mode-line-inactive))
+  (lambda-line-active-status-RW              (:foreground soothe-mid-green :inherit 'mode-line))
+  (lambda-line-inactive-status-RW            (:foreground soothe-low-green :inherit 'mode-line-inactive))
+  (lambda-line-active-status-MD              (:foreground soothe-red-3 :inherit 'mode-line))
+  (lambda-line-inactive-status-MD            (:foreground soothe-foreground-2 :inherit 'mode-line-inactive))
+  (lambda-line-visual-bell                   (:background soothe-low-red))
+
   (which-func                                (:foreground soothe-prime-blue))
   (isearch                                   (:foreground soothe-foreground-1              :background soothe-purple-2bg))
   (isearch-fail                              (:foreground soothe-foreground-1              :background soothe-low-red))
@@ -554,6 +576,10 @@
   (web-mode-html-tag-bracket-face            (:inherit 'default))
   (web-mode-html-tag-face                    (:inherit 'font-lock-builtin-face))
 
+  (window-divider                            (:foreground soothe-background-dark-0))
+  (window-divider-last-pixel                 (:foreground soothe-background-dark-0))
+  (window-divider-first-pixel                (:foreground soothe-background-dark-0))
+
   (which-key-command-description-face        (:inherit 'font-lock-function-name-face))
   (which-key-group-description-face          (:inherit 'font-lock-keyword-face))
   (which-key-highlighted-command-face        (:inherit 'which-key-command-description-face :underline t))
@@ -561,7 +587,7 @@
   (which-key-local-map-description-face      (:inherit 'which-key-command-description-face))
   (which-key-note-face                       (:inherit 'which-key-separator-face))
   (which-key-separator-face                  (:inherit 'font-lock-comment-face))
-  (which-key-special-key-face                (:inherit 'which-key-key-face                 :weight 'bold :inverse-video t))
+  (which-key-special-key-face                (:inherit 'which-key-key-face :weight 'bold :inverse-video t))
 
   (rainbow-delimiters-depth-1-face           (:foreground soothe-rainbow-delimiters-0))
   (rainbow-delimiters-depth-2-face           (:foreground soothe-rainbow-delimiters-1))
