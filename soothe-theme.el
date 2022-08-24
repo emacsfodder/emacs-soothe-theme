@@ -33,12 +33,12 @@
 ;;
 ;;; Code:
 
-(require 'soothe)
+(require 'soothe-tva)
 
 (unless (>= emacs-major-version 24)
   (error "Requires Emacs 24 or later"))
 
-(soothe-deftheme soothe
+(soothe-tva-deftheme soothe
                  "A dark colorful theme"
  ;;; Palette
  ((((class color) (min-colors #xFFFFFF))) ;; GUI/24bit only

@@ -37,7 +37,7 @@
 
 (unless (>= emacs-major-version 24)
   (error "Requires Emacs 24 or later"))
-(defmacro soothe-tva-deftheme (name description palette body)
+(defmacro soothe-tva-deftheme (name description palette &rest body)
   "Create a soothe-theme: NAME, DESCRIPTION, PALETTE, BODY."
   `(autothemer-deftheme ,name ,description ,palette
     ;;; Face specs
