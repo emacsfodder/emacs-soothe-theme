@@ -5,7 +5,7 @@
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
-;; Version: 2.0.0
+;; Version: 2.0.1
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -322,28 +322,29 @@
 
      (lambda-line-active                        (:inherit 'mode-line))
      (lambda-line-inactive                      (:inherit 'mode-line-inactive))
-     (lambda-line-hspace-active                 (:family "Monospace" :inherit 'mode-line))
-     (lambda-line-hspace-inactive               (:family "Monospace" :inherit 'mode-line-inactive))
+     (lambda-line-hspace-active                 (:inherit 'mode-line :family "Monospace"))
+     (lambda-line-hspace-inactive               (:inherit 'mode-line-inactive :family "Monospace"))
      (lambda-line-active-name                   (:inherit 'mode-line))
      (lambda-line-inactive-name                 (:inherit 'mode-line-inactive))
-     (lambda-line-active-primary                (:weight 'light :inherit 'mode-line))
+     (lambda-line-active-primary                (:inherit 'mode-line :weight 'light))
      (lambda-line-inactive-primary              (:inherit 'mode-line-inactive))
      (lambda-line-active-secondary              (:inherit 'mode-line))
      (lambda-line-inactive-secondary            (:inherit 'mode-line-inactive))
      (lambda-line-active-tertiary               (:inherit 'mode-line))
      (lambda-line-inactive-tertiary             (:inherit 'mode-line-inactive))
-     (lambda-line-active-status-RO              (:foreground soothe-mid-red :inherit 'mode-line))
-     (lambda-line-inactive-status-RO            (:foreground soothe-low-red :inherit 'mode-line-inactive))
-     (lambda-line-active-status-RW              (:foreground soothe-mid-green :inherit 'mode-line))
-     (lambda-line-inactive-status-RW            (:foreground soothe-low-green :inherit 'mode-line-inactive))
-     (lambda-line-active-status-MD              (:foreground soothe-red-3 :inherit 'mode-line))
-     (lambda-line-inactive-status-MD            (:foreground soothe-foreground-2 :inherit 'mode-line-inactive))
+     (lambda-line-active-status-RO              (:inherit 'mode-line            :foreground soothe-mid-red))
+     (lambda-line-inactive-status-RO            (:inherit 'mode-line-inactive   :foreground soothe-low-red))
+     (lambda-line-active-status-RW              (:inherit 'mode-line            :foreground soothe-mid-green))
+     (lambda-line-inactive-status-RW            (:inherit 'mode-line-inactive   :foreground soothe-low-green))
+     (lambda-line-active-status-MD              (:inherit 'mode-line            :foreground soothe-red-3))
+     (lambda-line-inactive-status-MD            (:inherit 'mode-line-inactive   :foreground soothe-foreground-2))
      (lambda-line-visual-bell                   (:background soothe-low-red))
 
      (orderless-match-face-0                    (:inherit 'match                              :foreground soothe-prime-turquoise))
      (orderless-match-face-1                    (:inherit 'highlight                          :foreground soothe-prime-purple))
      (orderless-match-face-2                    (:inherit 'lazy-highlight                     :foreground soothe-prime-orange))
      (orderless-match-face-3                    (:inherit 'secondary-selection                :foreground soothe-prime-blue))
+
      (org-date                                  (:foreground soothe-prime-purple              :background soothe-purple-1bg))
      (org-done                                  (:foreground soothe-prime-green               :background soothe-green-1bg))
      (org-hide                                  (:foreground soothe-gray-3                    :background soothe-gray-1bg))
@@ -371,7 +372,7 @@
      (smerge-refined-changed                    (:inherit 'diff-changed))
      (smerge-refined-removed                    (:inherit 'diff-removed))
      (smerge-upper                              (:background soothe-blue-1bg))
-     (success                                   (:foreground soothe-foreground-1              :background soothe-mid-blue))
+     (success                                   (:foreground soothe-turquoise-0))
      (swiper-background-match-face-1            (:inherit 'swiper-match-face-1))
      (swiper-background-match-face-2            (:inherit 'swiper-match-face-2))
      (swiper-background-match-face-3            (:inherit 'swiper-match-face-3))
