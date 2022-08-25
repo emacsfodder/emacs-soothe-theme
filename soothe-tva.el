@@ -5,7 +5,7 @@
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
-;; Version: 2.0.1
+;; Version: 2.0.2
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -411,8 +411,10 @@
      (whitespace-space                          (:foreground soothe-turquoise-2               :background soothe-turquoise-2bg))
      (whitespace-space-after-tab                (:foreground soothe-turquoise-2               :background soothe-turquoise-2bg))
      (whitespace-tab                            (:foreground soothe-turquoise-2               :background soothe-turquoise-2bg))
-     (whitespace-trailing                       (:foreground soothe-prime-red                 :background soothe-turquoise-2bg)))
-
+     (whitespace-trailing                       (:foreground soothe-prime-red                 :background soothe-turquoise-2bg))
+     (window-divider-first-pixel                (:foreground soothe-background-0-dark))
+     (window-divider-last-pixel                 (:foreground soothe-background-0-dark))
+     (window-divider                            (:foreground soothe-background-0-dark)))
     ,@body))
 
   ;;;###autoload
