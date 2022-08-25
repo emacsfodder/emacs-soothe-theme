@@ -179,7 +179,6 @@
   (soothe-rainbow-delimiters-8 "#71687B")
   (soothe-rainbow-delimiters-9 "#503E69"))
 
- ;;; Custom theme set variables
  (custom-theme-set-variables 'soothe
                             `(pos-tip-foreground-color ,soothe-foreground)
                             `(pos-tip-background-color ,soothe-background)
@@ -200,16 +199,27 @@
                    (file-name-directory load-file-name))))
 
 ;; For development disable/unload/recompile/reload-theme.
-(defun soothe-theme-dev-reload ()
+(defun soothe-theme--tva-dev-reload ()
   "For development, reload soothe-theme from development file."
   (interactive)
-  (let (dev-file-name)
-   (when (featurep 'soothe) (unload-feature 'soothe))
-   (when (featurep 'soothe-theme) (unload-feature 'soothe-theme))
+  (let* ((theme-file-name (read-file-name
+                           "Locate sooth-theme.el: "
+                           nil nil t nil))
+         (tva-file-name (format "%ssoothe-tva.el"
+                                (file-name-directory
+                                 theme-file-name))))
+    (mapcar (lambda (it) (when (featurep it)
+                           (unload-feature it t)))
+            (list 'soothe
+                  'soothe-tva
+                  'soothe-theme))
+    (mapcar (lambda (it)
+              (byte-compile-file it)
+              (load-file (replace-regexp-in-string
+                          "[.]el" ".elc" it)))
+            (list tva-file-name
+                  theme-file-name))
    (disable-theme 'soothe)
-   (setq dev-file-name (read-file-name "Locate sooth-theme.el: " nil nil t nil))
-   (byte-compile-file dev-file-name)
-   (load-file (replace-regexp-in-string "[.]el" ".elc" dev-file-name))
    (enable-theme 'soothe)))
 
 (provide-theme 'soothe)
