@@ -5,7 +5,7 @@
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
-;; Version: 2.0.2
+;; Version: 2.0.3
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -372,7 +372,7 @@
      (smerge-refined-changed                    (:inherit 'diff-changed))
      (smerge-refined-removed                    (:inherit 'diff-removed))
      (smerge-upper                              (:background soothe-blue-1bg))
-     (success                                   (:foreground soothe-turquoise-0))
+     (success                                   (:foreground soothe-prime-turquoise))
      (swiper-background-match-face-1            (:inherit 'swiper-match-face-1))
      (swiper-background-match-face-2            (:inherit 'swiper-match-face-2))
      (swiper-background-match-face-3            (:inherit 'swiper-match-face-3))
@@ -412,9 +412,9 @@
      (whitespace-space-after-tab                (:foreground soothe-turquoise-2               :background soothe-turquoise-2bg))
      (whitespace-tab                            (:foreground soothe-turquoise-2               :background soothe-turquoise-2bg))
      (whitespace-trailing                       (:foreground soothe-prime-red                 :background soothe-turquoise-2bg))
-     (window-divider-first-pixel                (:foreground soothe-background-0-dark))
-     (window-divider-last-pixel                 (:foreground soothe-background-0-dark))
-     (window-divider                            (:foreground soothe-background-0-dark)))
+     (window-divider-first-pixel                (:foreground soothe-background-dark-0))
+     (window-divider-last-pixel                 (:foreground soothe-background-dark-0))
+     (window-divider                            (:foreground soothe-background-dark-0)))
     ,@body))
 
   ;;;###autoload
