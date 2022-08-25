@@ -249,7 +249,7 @@
      (link-visited                              (:foreground soothe-prime-turquoise           :background soothe-blue-4bg))
      (linum                                     (:foreground soothe-gray-6                    :background soothe-alt-background))
      (magit-branch                              (:foreground soothe-prime-orange              :background soothe-orange-2bg))
-     (magit-branch-current                      (:foreground soothe-prime-purple              :background soothe-purple-1bg :box (:line-width -1 :color soothe-prime-purple)))
+     (magit-branch-current                      (:foreground soothe-prime-purple              :background soothe-purple-1bg :box (:line-width -1 :color soothe-low-purple)))
      (magit-branch-local                        (:foreground soothe-prime-purple              :background soothe-purple-1bg))
      (magit-branch-remote                       (:foreground soothe-prime-orange              :background soothe-orange-2bg))
      (magit-diff-added                          (:foreground soothe-foreground-1              :background soothe-bg-green))
