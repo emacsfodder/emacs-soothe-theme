@@ -5,7 +5,7 @@
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
-;; Version: 2.0.3
+;; Version: 2.1.0
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -38,8 +38,9 @@
 (unless (>= emacs-major-version 24)
   (error "Requires Emacs 24 or later"))
 
-(soothe-tva-deftheme soothe
-                 "A dark colorful theme"
+(soothe-tva-deftheme
+ soothe
+ "A dark colorful theme"
  ;;; Palette
  ((((class color) (min-colors #xFFFFFF))) ;; GUI/24bit only
   ;;; Foreground colors
@@ -179,17 +180,18 @@
   (soothe-rainbow-delimiters-8 "#71687B")
   (soothe-rainbow-delimiters-9 "#503E69"))
 
- (custom-theme-set-variables 'soothe
-                            `(pos-tip-foreground-color ,soothe-foreground)
-                            `(pos-tip-background-color ,soothe-background)
-                            `(ansi-color-names-vector [,soothe-background
-                                                       ,soothe-prime-red
-                                                       ,soothe-prime-green
-                                                       ,soothe-prime-yellow
-                                                       ,soothe-prime-blue
-                                                       ,soothe-prime-purple
-                                                       ,soothe-prime-turquoise
-                                                       ,soothe-foreground])))
+ (custom-theme-set-variables
+  'soothe
+  `(pos-tip-foreground-color ,soothe-foreground)
+  `(pos-tip-background-color ,soothe-background)
+  `(ansi-color-names-vector [,soothe-background]
+         ,soothe-prime-red
+         ,soothe-prime-green
+         ,soothe-prime-yellow
+         ,soothe-prime-blue
+         ,soothe-prime-purple
+         ,soothe-prime-turquoise
+         ,soothe-foreground)))
 
 ;;;###autoload
 (and load-file-name
@@ -197,30 +199,6 @@
      (add-to-list 'custom-theme-load-path
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
-
-;; For development disable/unload/recompile/reload-theme.
-(defun soothe-theme--tva-dev-reload ()
-  "For development, reload soothe-theme from development file."
-  (interactive)
-  (let* ((theme-file-name (read-file-name
-                           "Locate sooth-theme.el: "
-                           nil nil t nil))
-         (tva-file-name (format "%ssoothe-tva.el"
-                                (file-name-directory
-                                 theme-file-name))))
-    (mapcar (lambda (it) (when (featurep it)
-                           (unload-feature it t)))
-            (list 'soothe
-                  'soothe-tva
-                  'soothe-theme))
-    (mapcar (lambda (it)
-              (byte-compile-file it)
-              (load-file (replace-regexp-in-string
-                          "[.]el" ".elc" it)))
-            (list tva-file-name
-                  theme-file-name))
-   (disable-theme 'soothe)
-   (enable-theme 'soothe)))
 
 (provide-theme 'soothe)
 
