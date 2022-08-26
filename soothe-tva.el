@@ -5,12 +5,12 @@
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
-;; Version: 2.1.1
+;; Version: 2.1.2
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
-;;; License
+;;; License:
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -384,12 +384,12 @@
      (lambda-line-inactive-secondary            (:inherit 'mode-line-inactive))
      (lambda-line-active-tertiary               (:inherit 'mode-line))
      (lambda-line-inactive-tertiary             (:inherit 'mode-line-inactive))
-     (lambda-line-active-status-RO              (:inherit 'mode-line))
-     (lambda-line-inactive-status-RO            (:inherit 'mode-line-inactive))
+     (lambda-line-active-status-RO              (:inherit 'mode-line                           :background soothe-red-3))
+     (lambda-line-inactive-status-RO            (:inherit 'mode-line-inactive                  :background soothe-low-red))
      (lambda-line-active-status-RW              (:inherit 'mode-line                           :foreground soothe-prime-turquoise))
      (lambda-line-inactive-status-RW            (:inherit 'mode-line-inactive                  :foreground soothe-faded-purple))
-     (lambda-line-active-status-MD              (:inherit 'mode-line                           :foreground soothe-prime-turquoise))
-     (lambda-line-inactive-status-MD            (:inherit 'mode-line-inactive                  :foreground soothe-turquoise-2))
+     (lambda-line-active-status-MD              (:inherit 'mode-line                           :background soothe-turquoise-2 :foreground soothe-prime-turquoise))
+     (lambda-line-inactive-status-MD            (:inherit 'mode-line-inactive                  :background soothe-low-purple  :foreground soothe-turquoise-2))
      (lambda-line-visual-bell                   (:background soothe-turquoise-2))
      (orderless-match-face-0                    (:inherit 'match                               :foreground soothe-prime-turquoise))
      (orderless-match-face-1                    (:inherit 'highlight                           :foreground soothe-prime-purple))
