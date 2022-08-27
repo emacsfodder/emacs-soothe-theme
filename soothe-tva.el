@@ -5,7 +5,7 @@
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
-;; Version: 2.1.2
+;; Version: 2.1.3
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -373,23 +373,23 @@
      (mode-line-buffer-id                       (:foreground soothe-prime-orange))
      (mode-line-emphasis                        (:bold))
      (lambda-line-active                        (:inherit 'mode-line))
-     (lambda-line-inactive                      (:inherit 'mode-line-inactive))
+     (lambda-line-active-name                   (:inherit 'mode-line))
+     (lambda-line-active-primary                (:inherit 'mode-line))
+     (lambda-line-active-secondary              (:inherit 'mode-line))
+     (lambda-line-active-status-MD              (:inherit 'mode-line                           :background soothe-dark-purple :foreground soothe-overexposed-purple))
+     (lambda-line-active-status-RO              (:inherit 'mode-line                           :background soothe-prime-orange :foreground soothe-foreground))
+     (lambda-line-active-status-RW              (:inherit 'mode-line                           :foreground soothe-prime-turquoise))
+     (lambda-line-active-tertiary               (:inherit 'mode-line))
      (lambda-line-hspace-active                 (:inherit 'mode-line))
      (lambda-line-hspace-inactive               (:inherit 'mode-line-inactive))
-     (lambda-line-active-name                   (:inherit 'mode-line))
+     (lambda-line-inactive                      (:inherit 'mode-line-inactive))
      (lambda-line-inactive-name                 (:inherit 'mode-line-inactive))
-     (lambda-line-active-primary                (:inherit 'mode-line))
      (lambda-line-inactive-primary              (:inherit 'mode-line-inactive))
-     (lambda-line-active-secondary              (:inherit 'mode-line))
      (lambda-line-inactive-secondary            (:inherit 'mode-line-inactive))
-     (lambda-line-active-tertiary               (:inherit 'mode-line))
-     (lambda-line-inactive-tertiary             (:inherit 'mode-line-inactive))
-     (lambda-line-active-status-RO              (:inherit 'mode-line                           :background soothe-red-3))
-     (lambda-line-inactive-status-RO            (:inherit 'mode-line-inactive                  :background soothe-low-red))
-     (lambda-line-active-status-RW              (:inherit 'mode-line                           :foreground soothe-prime-turquoise))
+     (lambda-line-inactive-status-MD            (:inherit 'mode-line-inactive                  :background soothe-low-purple  :foreground soothe-faded-purple))
+     (lambda-line-inactive-status-RO            (:inherit 'mode-line-inactive                  :background soothe-low-orange))
      (lambda-line-inactive-status-RW            (:inherit 'mode-line-inactive                  :foreground soothe-faded-purple))
-     (lambda-line-active-status-MD              (:inherit 'mode-line                           :background soothe-turquoise-2 :foreground soothe-prime-turquoise))
-     (lambda-line-inactive-status-MD            (:inherit 'mode-line-inactive                  :background soothe-low-purple  :foreground soothe-turquoise-2))
+     (lambda-line-inactive-tertiary             (:inherit 'mode-line-inactive))
      (lambda-line-visual-bell                   (:background soothe-turquoise-2))
      (orderless-match-face-0                    (:inherit 'match                               :foreground soothe-prime-turquoise))
      (orderless-match-face-1                    (:inherit 'highlight                           :foreground soothe-prime-purple))
