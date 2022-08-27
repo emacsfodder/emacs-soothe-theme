@@ -5,7 +5,7 @@
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
-;; Version: 2.1.3
+;; Version: 2.1.4
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -377,7 +377,7 @@
      (lambda-line-active-primary                (:inherit 'mode-line))
      (lambda-line-active-secondary              (:inherit 'mode-line))
      (lambda-line-active-status-MD              (:inherit 'mode-line                           :background soothe-dark-purple :foreground soothe-overexposed-purple))
-     (lambda-line-active-status-RO              (:inherit 'mode-line                           :background soothe-prime-orange :foreground soothe-foreground))
+     (lambda-line-active-status-RO              (:inherit 'mode-line                           :foreground soothe-orange-2))
      (lambda-line-active-status-RW              (:inherit 'mode-line                           :foreground soothe-prime-turquoise))
      (lambda-line-active-tertiary               (:inherit 'mode-line))
      (lambda-line-hspace-active                 (:inherit 'mode-line))
@@ -387,7 +387,7 @@
      (lambda-line-inactive-primary              (:inherit 'mode-line-inactive))
      (lambda-line-inactive-secondary            (:inherit 'mode-line-inactive))
      (lambda-line-inactive-status-MD            (:inherit 'mode-line-inactive                  :background soothe-low-purple  :foreground soothe-faded-purple))
-     (lambda-line-inactive-status-RO            (:inherit 'mode-line-inactive                  :background soothe-low-orange))
+     (lambda-line-inactive-status-RO            (:inherit 'mode-line-inactive                  :foreground soothe-faded-orange))
      (lambda-line-inactive-status-RW            (:inherit 'mode-line-inactive                  :foreground soothe-faded-purple))
      (lambda-line-inactive-tertiary             (:inherit 'mode-line-inactive))
      (lambda-line-visual-bell                   (:background soothe-turquoise-2))
