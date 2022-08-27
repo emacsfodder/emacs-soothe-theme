@@ -160,7 +160,7 @@
   (soothe-dark-blue            "#071D26")
   (soothe-dark-purple          "#1A1226")
 
-  ;;; 2022 Background colors
+  ;;; Extra Background colors
   (soothe-bg-red               "#190A0A")
   (soothe-bg-orange            "#190E00")
   (soothe-bg-green             "#101902")
