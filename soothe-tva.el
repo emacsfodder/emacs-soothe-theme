@@ -420,7 +420,7 @@
      (reb-match-3                               (:foreground soothe-prime-orange               :background soothe-bg-purple))
      (region                                    (:background soothe-blue-5bg))
      (secondary-selection                       (:background soothe-bg-turquoise))
-     (show-paren-match                          (:foreground soothe-turquoise-0                :background soothe-orange-1bg))
+     (show-paren-match                          (:foreground soothe-prime-turquoise            :background soothe-bg-purple))
      (show-paren-mismatch                       (:foreground soothe-prime-orange               :background soothe-red-2bg))
      (smerge-base                               (:inherit 'diff-context))
      (smerge-lower                              (:background soothe-turquoise-1bg))
