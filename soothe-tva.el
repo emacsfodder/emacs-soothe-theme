@@ -5,7 +5,7 @@
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
-;; Version: 2.1.6
+;; Version: 2.1.7
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -81,6 +81,7 @@
      (diff-context                              (:foreground soothe-foreground-1))
      (diff-file-header                          (:foreground soothe-prime-orange               :background soothe-orange-1bg))
      (diff-function                             (:foreground soothe-foreground-1               :background soothe-dark-orange))
+     (diff-header                               (:foreground soothe-prime-turquoise            :background soothe-dark-orange))
      (diff-hl-change                            (:foreground soothe-prime-purple               :background soothe-purple-1bg))
      (diff-hl-delete                            (:foreground soothe-prime-red                  :background soothe-red-1bg))
      (diff-hl-insert                            (:foreground soothe-prime-green                :background soothe-green-2bg))
@@ -242,11 +243,20 @@
      (helm-swoop-target-line-face               (:foreground soothe-foreground-3               :background soothe-bg-blue))
      (helm-swoop-target-word-face               (:foreground soothe-overexposed-purple         :background soothe-low-purple))
      (helm-visible-mark                         (:foreground soothe-foreground-3               :background soothe-low-purple))
-     (highlight                                 (:background soothe-blue-5bg))
+     (highlight-changes                         (:background soothe-background-dark-0))
+     (highlight-changes-delete                  (:background soothe-background-dark-0 :foreground soothe-foreground-3 :underline (:color soothe-prime-red :style 'wave)))
+     (highlight-changes-1                       (:background soothe-background-dark-0 :foreground soothe-prime-yellow))
+     (highlight-changes-2                       (:background soothe-background-dark-0 :foreground soothe-prime-purple))
+     (highlight-changes-3                       (:background soothe-background-dark-0 :foreground soothe-prime-blue))
+     (highlight-changes-4                       (:background soothe-background-dark-0 :foreground soothe-prime-red))
+     (highlight-changes-5                       (:background soothe-background-dark-0 :foreground soothe-prime-orange))
+     (highlight-changes-6                       (:background soothe-background-dark-0 :foreground soothe-prime-green))
+     (highlight-changes-7                       (:background soothe-background-dark-0 :foreground soothe-prime-turquoise))
+     (highlight                                 (:background soothe-low-blue))
      (highlight-indentation-current-column-face (:background soothe-gray-5))
      (highlight-indentation-face                (:background soothe-background-dark))
      (hl-line                                   (:background soothe-bg-turquoise))
-     (hl-sexp-face                              (:background soothe-turquoise-2bg))
+     (hl-sexp-face                              (:background soothe-bg-turquoise))
      (ido-first-match                           (:foreground soothe-prime-orange               :background soothe-orange-1bg))
      (ido-incomplete-regexp                     (:foreground soothe-prime-red                  :background soothe-orange-1bg))
      (ido-indicator                             (:foreground soothe-turquoise-1                :background soothe-turquoise-1bg))

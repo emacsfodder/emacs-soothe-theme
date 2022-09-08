@@ -5,7 +5,7 @@
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
-;; Version: 2.1.6
+;; Version: 2.1.7
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -169,7 +169,7 @@
   (soothe-bg-turquoise         "#15252A")
 
   ;;; Rainbow Delimiter colors
-  (soothe-rainbow-delimiters-0 "#476121")
+  (soothe-rainbow-delimiters-0 "#246D52")
   (soothe-rainbow-delimiters-1 "#306173")
   (soothe-rainbow-delimiters-2 "#65557C")
   (soothe-rainbow-delimiters-3 "#8B5100")
