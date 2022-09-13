@@ -95,7 +95,7 @@
      (dired-header                              (:inherit 'header-line))
      (dired-ignored                             (:foreground soothe-turquoise-1                :background soothe-background))
      (dired-mark                                (:foreground soothe-orange-2                   :background soothe-background))
-     (dired-marked                              (:foreground soothe-prime-orange               :background soothe-orange-1bg))
+     (dired-marked                              (:foreground soothe-prime-orange               :background soothe-purple-2bg))
      (dired-perm-write                          (:foreground soothe-prime-turquoise            :background soothe-turquoise-1bg))
      (dired-symlink                             (:foreground soothe-prime-blue                 :background soothe-blue-4bg))
      (dired-warning                             (:foreground soothe-prime-red                  :background soothe-red-2bg))
