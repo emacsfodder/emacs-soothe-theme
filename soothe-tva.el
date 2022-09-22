@@ -5,7 +5,7 @@
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
-;; Version: 2.1.7
+;; Version: 2.1.8
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -456,6 +456,8 @@
      (vertico-posframe-border-2                 (:background soothe-alt-background))
      (vertico-posframe-border-3                 (:background soothe-background-2))
      (vertico-posframe-border-4                 (:background soothe-background-3))
+     (vline                                     (:background soothe-bg-turquoise))
+     (vline-visual                              (:background soothe-bg-turquoise))
      (warning                                   (:foreground soothe-orange-2 :weight 'bold))
      (web-mode-doctype-face                     (:foreground soothe-foreground-2 :weight 'bold))
      (web-mode-html-attr-equal-face             (:inherit 'default))
