@@ -1,4 +1,4 @@
-;;; soothe-obsidian-theme.el --- A darker colorful theme -*- lexical-binding: t; -*-
+;;; soothe-darker-theme.el --- A darker colorful theme -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2022-2024 Jason Milkins
 ;;
@@ -40,7 +40,7 @@
   (error "Requires Emacs 24 or later"))
 
 (soothe-tva-deftheme
- soothe-obsidian
+ soothe-darker
  "A dark colorful theme"
  ;;; Palette
  ((((class color) (min-colors #xFFFFFF))) ;; GUI/24bit only
@@ -52,9 +52,9 @@
   (soothe-foreground-3         "#CECCC7")
   ;;; Background colors
   (soothe-background-dark-0    "#000000")
-  (soothe-background-dark      "#000000")
-  (soothe-background           "#000000")
-  (soothe-background-0         "#000000")
+  (soothe-background-dark      "#030303")
+  (soothe-background           "#070707")
+  (soothe-background-0         "#0A0A0A")
   (soothe-alt-background       "#111013")
   (soothe-background-1         "#181818")
   (soothe-background-2         "#212121")
@@ -200,10 +200,10 @@
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
 
-(provide-theme 'soothe-obsidian)
+(provide-theme 'soothe-darker)
 
 ;; Local Variables:
 ;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode 1))
 ;; End:
 
-;;; soothe-obsidian-theme.el ends here
+;;; soothe-darker-theme.el ends here
