@@ -1,11 +1,11 @@
 ;;; soothe-tva.el --- Autothemer TVA engine for soothe-theme -*- lexical-binding: t; -*-
 ;;
-;; Copyright (C) 2012-2022 Jason Milkins
+;; Copyright (C) 2012-2024 Jason Milkins
 ;;
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
 ;; URL: https://github.com/emacsfodder/emacs-soothe-theme
-;; Version: 2.1.8
+;; Version: 2.1.9
 ;; Package-Requires: ((emacs "24.3") (autothemer "0.2"))
 ;;
 ;; This file is not part of GNU Emacs.

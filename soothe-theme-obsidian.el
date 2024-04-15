@@ -1,6 +1,6 @@
-;;; soothe-theme.el --- A dark colorful theme -*- lexical-binding: t; -*-
+;;; soothe-obsidian-theme.el --- A darker colorful theme -*- lexical-binding: t; -*-
 ;;
-;; Copyright (C) 2012-2024 Jason Milkins
+;; Copyright (C) 2022-2024 Jason Milkins
 ;;
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Maintainer: Jason Milkins <jasonm23@gmail.com>
@@ -29,7 +29,7 @@
 
 ;;; Commentary:
 ;;
-;;  A dark colorful theme.
+;;  A darker colorful theme.
 ;;
 ;;; Code:
 
@@ -39,7 +39,7 @@
   (error "Requires Emacs 24 or later"))
 
 (soothe-tva-deftheme
- soothe
+ soothe-obsidian
  "A dark colorful theme"
  ;;; Palette
  ((((class color) (min-colors #xFFFFFF))) ;; GUI/24bit only
@@ -49,19 +49,18 @@
   (soothe-foreground-1         "#E3E4E2")
   (soothe-foreground-2         "#DBD9D4")
   (soothe-foreground-3         "#CECCC7")
-
   ;;; Background colors
   (soothe-background-dark-0    "#000000")
-  (soothe-background-dark      "#0F0E11")
-  (soothe-background           "#111013")
-  (soothe-background-0         "#111013")
-  (soothe-alt-background       "#121113")
-  (soothe-background-1         "#121113")
-  (soothe-background-2         "#2B2A2A")
+  (soothe-background-dark      "#000000")
+  (soothe-background           "#000000")
+  (soothe-background-0         "#000000")
+  (soothe-alt-background       "#111013")
+  (soothe-background-1         "#181818")
+  (soothe-background-2         "#212121")
   (soothe-background-3         "#313030")
   (soothe-background-4         "#343333")
 
-  ;;; Colors Gray
+    ;;; Colors Gray
   (soothe-gray-1               "#AAAAAA")
   (soothe-gray-2               "#828282")
   (soothe-gray-3               "#333333")
@@ -72,7 +71,7 @@
   (soothe-gray-2bg             "#111111")
   (soothe-gray-3bg             "#141414")
 
-  ;;; Colors Prime
+    ;;; Colors Prime
   (soothe-prime-red            "#B14E41")
   (soothe-prime-orange         "#D9662E")
   (soothe-prime-yellow         "#CEB666")
@@ -81,7 +80,7 @@
   (soothe-prime-purple         "#948CB5")
   (soothe-prime-turquoise      "#1FA8A8")
 
-  ;;; Colors Turquoise
+    ;;; Colors Turquoise
   (soothe-turquoise-0          "#106A77")
   (soothe-turquoise-1          "#0E545F")
   (soothe-turquoise-2          "#113E46")
@@ -89,7 +88,7 @@
   (soothe-turquoise-1bg        "#06181C")
   (soothe-turquoise-2bg        "#051316")
 
-  ;;; Colors Accents
+    ;;; Colors Accents
   (soothe-red-2                "#A24B2E")
   (soothe-red-3                "#AA2010")
   (soothe-orange-2             "#FF642A")
@@ -100,7 +99,7 @@
   (soothe-purple-3             "#50486C")
   (soothe-purple-4             "#3B3358")
 
-  ;;; Original Background Colors
+    ;;; Original Background Colors
   (soothe-red-1bg              "#1D1717")
   (soothe-red-2bg              "#251F20")
   (soothe-orange-1bg           "#1F1813")
@@ -117,50 +116,50 @@
   (soothe-purple-2bg           "#353048")
   (soothe-purple-3bg           "#282436")
 
-  ;;; 2022 Palette add-ons
-  ;;; Muted colors
+    ;;; 2022 Palette add-ons
+    ;;; Muted colors
   (soothe-muted-red            "#ED8E8E")
   (soothe-muted-orange         "#D7B181")
   (soothe-muted-green          "#90AC67")
   (soothe-muted-blue           "#72A9BF")
   (soothe-muted-purple         "#BD95FA")
 
-  ;;; Overexposed colors
+    ;;; Overexposed colors
   (soothe-overexposed-red      "#F2A9A9")
   (soothe-overexposed-orange   "#F2D0A9")
   (soothe-overexposed-green    "#D4F2A9")
   (soothe-overexposed-blue     "#A9DCF2")
   (soothe-overexposed-purple   "#C6A9F2")
 
-  ;;; Faded colors
+    ;;; Faded colors
   (soothe-faded-red            "#7F5858")
   (soothe-faded-orange         "#7F6D58")
   (soothe-faded-green          "#6F7F58")
   (soothe-faded-blue           "#58737F")
   (soothe-faded-purple         "#67587F")
 
-  ;;; Mid colors
+    ;;; Mid colors
   (soothe-mid-red              "#883B3B")
   (soothe-mid-orange           "#8B5000")
   (soothe-mid-green            "#3F610D")
   (soothe-mid-blue             "#195A73")
   (soothe-mid-purple           "#563C7C")
 
-  ;;; Low colors
+    ;;; Low colors
   (soothe-low-red              "#411010")
   (soothe-low-orange           "#412500")
   (soothe-low-green            "#2A4107")
   (soothe-low-blue             "#0D3241")
   (soothe-low-purple           "#2C1F41")
 
-  ;;; Dark colors
+    ;;; Dark colors
   (soothe-dark-red             "#261010")
   (soothe-dark-orange          "#261500")
   (soothe-dark-green           "#182604")
   (soothe-dark-blue            "#071D26")
   (soothe-dark-purple          "#1A1226")
 
-  ;;; Extra Background colors
+    ;;; Extra Background colors
   (soothe-bg-red               "#190A0A")
   (soothe-bg-orange            "#190E00")
   (soothe-bg-green             "#101902")
@@ -168,7 +167,7 @@
   (soothe-bg-purple            "#110C19")
   (soothe-bg-turquoise         "#15252A")
 
-  ;;; Rainbow Delimiter colors
+    ;;; Rainbow Delimiter colors
   (soothe-rainbow-delimiters-0 "#246D52")
   (soothe-rainbow-delimiters-1 "#306173")
   (soothe-rainbow-delimiters-2 "#65557C")
@@ -200,10 +199,10 @@
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
 
-(provide-theme 'soothe)
+(provide-theme 'soothe-obsidian)
 
 ;; Local Variables:
 ;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode 1))
 ;; End:
 
-;;; soothe-theme.el ends here
+;;; soothe-obsidian-theme.el ends here
